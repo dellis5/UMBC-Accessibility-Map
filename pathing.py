@@ -1100,14 +1100,13 @@ def init_connections(nodes):#Adds the connections between the nodes
                 print("Invalid node name: ", i.name)
 
 
-#find_path(list of nodes, start node name, destination node name)
+#find_path(list of nodes, start node name (string), destination node name (string))
 #Returns a list of the nodes on the path from start to finish
 #Returns an empty list if no path is found
 def find_path(nodes, start, finish):#Finds the shortest path, returns a list of the nodes on the path
     for i in nodes:#Ensures past searches dont mess up this search
         i.distance = 9999
         i.previous = ""
-    
     
     queue = []
     final_path = []
@@ -1116,16 +1115,10 @@ def find_path(nodes, start, finish):#Finds the shortest path, returns a list of 
         if i.name == start:
             i.distance = 0
             queue.append(i)
-
-    for i in nodes:#Adds the rest of the nodes to the queue
-        if i.name != start:
-            queue.append(i)
     
     for i in queue:
-        i = queue[0]#Corrects the index after a pop
         if i.name == finish:
-            completed.append(queue.pop(0))
-            queue.append(Node("placeholder"))#Prevents accessing beyond the list
+            completed.append(i)
             
             completed.reverse()
             last = i.previous
@@ -1138,17 +1131,16 @@ def find_path(nodes, start, finish):#Finds the shortest path, returns a list of 
             return final_path
 
         for j in i.connections:
-            if (j[0] in queue) and (j[0].distance > j[1] + i.distance):
+            if j[0] not in queue:
+                queue.append(j[0])
+
+            if j[0].distance > j[1] + i.distance:
                 j[0].distance = j[1] + i.distance
                 j[0].previous = i.name
 
-        completed.append(queue.pop(0))
-        queue.append(Node("placeholder"))#Prevents accessing beyond the list
-
-        for j in range(len(queue)):
-            for k in range(len(queue) - 1):
-                if queue[k].distance > queue[k+1].distance:
-                    queue[k], queue[k+1] = queue[k+1], queue[k]
+        completed.append(i)
+        
+        queue.sort(key=lambda node:node.distance)
 
     return final_path
 
@@ -1169,3 +1161,4 @@ if not path:
     print("No path")
 for i in path:
     print(i.name, i.distance, end=", ")
+print()
