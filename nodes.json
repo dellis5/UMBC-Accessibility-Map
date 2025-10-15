@@ -1,0 +1,1326 @@
+{
+    "node": [
+        {
+            "Id": 1,
+	        "name": "Performing Arts & Humanities Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building Entrance 2", 20, true], 
+                            ["Performing Arts & Humanities Building Entrance 3", 20, true], 
+                            ["Intersection 1", 8, true]
+                        ]
+        },
+        {
+            "Id": 2,
+	        "name": "Performing Arts & Humanities Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building Entrance 1", 20, true], 
+                            ["Performing Arts & Humanities Building Entrance 3", 20, true], 
+                            ["Intersection 3", 0, true]
+                        ]
+        },
+        {
+            "Id": 3,
+	        "name": "Performing Arts & Humanities Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building Entrance 1", 20, true], 
+                            ["Performing Arts & Humanities Building Entrance 2", 20, true], 
+                            ["Intersection 6", 0, true]
+                        ]
+        },
+
+        {
+            "Id": 4,
+	        "name": "Fine Arts Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Fine Arts Building Entrance 2", 20, true], 
+                            ["Fine Arts Building Entrance 3", 20, true], 
+                            ["Fine Arts Building Entrance 4", 20, true], 
+                            ["Intersection 9", 11, true]
+                        ]
+        },
+        {
+            "Id": 5,
+	        "name": "Fine Arts Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Fine Arts Building Entrance 1", 20, true], 
+                            ["Fine Arts Building Entrance 3", 20, true], 
+                            ["Fine Arts Building Entrance 4", 20, true], 
+                            ["Intersection 15", 2, true]
+                        ]
+        },
+        {
+            "Id": 6,
+	        "name": "Fine Arts Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Fine Arts Building Entrance 1", 20, true], 
+                            ["Fine Arts Building Entrance 2", 20, true], 
+                            ["Fine Arts Building Entrance 4", 20, true], 
+                            ["Engineering Building Entrance 1", 2, true]
+                        ]
+        },
+        {
+            "Id": 7,
+	        "name": "Fine Arts Building Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Fine Arts Building Entrance 1", 20, true], 
+                            ["Fine Arts Building Entrance 2", 20, true], 
+                            ["Fine Arts Building Entrance 3", 20, true], 
+                            ["Intersection 11", 5, true]
+                        ]
+        },
+
+        {
+            "Id": 8,
+	        "name": "Engineering Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Engineering Building Entrance 2", 20, true], 
+                            ["Engineering Building Entrance 3", 20, true], 
+                            ["Engineering Building Entrance 4", 20, true], 
+                            ["Fine Arts Building Entrance 3", 2, true]
+                        ]
+        },
+        {
+            "Id": 9,
+	        "name": "Engineering Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Engineering Building Entrance 1", 20, true], 
+                            ["Engineering Building Entrance 3", 20, true], 
+                            ["Engineering Building Entrance 4", 20, true], 
+                            ["Intersection 16", 0, true]
+                        ]
+        },
+        {
+            "Id": 10,
+	        "name": "Engineering Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Engineering Building Entrance 1", 20, true], 
+                            ["Engineering Building Entrance 2", 20, true], 
+                            ["Engineering Building Entrance 4", 20, true], 
+                            ["Information Technology/Engineering Building Entrance 2", 2, true]
+                        ]
+        },
+        {
+            "Id": 11,
+	        "name": "Engineering Building Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Engineering Building Entrance 1", 20, true], 
+                            ["Engineering Building Entrance 2", 20, true], 
+                            ["Engineering Building Entrance 3", 20, true], 
+                            ["Intersection 13", 7, true]
+                        ]
+        },
+
+        {
+            "Id": 12,
+	        "name": "Information Technology/Engineering Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Information Technology/Engineering Building Entrance 2", 20, true], 
+                            ["Information Technology/Engineering Building Entrance 3", 20, true], 
+                            ["Intersection 14", 12, true]
+                        ]
+        },
+        {
+            "Id": 13,
+	        "name": "Information Technology/Engineering Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Information Technology/Engineering Building Entrance 1", 20, true], 
+                            ["Information Technology/Engineering Building Entrance 3", 20, true], 
+                            ["Engineering Building 3", 2, true]
+                        ]
+        },
+        {
+            "Id": 14,
+	        "name": "Information Technology/Engineering Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Information Technology/Engineering Building Entrance 1", 20, true], 
+                            ["Information Technology/Engineering Building Entrance 2", 20, true], 
+                            ["Intersection 16", 12, true]
+                        ]
+        },
+
+        {
+            "Id": 15,
+	        "name": "Meyerhoff Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 3", 20, true],
+                            ["Meyerhoff Building Entrance 4", 20, true],
+                            ["Meyerhoff Building Entrance 5", 20, true],
+                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Intersection 21", 2, true]
+                        ]
+        },
+        {
+            "Id": 16,
+	        "name": "Meyerhoff Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 22", 1, true]
+                        ]
+        },
+        {
+            "Id": 17,
+	        "name": "Meyerhoff Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                           ["Meyerhoff Building Entrance 1", 20, true],
+                           ["Meyerhoff Building Entrance 4", 20, true],
+                           ["Meyerhoff Building Entrance 5", 20, true],
+                           ["Meyerhoff Building Entrance 6", 20, true],
+                           ["Intersection 23", 2, true]
+                        ]
+        },
+        {
+            "Id": 18,
+	        "name": "Meyerhoff Building Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 1", 20, true],
+                            ["Meyerhoff Building Entrance 3", 20, true],
+                            ["Meyerhoff Building Entrance 5", 20, true],
+                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["University Center Entrance 1", 2, true]
+                        ]
+        },
+        {
+            "Id": 19,
+	        "name": "Meyerhoff Building Entrance 5",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 1", 20, true],
+                            ["Meyerhoff Building Entrance 3", 20, true],
+                            ["Meyerhoff Building Entrance 4", 20, true],
+                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Intersection 15", 2, true]
+                        ]
+        },
+        {
+            "Id": 20,
+	        "name": "Meyerhoff Building Entrance 6",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 1", 20, true],
+                            ["Meyerhoff Building Entrance 3", 20, true],
+                            ["Meyerhoff Building Entrance 4", 20, true],
+                            ["Meyerhoff Building Entrance 5", 20, true],
+                            ["Intersection 15", 10, true]
+                        ]
+        },
+
+        {
+            "Id": 21,
+	        "name": "University Center Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 2", 20, true],
+                            ["University Center Entrance 3", 20, true],
+                            ["University Center Entrance 4", 20, true],
+                            ["Meyerhoff Building Entrance 4", 2, true]
+                        ]
+        },
+        {
+            "Id": 22,
+	        "name": "University Center Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 1", 20, true],
+                            ["University Center Entrance 3", 20, true],
+                            ["University Center Entrance 4", 20, true],
+                            ["Intersection 27", 3, true]
+                        ]
+        },
+        {
+            "Id": 23,
+	        "name": "University Center Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 1", 20, true],
+                            ["University Center Entrance 2", 20, true],
+                            ["University Center Entrance 4", 20, true],
+                            ["Intersection 28", 1, true]
+                        ]
+        },
+        {
+            "Id": 24,
+	        "name": "University Center Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 1", 20, true],
+                            ["University Center Entrance 2", 20, true],
+                            ["University Center Entrance 3", 20, true],
+                            ["Intersection 16", 0, true]
+                        ]
+        },
+
+        {
+            "Id": 25,
+	        "name": "Sherman Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 30", 1, false]
+                        ]
+        },
+        {
+            "Id": 26,
+	        "name": "Sherman Hall Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 31", 0, false]
+                        ]
+        },
+        {
+            "Id": 27,
+	        "name": "Sherman Hall Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            []
+                        ]
+        },
+        {
+            "Id": 28,
+	        "name": "Sherman Hall Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            []
+                        ]
+        },
+
+        {
+            "Id": 29,
+	        "name": "Biological Sciences Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Biological Sciences Building Entrance 2", 20, true],
+                            ["Biological Sciences Building Entrance 3", 20, true],
+                            ["Intersection 41", 4, true]
+                        ]
+        },
+        {
+            "Id": 30,
+	        "name": "Biological Sciences Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Biological Sciences Building Entrance 1", 20, true],
+                            ["Biological Sciences Building Entrance 3", 20, true],
+                            ["Intersection 24", 4, true]
+                        ]
+        },
+        {
+            "Id": 31,
+	        "name": "Biological Sciences Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Biological Sciences Building Entrance 1", 20, true],
+                            ["Biological Sciences Building Entrance 2", 20, true],
+                            ["Intersection 40", 0, true]
+                        ]
+        },
+        {
+            "Id": 32,
+	        "name": "Biological Sciences Building Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 40", 0, true]
+                        ]
+        },
+
+        {
+            "Id": 33,
+	        "name": "Math & Psychology Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Math & Psychology Building Entrance 2", 20, true],
+                            ["Math & Psychology Building Entrance 3", 20, true],
+                            ["Intersection 43", 6, true]
+                        ]
+        },
+        {
+            "Id": 34,
+	        "name": "Math & Psychology Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Math & Psychology Building Entrance 1", 20, true],
+                            ["Math & Psychology Building Entrance 3", 20, true],
+                            ["Intersection 29", 6, true]
+                        ]
+        },
+        {
+            "Id": 35,
+	        "name": "Math & Psychology Building Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Math & Psychology Building Entrance 1", 20, true],
+                            ["Math & Psychology Building Entrance 2", 20, true],
+                            ["Intersection 25", 4, true]
+                        ]
+        },
+
+        {
+            "Id": 36,
+	        "name": "Sondheim Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Sondheim Hall Entrance 2", 20, true],
+                            ["Intersection 30", 2, true]
+                        ]
+        },
+        {
+            "Id": 37,
+	        "name": "Sondheim Hall Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Sondheim Hall Entrance 1", 20, true],
+                            ["Intersection 31", 2, true]
+                        ]
+        },
+
+        {
+            "Id": 38,
+	        "name": "Administration Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Administration Building Entrance 2", 20, true],
+                            ["Intersection 32", 1, true]
+                        ]
+        },
+        {
+            "Id": 39,
+	        "name": "Administration Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Administration Building Entrance 1", 20, true],
+                            ["Intersection 35", 0, true]
+                        ]
+        },
+
+        {
+            "Id": 40,
+	        "name": "The Commons Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 2", 20, true],
+                            ["The Commons Entrance 3", 20, true],
+                            ["The Commons Entrance 4", 20, true],
+                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Entrance 6", 20, true],
+                            ["Intersection 48", 0, true]
+                        ]
+        },
+        {
+            "Id": 41,
+	        "name": "The Commons Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 1", 20, true],
+                            ["The Commons Entrance 3", 20, true],
+                            ["The Commons Entrance 4", 20, true],
+                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Entrance 6", 20, true],
+                            ["Intersection 52", 0, true]
+                        ]
+        },
+        {
+            "Id": 42,
+	        "name": "The Commons Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 1", 20, true],
+                            ["The Commons Entrance 2", 20, true],
+                            ["The Commons Entrance 4", 20, true],
+                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Entrance 6", 20, true],
+                            ["Intersection 59", 18, true]
+                        ]
+        },
+        {
+            "Id": 43,
+	        "name": "The Commons Entrance 4",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 1", 20, true],
+                            ["The Commons Entrance 2", 20, true],
+                            ["The Commons Entrance 3", 20, true],
+                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Entrance 6", 20, true],
+                            ["Intersection 49", 5, true]
+                        ]
+        },
+        {
+            "Id": 44,
+	        "name": "The Commons Entrance 5",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 1", 20, true],
+                            ["The Commons Entrance 2", 20, true],
+                            ["The Commons Entrance 3", 20, true],
+                            ["The Commons Entrance 4", 20, true],
+                            ["The Commons Entrance 6", 20, true],
+                            ["Intersection 46", 13, true]
+                        ]
+        },
+        {
+            "Id": 45,
+	        "name": "The Commons Entrance 6",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 1", 20, true],
+                            ["The Commons Entrance 2", 20, true],
+                            ["The Commons Entrance 3", 20, true],
+                            ["The Commons Entrance 4", 20, true],
+                            ["The Commons Entrance 5", 20, true],
+                            ["Intersection 46", 3, true]
+                        ]
+        },
+
+        {
+            "Id": 46,
+	        "name": "Lecture Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 42", 6, true]
+                        ]
+        },
+
+        {
+            "Id": 47,
+	        "name": "Retriever Activities Center Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 32", 5, true]
+                        ]
+        },
+
+        {
+            "Id": 48,
+	        "name": "Interdisciplinary Life Sciences Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Interdisciplinary Life Sciences Building Entrance 2", 20, true],
+                            ["Intersection 55", 0, true]
+                        ]
+        },
+        {
+            "Id": 49,
+	        "name": "Interdisciplinary Life Sciences Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Interdisciplinary Life Sciences Building Entrance 1", 20, true],
+                            ["Intersection 50", 5, true]
+                        ]
+        },
+
+        {
+            "Id": 50,
+	        "name": "Albin O. Kuhn Library & Gallery Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Albin O. Kuhn Library & Gallery Entrance 2", 20, true],
+                            ["Albin O. Kuhn Library & Gallery Entrance 3", 20, true],
+                            ["Intersection 37", 0, true]
+                        ]
+        },
+        {
+            "Id": 51,
+	        "name": "Albin O. Kuhn Library & Gallery Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Albin O. Kuhn Library & Gallery Entrance 1", 20, true],
+                            ["Albin O. Kuhn Library & Gallery Entrance 3", 20, true],
+                            ["Intersection 63", 0, true]
+                        ]
+        },
+        {
+            "Id": 52,
+	        "name": "Albin O. Kuhn Library & Gallery Entrance 3",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Albin O. Kuhn Library & Gallery Entrance 1", 20, true],
+                            ["Albin O. Kuhn Library & Gallery Entrance 2", 20, true],
+                            ["Intersection 17", 0, true]
+                        ]
+        },
+
+        {
+            "Id": 53,
+	        "name": "Physics Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Physics Building Entrance 2", 20, true],
+                            ["Intersection 61", 3, true]
+                        ]
+        },
+        {
+            "Id": 54,
+	        "name": "Physics Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Physics Building Entrance 1", 20, true],
+                            ["Intersection 58", 6, true]
+                        ]
+        },
+
+
+
+
+        {
+            "Id": 201,
+	        "name": "Intersection 1",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building Entrance 1", 8, true],
+                            ["Intersection 2", 18, true]
+                        ]
+        },
+        {
+            "Id": 202,
+	        "name": "Intersection 2",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 1", 18, true],
+                            ["Intersection 3", 8, true],
+                            ["Intersection 4", 11, true]
+                        ]
+        },
+        {
+            "Id": 203,
+	        "name": "Intersection 3",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building Entrance 2", 0, true],
+                            ["Intersection 2", 8, true],
+                            ["Intersection 5", 5, true]
+                        ]
+        },
+        {
+            "Id": 204,
+	        "name": "Intersection 4",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 2", 11, true],
+                            ["Intersection 5", 10, true],
+                            ["Intersection 10", 3, true],
+                            ["Intersection 12", 11, true]
+                        ]
+        },
+        {
+            "Id": 205,
+	        "name": "Intersection 5",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 3", 5, true],
+                            ["Intersection 4", 10, true],
+                            ["Intersection 6", 3, true]
+                        ]
+        },
+        {
+            "Id": 206,
+	        "name": "Intersection 6",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building Entrance 3", 0, true],
+                            ["Intersection 5", 3, true],
+                            ["Intersection 7", 10, true]
+                        ]
+        },
+        {
+            "Id": 207,
+	        "name": "Intersection 7",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 6", 10, true],
+                            ["Intersection 8", 12, true],
+                            ["Intersection 14", 3, true]
+                        ]
+        },
+        {
+            "Id": 208,
+	        "name": "Intersection 8",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 7", 12, true]
+                        ]
+        },
+        {
+            "Id": 209,
+	        "name": "Intersection 9",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Fine Arts Building Entrance 1", 11, true],
+                            ["Intersection 10", 10, true]
+                        ]
+        },
+        {
+            "Id": 210,
+	        "name": "Intersection 10",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 4", 3, true],
+                            ["Intersection 9", 10, true],
+                            ["Intersection 11", 4, true]
+                        ]
+        },
+        {
+            "Id": 211,
+	        "name": "Intersection 11",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Fine Arts Building Entrance 4", 5, true],
+                            ["Intersection 10", 4, true],
+                            ["Intersection 13", 7, true]
+                        ]
+        },
+        {
+            "Id": 212,
+	        "name": "Intersection 12",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 4", 11, true],
+                            ["Intersection 13", 2, true],
+                            ["Intersection 14", 9, true]
+                        ]
+        },
+        {
+            "Id": 213,
+	        "name": "Intersection 13",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Engineering Building Entrance 4", 7, true],
+                            ["Intersection 11", 7, true],
+                            ["Intersection 12", 2, true]
+                        ]
+        },
+        {
+            "Id": 214,
+	        "name": "Intersection 14",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Information Technology/Engineering Building Entrance 1", 12, true],
+                            ["Intersection 7", 3, true],
+                            ["Intersection 12", 9, true]
+                        ]
+        },
+        {
+            "Id": 215,
+	        "name": "Intersection 15",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 5", 1, true],
+                            ["Meyerhoff Building Entrance 6", 10, true],
+                            ["Fine Arts Building Entrance 2", 1, true],
+                            ["Intersection 16", 14, true]
+                        ]
+        },
+        {
+            "Id": 216,
+	        "name": "Intersection 16",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 4", 0, true],
+                            ["Engineering Building Entrance 2", 0, true],
+                            ["Information Technology/Engineering Building Entrance 3", 12, true],
+                            ["Intersection 15", 14, true]
+                        ]
+        },
+        {
+            "Id": 217,
+	        "name": "Intersection 17",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Albin O. Kuhn Library & Gallery Entrance 3", 0, true],
+                            ["Intersection 63", 11, true],
+                            ["Intersection 18", 11, true]
+                        ]
+        },
+        {
+            "Id": 218,
+	        "name": "Intersection 18",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 17", 11, true],
+                            ["Intersection 20", 28, true]
+                        ]
+        },
+        {
+            "Id": 219,
+	        "name": "Intersection 19",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 63", 17, true],
+                            ["Intersection 20", 11, true],
+                            ["Intersection 39", 9, true]
+                        ]
+        },
+        {
+            "Id": 220,
+	        "name": "Intersection 20",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 18", 28, true],
+                            ["Intersection 19", 11, true],
+                            ["Intersection 21", 3, true],
+                            ["Intersection 40", 3, true]
+                        ]
+        },
+        {
+            "Id": 221,
+	        "name": "Intersection 21",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 1", 2, true],
+                            ["Intersection 20", 3, true],
+                            ["Intersection 22", 5, true]
+                        ]
+        },
+        {
+            "Id": 222,
+	        "name": "Intersection 22",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 2", 1, true],
+                            ["Intersection 21", 5, true],
+                            ["Intersection 23", 6, true]
+                        ]
+        },
+        {
+            "Id": 223,
+	        "name": "Intersection 23",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Meyerhoff Building Entrance 3", 2, true],
+                            ["Intersection 22", 6, true],
+                            ["Intersection 24", 2, true]
+                        ]
+        },
+        {
+            "Id": 224,
+	        "name": "Intersection 24",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Biological Sciences Building Entrance 2", 3, true],
+                            ["Intersection 23", 2, true],
+                            ["Intersection 25", 3, true]
+                        ]
+        },
+        {
+            "Id": 225,
+	        "name": "Intersection 25",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Math & Psychology Building Entrance 3", 3, true],
+                            ["Intersection 24", 3, true],
+                            ["Intersection 26", 2, true]
+                        ]
+        },
+        {
+            "Id": 226,
+	        "name": "Intersection 26",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 25", 2, true],
+                            ["Intersection 27", 3, true],
+                            ["Intersection 29", 12, true]
+                        ]
+        },
+        {
+            "Id": 227,
+	        "name": "Intersection 27",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 2", 3, true],
+                            ["Intersection 26", 3, true],
+                            ["Intersection 28", 8, true]
+                        ]
+        },
+        {
+            "Id": 228,
+	        "name": "Intersection 28",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["University Center Entrance 3", 1, true],
+                            ["Intersection 27", 8, true],
+                            ["Intersection 29", 6, true]
+                        ]
+        },
+        {
+            "Id": 229,
+	        "name": "Intersection 29",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Math & Psychology Building Entrance 2", 6, true],
+                            ["Intersection 26", 12, true],
+                            ["Intersection 28", 6, true],
+                            ["Intersection 30", 3, true]
+                        ]
+        },
+        {
+            "Id": 230,
+	        "name": "Intersection 30",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Sherman Hall Entrance 1", 1, false],
+                            ["Sondheim Hall Entrance 2", 2, true],
+                            ["Intersection 29", 3, true],
+                            ["Intersection 31", 12, true]
+                        ]
+        },
+        {
+            "Id": 231,
+	        "name": "Intersection 31",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Sherman Hall Entrance 2", 0, false],
+                            ["Sondheim Hall Entrance 1", 2, true],
+                            ["Intersection 30", 12, true],
+                            ["Intersection 32", 9, true]
+                        ]
+        },
+        {
+            "Id": 232,
+	        "name": "Intersection 32",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Administration Building Entrance 1", 1, true],
+                            ["Retriever Activities Center Entrance 1", 5, true],
+                            ["Intersection 31", 9, true],
+                            ["Intersection 33", 3, true]
+                        ]
+        },
+        {
+            "Id": 233,
+	        "name": "Intersection 33",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 32", 3, true],
+                            ["Intersection 34", 2, true],
+                            ["Intersection 35", 4, true]
+                        ]
+        },
+        {
+            "Id": 234,
+	        "name": "Intersection 34",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 33", 2, true],
+                            ["Intersection 36", 8, true]
+                        ]
+        },
+        {
+            "Id": 235,
+	        "name": "Intersection 35",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Administration Building Entrance 2", 0, true],
+                            ["Intersection 33", 4, true]
+                        ]
+        },
+        {
+            "Id": 236,
+	        "name": "Intersection 36",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 34", 8, true],
+                            ["Intersection 51", 20, true]
+                        ]
+        },
+        {
+            "Id": 237,
+	        "name": "Intersection 37",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Albin O. Kuhn Library & Gallery Entrance 1", 0, true],
+                            ["Intersection 38", 6, true]
+                        ]
+        },
+        {
+            "Id": 238,
+	        "name": "Intersection 38",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 37", 6, true],
+                            ["Intersection 44", 7, true],
+                            ["Intersection 45", 9, true]
+                        ]
+        },
+        {
+            "Id": 239,
+	        "name": "Intersection 39",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 19", 9, true],
+                            ["Intersection 41", 10, true],
+                            ["Intersection 48", 13, true]
+                        ]
+        },
+        {
+            "Id": 240,
+	        "name": "Intersection 40",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Biological Sciences Building Entrance 3", 0, true],
+                            ["Biological Sciences Building Entrance 4", 0, true],
+                            ["Intersection 20", 3, true],
+                            ["Intersection 41", 6, true]
+                        ]
+        },
+        {
+            "Id": 241,
+	        "name": "Intersection 41",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Biological Sciences Building Entrance 1", 5, true],
+                            ["Intersection 39", 10, true],
+                            ["Intersection 40", 6, true],
+                            ["Intersection 46", 3, true]
+                        ]
+        },
+        {
+            "Id": 242,
+	        "name": "Intersection 42",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Lecture Hall Entrance 1", 6, true],
+                            ["Intersection 43", 17, true],
+                            ["Intersection 47", 3, true]
+                        ]
+        },
+        {
+            "Id": 243,
+	        "name": "Intersection 43",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Math & Psychology Building Entrance 1", 6, true],
+                            ["Intersection 42", 17, true],
+                            ["Intersection 50", 22, true]
+                        ]
+        },
+        {
+            "Id": 244,
+	        "name": "Intersection 44",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 38", 7, true],
+                            ["Intersection 45", 7, true],
+                            ["Intersection 53", 20, true]
+                        ]
+        },
+        {
+            "Id": 245,
+	        "name": "Intersection 45",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 38", 9, true],
+                            ["Intersection 44", 7, true],
+                            ["Intersection 48", 12, true]
+                        ]
+        },
+        {
+            "Id": 246,
+	        "name": "Intersection 46",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 5", 13, true],
+                            ["The Commons Entrance 6", 3, true],
+                            ["Intersection 41", 3, true],
+                            ["Intersection 47", 17, true]
+                        ]
+        },
+        {
+            "Id": 247,
+	        "name": "Intersection 47",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 42", 3, true],
+                            ["Intersection 46", 17, true],
+                            ["Intersection 49", 10, true]
+                        ]
+        },
+        {
+            "Id": 248,
+	        "name": "Intersection 48",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 1", 0, true],
+                            ["Intersection 39", 13, true],
+                            ["Intersection 45", 12, true],
+                            ["Intersection 52", 7, true]
+                        ]
+        },
+        {
+            "Id": 249,
+	        "name": "Intersection 49",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 4", 5, true],
+                            ["Intersection 47", 10, true],
+                            ["Intersection 50", 3, true]
+                        ]
+        },
+        {
+            "Id": 250,
+	        "name": "Intersection 50",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Interdisciplinary Life Sciences Building Entrance 2", 5, true],
+                            ["Intersection 43", 22, true],
+                            ["Intersection 49", 3, true],
+                            ["Intersection 51", 54, true],
+                            ["Intersection 55", 14, true]
+                        ]
+        },
+        {
+            "Id": 251,
+	        "name": "Intersection 51",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 36", 20, true],
+                            ["Intersection 50", 54, true]
+                        ]
+        },
+        {
+            "Id": 252,
+	        "name": "Intersection 52",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 2", 0, true],
+                            ["Intersection 48", 7, true],
+                            ["Intersection 54", 17, true]
+                        ]
+        },
+        {
+            "Id": 253,
+	        "name": "Intersection 53",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 44", 20, true],
+                            ["Intersection 54", 11, true]
+                        ]
+        },
+        {
+            "Id": 254,
+	        "name": "Intersection 54",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 52", 17, true],
+                            ["Intersection 53", 11, true],
+                            ["Intersection 56", 4, true]
+                        ]
+        },
+        {
+            "Id": 255,
+	        "name": "Intersection 55",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Interdisciplinary Life Sciences Building Entrance 1", 0, true],
+                            ["Intersection 50", 14, true],
+                            ["Intersection 60", 6, true]
+                        ]
+        },
+        {
+            "Id": 256,
+	        "name": "Intersection 56",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 54", 4, true],
+                            ["Intersection 57", 3, true]
+                        ]
+        },
+        {
+            "Id": 257,
+	        "name": "Intersection 57",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 56", 3, true],
+                            ["Intersection 58", 10, true],
+                            ["Intersection 61", 3, true]
+                        ]
+        },
+        {
+            "Id": 258,
+	        "name": "Intersection 58",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Physics Building Entrance 2", 6, true],
+                            ["Intersection 57", 10, true],
+                            ["Intersection 59", 2, true]
+                        ]
+        },
+        {
+            "Id": 259,
+	        "name": "Intersection 59",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["The Commons Entrance 3", 18, true],
+                            ["Intersection 58", 2, true],
+                            ["Intersection 62", 4, true]
+                        ]
+        },
+        {
+            "Id": 260,
+	        "name": "Intersection 60",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 55", 6, true],
+                            ["Intersection 62", 4, true]
+                        ]
+        },
+        {
+            "Id": 261,
+	        "name": "Intersection 61",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Physics Building Entrance 1", 3, true],
+                            ["Intersection 57", 3, true]
+                        ]
+        },
+        {
+            "Id": 262,
+	        "name": "Intersection 62",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Intersection 59", 4, true],
+                            ["Intersection 60", 4, true]
+                        ]
+        },
+        {
+            "Id": 263,
+	        "name": "Intersection 63",
+	        "type": "intersection",
+	        "coords": [0,0],
+            "neighbors": [
+                            ["Albin O. Kuhn Library & Gallery Entrance 2", 0, true],
+                            ["Intersection 17", 11, true],
+                            ["Intersection 19", 17, true]
+                        ]
+        }     
+    ]
+}
