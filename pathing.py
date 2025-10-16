@@ -2,7 +2,7 @@ import json
 
 
 #init_nodes(dictionary of nodes from JSON file)
-def init_nodes(data):#Creates the nodes, adds them to the list of nodes
+def init_nodes(data):#Changes node neighbors[0] from str to corresponding node dictionary
     for i in data["node"]:
         for j in i["neighbors"]:
             for k in data["node"]:
@@ -12,10 +12,9 @@ def init_nodes(data):#Creates the nodes, adds them to the list of nodes
         for j in i["neighbors"]:
             if type(j[0]) == str:
                 print("JSON naming error at", i["name"], "neighbors", ">", j[0], "<")
-    # print(data["node"][0])
 
 
-#find_path(list of nodes, start node name (string), destination node name (string))
+#find_path(Dictionary of node dictionaries, start node name (string), destination node name (string))
 #Returns a list of the nodes on the path from start to finish
 #Returns an empty list if no path is found
 def find_path(data, start, finish):#Finds the shortest path, returns a list of the nodes on the path
@@ -50,7 +49,7 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
             return final_path
 
         for j in i["neighbors"]:
-            if j[0]["distance"] > j[1] + i["distance"]:
+            if j[0]["distance"] > j[1] + i["distance"] and j[2]:#Checks if path is shorter and open
                 j[0]["distance"] = j[1] + i["distance"]
                 j[0]["previous"] = i["name"]
 
@@ -67,8 +66,6 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
 with open("nodes.json", "r") as f:
     data = json.load(f)
 
-# print(data["node"][0]["Id"])
-# print(len(data["node"]))
 
 
 init_nodes(data)
