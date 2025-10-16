@@ -151,7 +151,7 @@
             "neighbors": [
                             ["Information Technology/Engineering Building Entrance 1", 20, true], 
                             ["Information Technology/Engineering Building Entrance 3", 20, true], 
-                            ["Engineering Building 3", 2, true]
+                            ["Engineering Building Entrance 3", 2, true]
                         ]
         },
         {
@@ -314,7 +314,7 @@
 	        "type": "entrance",
 	        "coords": [0,0],
             "neighbors": [
-                            []
+                            ["Sherman Hall Entrance 3", 100, false]
                         ]
         },
         {
@@ -323,7 +323,7 @@
 	        "type": "entrance",
 	        "coords": [0,0],
             "neighbors": [
-                            []
+                            ["Sherman Hall Entrance 4", 100, false]
                         ]
         },
 
