@@ -49,34 +49,55 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
             return final_path
 
         for j in i["neighbors"]:
-            if j[0]["distance"] > j[1] + i["distance"] and j[2]:#Checks if path is shorter and open
-                j[0]["distance"] = j[1] + i["distance"]
-                j[0]["previous"] = i["name"]
+            if type(j[0]) != str:#Prevents error when a neighbor's name is not the name of an existing node
+                if j[0]["distance"] > j[1] + i["distance"] and j[2]:#Checks if path is shorter and open
+                    j[0]["distance"] = j[1] + i["distance"]
+                    j[0]["previous"] = i["name"]
 
         searched.append(i)
         queue.sort(key=lambda dict:dict["distance"])
 
     return final_path
 
+#get_edge_ids(Dictionary of edges, list of node dictionaries that are on the path)
+#Returns a list of the edge ids on the path
+def get_edge_ids(edges, path):
+    ids = []
+    for i in path:
+        for j in edges["edge"]:
+            if (i["name"] == j["node 1"] or i["name"] == j["node 2"]) and (i["previous"] == j["node 1"] or i["previous"] == j["node 2"]):
+                ids.append(j["id"])
 
+    return ids
+
+#Returns a list of size 2
+#path[0] contains the names of the nodes on the path
+#path[1] contains the ids of the edges on the path
+def get_path(start, finish):
+    with open("nodes.json", "r") as f:
+        node_list = json.load(f)
+    with open("edges.json", "r") as f:
+        edge_list = json.load(f)
+
+    init_nodes(node_list)
+    path_nodes = find_path(node_list, start, finish)
+    path_edges = get_edge_ids(edge_list, path_nodes)
+
+    path = [[], []]
+    for i in path_nodes:
+        path[0].append(i["name"])
+    for i in path_edges:
+        path[1].append(i)
+    
+    return path
 
 
 #testing
 
-with open("nodes.json", "r") as f:
-    data = json.load(f)
-
-
-
-init_nodes(data)
-
-start = "Performing Arts & Humanities Building Entrance 1"
-finish = "Interdisciplinary Life Sciences Building Entrance 2"
-path = find_path(data, start, finish)
-
-print()
-print(start, "->", finish)
-if not path:
-    print("No path")
-for i in path:
-    print(i["name"], i["distance"], end=", ")
+# final_path = get_path("Performing Arts & Humanities Building Entrance 1", "Interdisciplinary Life Sciences Building Entrance 2")
+# print("\n")
+# for i in final_path[0]:
+#     print(i, end=", ")
+# print("\n")
+# for i in final_path[1]:
+#     print(i, end=", ")

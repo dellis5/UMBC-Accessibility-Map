@@ -1,0 +1,579 @@
+{
+    "edge":[
+        {
+            "id": 1,
+            "node 1": "Intersection 1",
+            "node 2": "Performing Arts & Humanities Building Entrance 1"
+        },
+        {
+            "id": 2,
+            "node 1": "Intersection 1",
+            "node 2": "Intersection 2"
+        },
+        {
+            "id": 3,
+            "node 1": "Intersection 2",
+            "node 2": "Intersection 3"
+        },
+        {
+            "id": 4,
+            "node 1": "Intersection 2",
+            "node 2": "Intersection 4"
+        },
+        {
+            "id": 5,
+            "node 1": "Intersection 3",
+            "node 2": "Intersection Performing Arts & Humanities Building Entrance 2"
+        },
+        {
+            "id": 6,
+            "node 1": "Intersection 3",
+            "node 2": "Intersection 5"
+        },
+        {
+            "id": 7,
+            "node 1": "Intersection 4",
+            "node 2": "Intersection 5"
+        },
+        {
+            "id": 8,
+            "node 1": "Intersection 4",
+            "node 2": "Intersection 10"
+        },
+        {
+            "id": 9,
+            "node 1": "Intersection 4",
+            "node 2": "Intersection 12"
+        },
+        {
+            "id": 10,
+            "node 1": "Intersection 5",
+            "node 2": "Intersection 6"
+        },
+        {
+            "id": 11,
+            "node 1": "Intersection 6",
+            "node 2": "Performing Arts & Humanities Building Entrance 3"
+        },
+        {
+            "id": 12,
+            "node 1": "Intersection 6",
+            "node 2": "Intersection 7"
+        },
+        {
+            "id": 13,
+            "node 1": "Intersection 7",
+            "node 2": "Intersection 8"
+        },
+        {
+            "id": 14,
+            "node 1": "Intersection 7",
+            "node 2": "Intersection 14"
+        },
+        {
+            "id": 15,
+            "node 1": "Intersection 7",
+            "node 2": "Intersection 8"
+        },
+        {
+            "id": 16,
+            "node 1": "Intersection 9",
+            "node 2": "Fine Arts Building Entrance 1"
+        },
+        {
+            "id": 17,
+            "node 1": "Intersection 9",
+            "node 2": "Intersection 10"
+        },
+        {
+            "id": 18,
+            "node 1": "Intersection 10",
+            "node 2": "Intersection 11"
+        },
+        {
+            "id": 19,
+            "node 1": "Intersection 11",
+            "node 2": "Fine Arts Building Entrance 4"
+        },
+        {
+            "id": 20,
+            "node 1": "Intersection 11",
+            "node 2": "Intersection 13"
+        },
+        {
+            "id": 21,
+            "node 1": "Intersection 12",
+            "node 2": "Intersection 13"
+        },
+        {
+            "id": 22,
+            "node 1": "Intersection 12",
+            "node 2": "Intersection 14"
+        },
+        {
+            "id": 23,
+            "node 1": "Intersection 14",
+            "node 2": "Information Technology/Engineering Building Entrance 1"
+        },
+        {
+            "id": 24,
+            "node 1": "Intersection 15",
+            "node 2": "Meyerhoff Building Entrance 5"
+        },
+        {
+            "id": 25,
+            "node 1": "Intersection 15",
+            "node 2": "Meyerhoff Building Entrance 6"
+        },
+        {
+            "id": 26,
+            "node 1": "Intersection 15",
+            "node 2": "Fine Arts Building Entrance 2"
+        },
+        {
+            "id": 27,
+            "node 1": "Intersection 15",
+            "node 2": "Intersection 16"
+        },
+        {
+            "id": 28,
+            "node 1": "Intersection 16",
+            "node 2": "University Center Entrance 4"
+        },
+        {
+            "id": 29,
+            "node 1": "Intersection 16",
+            "node 2": "Engineering Building Entrance 2"
+        },
+        {
+            "id": 30,
+            "node 1": "Intersection 16",
+            "node 2": "Information Technology/Engineering Building Entrance 3"
+        },
+        {
+            "id": 31,
+            "node 1": "Intersection 17",
+            "node 2": "Albin O. Kuhn Library & Gallery Entrance 3"
+        },
+        {
+            "id": 32,
+            "node 1": "Intersection 17",
+            "node 2": "Intersection 63"
+        },
+        {
+            "id": 33,
+            "node 1": "Intersection 17",
+            "node 2": "Intersection 18"
+        },
+        {
+            "id": 34,
+            "node 1": "Intersection 18",
+            "node 2": "Intersection 20"
+        },
+        {
+            "id": 35,
+            "node 1": "Intersection 19",
+            "node 2": "Intersection 63"
+        },
+        {
+            "id": 36,
+            "node 1": "Intersection 19",
+            "node 2": "Intersection 20"
+        },
+        {
+            "id": 37,
+            "node 1": "Intersection 19",
+            "node 2": "Intersection 39"
+        },
+        {
+            "id": 38,
+            "node 1": "Intersection 20",
+            "node 2": "Intersection 21"
+        },
+        {
+            "id": 39,
+            "node 1": "Intersection 20",
+            "node 2": "Intersection 40"
+        },
+        {
+            "id": 40,
+            "node 1": "Intersection 21",
+            "node 2": "Meyerhoff Building Entrance 1"
+        },
+        {
+            "id": 41,
+            "node 1": "Intersection 21",
+            "node 2": "Intersection 22"
+        },
+        {
+            "id": 42,
+            "node 1": "Intersection 22",
+            "node 2": "Intersection 23"
+        },
+        {
+            "id": 43,
+            "node 1": "Intersection 23",
+            "node 2": "Meyerhoff Building Entrance 3"
+        },
+        {
+            "id": 44,
+            "node 1": "Intersection 23",
+            "node 2": "Intersection 24"
+        },
+        {
+            "id": 45,
+            "node 1": "Intersection 24",
+            "node 2": "Biological Sciences Building Entrance 2"
+        },
+        {
+            "id": 46,
+            "node 1": "Intersection 24",
+            "node 2": "Intersection 25"
+        },
+        {
+            "id": 47,
+            "node 1": "Intersection 25",
+            "node 2": "Math & Psychology Building Entrance 3"
+        },
+        {
+            "id": 48,
+            "node 1": "Intersection 25",
+            "node 2": "Intersection 26"
+        },
+        {
+            "id": 49,
+            "node 1": "Intersection 26",
+            "node 2": "Intersection 27"
+        },
+        {
+            "id": 50,
+            "node 1": "Intersection 26",
+            "node 2": "Intersection 29"
+        },
+        {
+            "id": 51,
+            "node 1": "Intersection 27",
+            "node 2": "Intersection 28"
+        },
+        {
+            "id": 52,
+            "node 1": "Intersection 28",
+            "node 2": "Intersection 29"
+        },
+        {
+            "id": 53,
+            "node 1": "Intersection 29",
+            "node 2": "Math & Psychology Building Entrance 2"
+        },
+        {
+            "id": 54,
+            "node 1": "Intersection 29",
+            "node 2": "Intersection 30"
+        },
+        {
+            "id": 55,
+            "node 1": "Intersection 30",
+            "node 2": "Sherman Hall Entrance 1"
+        },
+        {
+            "id": 56,
+            "node 1": "Intersection 30",
+            "node 2": "Sondheim Hall Entrance 2"
+        },
+        {
+            "id": 57,
+            "node 1": "Intersection 30",
+            "node 2": "Intersection 31"
+        },
+        {
+            "id": 58,
+            "node 1": "Intersection 31",
+            "node 2": "Sherman Hall Entrance 2"
+        },
+        {
+            "id": 59,
+            "node 1": "Intersection 31",
+            "node 2": "Sondheim Hall Entrance 1"
+        },
+        {
+            "id": 60,
+            "node 1": "Intersection 31",
+            "node 2": "Intersection 32"
+        },
+        {
+            "id": 61,
+            "node 1": "Intersection 32",
+            "node 2": "Administration Building Entrance 1"
+        },
+        {
+            "id": 62,
+            "node 1": "Intersection 32",
+            "node 2": "Retriever Activities Center Entrance 1"
+        },
+        {
+            "id": 63,
+            "node 1": "Intersection 32",
+            "node 2": "Intersection 33"
+        },
+        {
+            "id": 64,
+            "node 1": "Intersection 33",
+            "node 2": "Intersection 32"
+        },
+        {
+            "id": 65,
+            "node 1": "Intersection 33",
+            "node 2": "Intersection 34"
+        },
+        {
+            "id": 66,
+            "node 1": "Intersection 33",
+            "node 2": "Intersection 35"
+        },
+        {
+            "id": 67,
+            "node 1": "Intersection 34",
+            "node 2": "Intersection 36"
+        },
+        {
+            "id": 68,
+            "node 1": "Intersection 35",
+            "node 2": "Administration Building Entrance 2"
+        },
+        {
+            "id": 69,
+            "node 1": "Intersection 36",
+            "node 2": "Intersection 51"
+        },
+        {
+            "id": 70,
+            "node 1": "Intersection 37",
+            "node 2": "Albin O. Kuhn Library & Gallery Entrance 1"
+        },
+        {
+            "id": 71,
+            "node 1": "Intersection 37",
+            "node 2": "Intersection 38"
+        },
+        {
+            "id": 72,
+            "node 1": "Intersection 38",
+            "node 2": "Intersection 44"
+        },
+        {
+            "id": 73,
+            "node 1": "Intersection 38",
+            "node 2": "Intersection 44"
+        },
+        {
+            "id": 74,
+            "node 1": "Intersection 38",
+            "node 2": "Intersection 45"
+        },
+        {
+            "id": 75,
+            "node 1": "Intersection 39",
+            "node 2": "Intersection 41"
+        },
+        {
+            "id": 76,
+            "node 1": "Intersection 39",
+            "node 2": "Intersection 48"
+        },
+        {
+            "id": 77,
+            "node 1": "Intersection 40",
+            "node 2": "Biological Sciences Building Entrance 3"
+        },
+        {
+            "id": 78,
+            "node 1": "Intersection 40",
+            "node 2": "Biological Sciences Building Entrance 4"
+        },
+        {
+            "id": 79,
+            "node 1": "Intersection 40",
+            "node 2": "Intersection 41"
+        },
+        {
+            "id": 80,
+            "node 1": "Intersection 41",
+            "node 2": "Biological Sciences Building Entrance 1"
+        },
+        {
+            "id": 81,
+            "node 1": "Intersection 41",
+            "node 2": "Intersection 46"
+        },
+        {
+            "id": 82,
+            "node 1": "Intersection 42",
+            "node 2": "Lecture Hall Entrance 1"
+        },
+        {
+            "id": 83,
+            "node 1": "Intersection 42",
+            "node 2": "Intersection 43"
+        },
+        {
+            "id": 84,
+            "node 1": "Intersection 42",
+            "node 2": "Intersection 47"
+        },
+        {
+            "id": 85,
+            "node 1": "Intersection 43",
+            "node 2": "Math & Psychology Building Entrance 1"
+        },
+        {
+            "id": 86,
+            "node 1": "Intersection 43",
+            "node 2": "Intersection 50"
+        },
+        {
+            "id": 87,
+            "node 1": "Intersection 44",
+            "node 2": "Intersection 45"
+        },
+        {
+            "id": 88,
+            "node 1": "Intersection 44",
+            "node 2": "Intersection 53"
+        },
+        {
+            "id": 89,
+            "node 1": "Intersection 46",
+            "node 2": "The Commons Entrance 5"
+        },
+        {
+            "id": 90,
+            "node 1": "Intersection 46",
+            "node 2": "The Commons Entrance 6"
+        },
+        {
+            "id": 91,
+            "node 1": "Intersection 46",
+            "node 2": "Intersection 47"
+        },
+        {
+            "id": 92,
+            "node 1": "Intersection 47",
+            "node 2": "Intersection 49"
+        },
+        {
+            "id": 93,
+            "node 1": "Intersection 48",
+            "node 2": "The Commons Entrance 1"
+        },
+        {
+            "id": 94,
+            "node 1": "Intersection 48",
+            "node 2": "Intersection 52"
+        },
+        {
+            "id": 95,
+            "node 1": "Intersection 49",
+            "node 2": "The Commons Entrance 4"
+        },
+        {
+            "id": 96,
+            "node 1": "Intersection 49",
+            "node 2": "Intersection 50"
+        },
+        {
+            "id": 97,
+            "node 1": "Intersection 50",
+            "node 2": "Interdisciplinary Life Sciences Building Entrance 2"
+        },
+        {
+            "id": 98,
+            "node 1": "Intersection 50",
+            "node 2": "Intersection 51"
+        },
+        {
+            "id": 99,
+            "node 1": "Intersection 50",
+            "node 2": "Intersection 55"
+        },
+        {
+            "id": 100,
+            "node 1": "Intersection 52",
+            "node 2": "The Commons Entrance 2"
+        },
+        {
+            "id": 101,
+            "node 1": "Intersection 52",
+            "node 2": "Intersection 54"
+        },
+        {
+            "id": 102,
+            "node 1": "Intersection 53",
+            "node 2": "Intersection 54"
+        },
+        {
+            "id": 103,
+            "node 1": "Intersection 54",
+            "node 2": "Intersection 56"
+        },
+        {
+            "id": 104,
+            "node 1": "Intersection 55",
+            "node 2": "Interdisciplinary Life Sciences Building Entrance 1"
+        },
+        {
+            "id": 105,
+            "node 1": "Intersection 55",
+            "node 2": "Intersection 60"
+        },
+        {
+            "id": 106,
+            "node 1": "Intersection 56",
+            "node 2": "Intersection 57"
+        },
+        {
+            "id": 107,
+            "node 1": "Intersection 57",
+            "node 2": "Intersection 58"
+        },
+        {
+            "id": 108,
+            "node 1": "Intersection 57",
+            "node 2": "Intersection 61"
+        },
+        {
+            "id": 109,
+            "node 1": "Intersection 58",
+            "node 2": "Physics Building Entrance 2"
+        },
+        {
+            "id": 110,
+            "node 1": "Intersection 58",
+            "node 2": "Intersection 59"
+        },
+        {
+            "id": 111,
+            "node 1": "Intersection 59",
+            "node 2": "The Commons Entrance 3"
+        },
+        {
+            "id": 112,
+            "node 1": "Intersection 59",
+            "node 2": "Intersection 62"
+        },
+        {
+            "id": 113,
+            "node 1": "Intersection 60",
+            "node 2": "Intersection 62"
+        },
+        {
+            "id": 114,
+            "node 1": "Intersection 61",
+            "node 2": "Physics Building Entrance 1"
+        },
+        {
+            "id": 115,
+            "node 1": "Intersection 63",
+            "node 2": "Albin O. Kuhn Library & Gallery Entrance 2"
+        }
+    ]
+}
