@@ -1,119 +1,263 @@
 /* --- Global Styles & Variables --- */
 :root {
-    --umbc-gold: #FFC20E;
-    --umbc-black: #000000;
-    --light-gray: #f8f9fa;
-    --medium-gray: #e9ecef;
-    --dark-gray: #6c757d;
-    --primary-blue: #007bff;
-  }
-  
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #f4f4f4;
-  }
-  
-  /* --- Main App Layout --- */
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .app-header {
-    background-color: var(--umbc-black);
-    color: var(--umbc-gold);
-    padding: 1rem 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .app-header h1 {
-    margin: 0;
-    font-size: 1.75rem;
-  }
-  
-  /* --- Controls & Search Bar --- */
-  .controls-container {
-    background-color: var(--light-gray);
-    padding: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid var(--medium-gray);
-  }
-  
-  .search-wrapper {
-    position: relative;
-    width: 300px;
-  }
-  
-  .search-input {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid var(--medium-gray);
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-  }
-  
-  .results-container {
-    position: absolute;
-    width: 100%;
-    background-color: white;
-    border: 1px solid var(--medium-gray);
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-    text-align: left;
-  }
-  
-  .result-item {
-    padding: 0.75rem;
-    cursor: pointer;
-  }
-  
-  .result-item:hover {
-    background-color: var(--light-gray);
-  }
-  
-  .find-route-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid var(--umbc-black);
-    background-color: var(--umbc-gold);
-    color: var(--umbc-black);
-    transition: background-color 0.2s, transform 0.2s;
-  }
-  
-  .find-route-button:hover {
-    background-color: #eab308; /* Darker Gold */
-    transform: translateY(-2px);
-  }
-  
-  /* --- Map Container --- */
-  .map-wrapper {
-    flex-grow: 1;
-    margin: 1.5rem;
-    border: 1px solid var(--medium-gray);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden; /* Ensures map corners are rounded */
-  }
-  
-  .leaflet-container {
-    height: 100%;
-    width: 100%;
-  }
+  --umbc-gold: #FFC20E;
+  --umbc-black: #000000;
+  --light-gray: #f8f9fa;
+  --medium-gray: #dee2e6;
+  --dark-gray: #6c757d;
+  --primary-blue: #007bff;
+  --danger-red: #dc3545;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* --- Login View --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--umbc-black);
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.login-box h1 {
+  color: var(--umbc-black);
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--umbc-gold);
+  color: var(--umbc-black);
+}
+
+/* --- Main App Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  background-color: var(--umbc-black);
+  color: var(--umbc-gold);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.user-info {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.map-and-controls-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Controls & Search Bar --- */
+.controls-container {
+  background-color: var(--light-gray);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.search-wrapper {
+  position: relative;
+  width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+}
+
+.results-container {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--medium-gray);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  text-align: left;
+}
+
+.result-item {
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  background-color: var(--light-gray);
+}
+
+.find-route-button, .save-route-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid var(--umbc-black);
+  background-color: var(--umbc-gold);
+  color: var(--umbc-black);
+  transition: background-color 0.2s;
+}
+
+.find-route-button:disabled {
+  background-color: var(--medium-gray);
+  cursor: not-allowed;
+}
+
+.save-route-button {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* --- Map Container --- */
+.map-wrapper {
+  flex-grow: 1;
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Favorites Section --- */
+.favorites-section {
+  width: 350px;
+  border-left: 1px solid var(--medium-gray);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+}
+
+.favorites-section h2 {
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid var(--medium-gray);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.favorites-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.favorite-item:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.favorite-info {
+  padding: 0.75rem;
+  cursor: pointer;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.favorite-nickname {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.favorite-details {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+
+.delete-favorite-button {
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-favorite-button:hover {
+  color: var(--danger-red);
+}
+
+.no-favorites-message {
+  padding: 1rem;
+  color: var(--dark-gray);
+}
