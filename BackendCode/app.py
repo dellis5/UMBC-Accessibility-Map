@@ -23,13 +23,14 @@ with app.app_context():
     db.create_all()
 
 # --- API Endpoint to get all location names for the search bars ---
+# --- API Endpoint to get all location names for the search bars ---
 @app.route('/api/locations', methods=['GET'])
 def get_locations():
     try:
         with open("nodes.json", "r") as f:
             node_data = json.load(f)
-        # Create a list of location objects for the frontend
-        locations = [{"id": node["id"], "name": node["name"]} for node in node_data["node"]]
+        # This is the NEW, correct line that includes coords:
+        locations = [{"id": node["id"], "name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
         return jsonify(locations)
     except FileNotFoundError:
         return jsonify({"error": "nodes.json not found"}), 404
@@ -61,8 +62,7 @@ def find_accessible_path():
         path_coords = [coord_map[name] for name in path_node_names if name in coord_map]
 
         # 3. Send the coordinates back to the frontend
-        return jsonify({"path": path_coords})
-        
+        return jsonify({"path": path_coords, "names": path_node_names})        
     except Exception as e:
         print(f"An error occurred: {e}")
         return jsonify({"error": "An internal error occurred"}), 500

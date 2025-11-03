@@ -408,20 +408,20 @@
             "id": 36,
 	        "name": "Sondheim Hall Entrance 1",
 	        "type": "entrance",
-	        "coords": [39.25369796457805, -76.71281082018062],
+	        "coords": [39.25325532576136, -76.71298953922188],
             "neighbors": [
                             ["Sondheim Hall Entrance 2", 20, true],
-                            ["Intersection 30", 2, true]
+                            ["Intersection 31", 2, true]
                         ]
         },
         {
             "id": 37,
 	        "name": "Sondheim Hall Entrance 2",
 	        "type": "entrance",
-	        "coords": [39.253256606350206, -76.7129878459801],
+	        "coords": [39.25370068962459, -76.71281586881307],
             "neighbors": [
                             ["Sondheim Hall Entrance 1", 20, true],
-                            ["Intersection 31", 2, true]
+                            ["Intersection 30", 2, true]
                         ]
         },
 

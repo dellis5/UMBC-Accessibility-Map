@@ -3,59 +3,77 @@ import json
 
 #init_nodes(dictionary of nodes from JSON file)
 def init_nodes(data):#Changes node neighbors[0] from str to corresponding node dictionary
-    for i in data["node"]:
-        for j in i["neighbors"]:
-            for k in data["node"]:
-                if k["name"] == j[0]:
-                    j[0] = k
-        
-        for j in i["neighbors"]:
-            if type(j[0]) == str:
-                print("JSON naming error at", i["name"], "neighbors", ">", j[0], "<")
+    for node in data["node"]:
+        for neighbor in node["neighbors"]:
+            for i in data["node"]:
+                if i["name"] == neighbor[0]:
+                    neighbor[0] = i
+
+            if type(neighbor[0]) == str:
+                print("JSON naming error at", node["name"], "neighbors", ">", neighbor[0], "<")
+
+            
 
 
 #find_path(Dictionary of node dictionaries, start node name (string), destination node name (string))
 #Returns a list of the nodes on the path from start to finish
 #Returns an empty list if no path is found
 def find_path(data, start, finish):#Finds the shortest path, returns a list of the nodes on the path
+    
+    finish_coords = []
     for i in data["node"]:#Ensures past searches dont mess up this search
         i["distance"] = 9999
         i["previous"] = ""
+
+        if i["name"] == finish:
+            finish_coords = i["coords"]
     
+    
+    for i in data["node"]:#Gets the distance from each node to the finish node
+        i["gps_distance"] = ((i["coords"][0] - finish_coords[0]) ** 2 + (i["coords"][1] - finish_coords[1]) ** 2) ** .5
+    
+
+
+
+
     queue = []
     final_path = []
     searched = []
     for i in data["node"]:#Ensures the start is at the begining of the queue
         if i["name"] == start:
             i["distance"] = 0
+            i["combined_distance"] = i["gps_distance"]
             queue.append(i)
     for i in data["node"]:
         if i["name"] != start:
+            i["combined_distance"] = i["gps_distance"] + i["distance"]
             queue.append(i)
     
 
-    for i in queue:
-        if i["name"] == finish:
-            searched.append(i)
+    for node in queue:
+        if node["name"] == finish:
+            searched.append(node)
             
             searched.reverse()
-            last = i["previous"]
-            for j in searched:#Traces back the path from the finish to the start
-                if (j["name"] == last) or (j == searched[0]):
-                    final_path.append(j)
-                    last = j["previous"]
+            last = node["previous"]
+            for i in searched:#Traces back the path from the finish to the start
+                if (i["name"] == last) or (i == searched[0]):
+                    final_path.append(i)
+                    last = i["previous"]
 
             final_path.reverse()
             return final_path
 
-        for j in i["neighbors"]:
-            if type(j[0]) != str:#Prevents error when a neighbor's name is not the name of an existing node
-                if j[0]["distance"] > j[1] + i["distance"] and j[2]:#Checks if path is shorter and open
-                    j[0]["distance"] = j[1] + i["distance"]
-                    j[0]["previous"] = i["name"]
+        for neighbor in node["neighbors"]:
+            if type(neighbor[0]) != str:#Prevents error when a neighbor's name is not the name of an existing node
+                if neighbor[0]["distance"] > neighbor[1] + node["distance"] and neighbor[2]:#Checks if path is shorter and open
+                    neighbor[0]["distance"] = neighbor[1] + node["distance"]
+                    neighbor[0]["combined_distance"] = neighbor[0]["distance"] + neighbor[0]["gps_distance"]
+                    neighbor[0]["previous"] = node["name"]
 
-        searched.append(i)
-        queue.sort(key=lambda dict:dict["distance"])
+
+        searched.append(node)
+        queue.sort(key=lambda dict:dict["combined_distance"])
 
     return final_path
 
@@ -92,7 +110,7 @@ def get_path(start, finish):
     return path
 
 
-#testing
+#testing and sample usage
 
 # final_path = get_path("Performing Arts & Humanities Building Entrance 1", "Interdisciplinary Life Sciences Building Entrance 2")
 # print("\n")

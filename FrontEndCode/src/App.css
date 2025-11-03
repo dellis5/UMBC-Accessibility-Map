@@ -7,6 +7,7 @@
   --dark-gray: #6c757d;
   --primary-blue: #007bff;
   --danger-red: #dc3545;
+  --success-green: #28a745;
 }
 
 body {
@@ -15,6 +16,343 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-color: #f4f4f4;
+}
+
+/* --- NEW: Notification Bar --- *//* --- Global Styles & Variables --- */
+:root {
+  --umbc-gold: #FFC20E;
+  --umbc-black: #000000;
+  --light-gray: #f8f9fa;
+  --medium-gray: #dee2e6;
+  --dark-gray: #6c757d;
+  --primary-blue: #007bff;
+  --danger-red: #dc3545;
+  --success-green: #28a745;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* --- Notification Bar --- */
+.notification-bar {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.notification-bar.success { background-color: var(--success-green); }
+.notification-bar.error { background-color: var(--danger-red); }
+.notification-dismiss {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- NEW: Login Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; /* On top of everything */
+}
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--umbc-gold);
+  color: var(--umbc-black);
+}
+
+/* --- Main App Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app-header {
+  background-color: var(--umbc-black);
+  color: var(--umbc-gold);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001; /* Above map, below modal */
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.user-info {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* --- NEW: Header Button --- */
+.header-button {
+  background: var(--umbc-gold);
+  color: var(--umbc-black);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.map-and-controls-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Controls & Search Bar --- */
+.controls-container {
+  background-color: var(--light-gray);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+.search-wrapper {
+  position: relative;
+  width: 250px;
+}
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+}
+.results-container {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--medium-gray);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  text-align: left;
+}
+.result-item { padding: 0.75rem; cursor: pointer; }
+.result-item:hover { background-color: var(--light-gray); }
+
+.find-route-button, .save-route-button, .clear-route-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid var(--umbc-black);
+  background-color: var(--umbc-gold);
+  color: var(--umbc-black);
+  transition: background-color 0.2s;
+}
+.find-route-button:disabled {
+  background-color: var(--medium-gray);
+  cursor: not-allowed;
+}
+.save-route-button {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+.clear-route-button {
+    background-color: var(--danger-red);
+    color: white;
+    border-color: var(--danger-red);
+}
+
+/* --- Map Container --- */
+.map-wrapper {
+  flex-grow: 1;
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.leaflet-container { height: 100%; width: 100%; }
+
+/* --- Favorites Section --- */
+.favorites-section {
+  width: 350px;
+  border-left: 1px solid var(--medium-gray);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+}
+.favorites-section h2 {
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid var(--medium-gray);
+  font-size: 1.2rem;
+  text-align: center;
+}
+.favorites-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+.favorite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+.favorite-item:hover { box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.favorite-info {
+  padding: 0.75rem;
+  cursor: pointer;
+  text-align: left;
+  flex-grow: 1;
+}
+.favorite-nickname {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.favorite-details {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+.delete-favorite-button {
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.delete-favorite-button:hover { color: var(--danger-red); }
+.no-favorites-message {
+  padding: 1rem;
+  color: var(--dark-gray);
+}
+/* --- NEW: Guest message for favorites --- */
+.favorites-guest-message {
+  padding: 20px;
+  text-align: center;
+  color: var(--dark-gray);
+}
+/* --- NEW: Guest mode favorites panel --- */
+.favorites-section-guest {
+  justify-content: center;
+}
+
+/* --- NEW: Text Directions Debugger --- */
+.text-directions-container {
+  padding: 0 1rem 1rem 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+.text-directions-container h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.text-directions-list {
+  background: white;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 2.5rem; /* Indent list numbers */
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+.text-directions-list li {
+  padding: 4px 0;
+}
+.notification-bar {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000; /* High z-index to show on top of everything */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.notification-bar.success {
+  background-color: var(--success-green);
+}
+.notification-bar.error {
+  background-color: var(--danger-red);
+}
+.notification-dismiss {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* --- Login View --- */
@@ -149,7 +487,8 @@ body {
   background-color: var(--light-gray);
 }
 
-.find-route-button, .save-route-button {
+/* --- UPDATED: Button Group --- */
+.find-route-button, .save-route-button, .clear-route-button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -170,6 +509,13 @@ body {
     background-color: var(--primary-blue);
     color: white;
     border-color: var(--primary-blue);
+}
+
+/* --- NEW: Clear Button Style --- */
+.clear-route-button {
+    background-color: var(--danger-red);
+    color: white;
+    border-color: var(--danger-red);
 }
 
 /* --- Map Container --- */
@@ -260,4 +606,310 @@ body {
 .no-favorites-message {
   padding: 1rem;
   color: var(--dark-gray);
+}/* --- Global Styles & Variables --- */
+:root {
+  --umbc-gold: #FFC20E;
+  --umbc-black: #000000;
+  --light-gray: #f8f9fa;
+  --medium-gray: #dee2e6;
+  --dark-gray: #6c757d;
+  --primary-blue: #007bff;
+  --danger-red: #dc3545;
+  --success-green: #28a745;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* --- Notification Bar --- */
+.notification-bar {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.notification-bar.success { background-color: var(--success-green); }
+.notification-bar.error { background-color: var(--danger-red); }
+.notification-dismiss {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- NEW: Login Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; /* On top of everything */
+}
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--umbc-gold);
+  color: var(--umbc-black);
+}
+
+/* --- Main App Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app-header {
+  background-color: var(--umbc-black);
+  color: var(--umbc-gold);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001; /* Above map, below modal */
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.user-info {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* --- NEW: Header Button --- */
+.header-button {
+  background: var(--umbc-gold);
+  color: var(--umbc-black);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.map-and-controls-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Controls & Search Bar --- */
+.controls-container {
+  background-color: var(--light-gray);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+.search-wrapper {
+  position: relative;
+  width: 250px;
+}
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+}
+.results-container {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--medium-gray);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  text-align: left;
+}
+.result-item { padding: 0.75rem; cursor: pointer; }
+.result-item:hover { background-color: var(--light-gray); }
+
+.find-route-button, .save-route-button, .clear-route-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid var(--umbc-black);
+  background-color: var(--umbc-gold);
+  color: var(--umbc-black);
+  transition: background-color 0.2s;
+}
+.find-route-button:disabled {
+  background-color: var(--medium-gray);
+  cursor: not-allowed;
+}
+.save-route-button {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+.clear-route-button {
+    background-color: var(--danger-red);
+    color: white;
+    border-color: var(--danger-red);
+}
+
+/* --- Map Container --- */
+.map-wrapper {
+  flex-grow: 1;
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.leaflet-container { height: 100%; width: 100%; }
+
+/* --- Favorites Section --- */
+.favorites-section {
+  width: 350px;
+  border-left: 1px solid var(--medium-gray);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+}
+.favorites-section h2 {
+  padding: 1rem;
+  margin: 0;
+  border-bottom: 1px solid var(--medium-gray);
+  font-size: 1.2rem;
+  text-align: center;
+}
+.favorites-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+.favorite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+.favorite-item:hover { box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.favorite-info {
+  padding: 0.75rem;
+  cursor: pointer;
+  text-align: left;
+  flex-grow: 1;
+}
+.favorite-nickname {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.favorite-details {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+.delete-favorite-button {
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.delete-favorite-button:hover { color: var(--danger-red); }
+.no-favorites-message {
+  padding: 1rem;
+  color: var(--dark-gray);
+}
+/* --- NEW: Guest message for favorites --- */
+.favorites-guest-message {
+  padding: 20px;
+  text-align: center;
+  color: var(--dark-gray);
+}
+/* --- NEW: Guest mode favorites panel --- */
+.favorites-section-guest {
+  justify-content: center;
+}
+
+/* --- NEW: Text Directions Debugger --- */
+.text-directions-container {
+  padding: 0 1rem 1rem 1rem;
+  border-bottom: 1px solid var(--medium-gray);
+}
+.text-directions-container h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.text-directions-list {
+  background: white;
+  border: 1px solid var(--medium-gray);
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 2.5rem; /* Indent list numbers */
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+.text-directions-list li {
+  padding: 4px 0;
 }
