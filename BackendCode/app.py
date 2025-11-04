@@ -23,7 +23,6 @@ with app.app_context():
     db.create_all()
 
 # --- API Endpoint to get all location names for the search bars ---
-# --- API Endpoint to get all location names for the search bars ---
 @app.route('/api/locations', methods=['GET'])
 def get_locations():
     try:
@@ -68,31 +67,63 @@ def find_accessible_path():
         return jsonify({"error": "An internal error occurred"}), 500
 
 
-# ===== NEW USER & FAVORITES ENDPOINTS =====
+# ===== USER & FAVORITES ENDPOINTS =====
 
-# --- Create a new user ---
+# --- Create a new user (with password) ---
 @app.route('/api/users', methods=['POST'])
 def create_user():
     data = request.json
     
-    if not data.get('email') or not data.get('name'):
-        return jsonify({"error": "email and name are required"}), 400
+    # Validate required fields
+    required_fields = ['username', 'email', 'name', 'password']
+    if not all(field in data for field in required_fields):
+        return jsonify({"error": "username, email, name, and password are required"}), 400
     
-    # Check if user already exists
-    existing_user = User.query.filter_by(email=data['email']).first()
+    # Check if username already exists
+    existing_user = User.query.filter_by(username=data['username']).first()
     if existing_user:
-        return jsonify({"error": "User with this email already exists"}), 409
+        return jsonify({"error": "Username already exists"}), 409
     
-    new_user = User(email=data['email'], name=data['name'])
+    # Check if email already exists
+    existing_email = User.query.filter_by(email=data['email']).first()
+    if existing_email:
+        return jsonify({"error": "Email already exists"}), 409
+    
+    # Create new user
+    new_user = User(
+        username=data['username'],
+        email=data['email'],
+        name=data['name']
+    )
+    new_user.set_password(data['password'])  # Hash the password
+    
     db.session.add(new_user)
     db.session.commit()
     
     return jsonify(new_user.to_dict()), 201
 
-# --- Get user by email ---
-@app.route('/api/users/<email>', methods=['GET'])
-def get_user(email):
-    user = User.query.filter_by(email=email).first()
+# --- Login endpoint ---
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.json
+    
+    if not data.get('username') or not data.get('password'):
+        return jsonify({"error": "username and password are required"}), 400
+    
+    user = User.query.filter_by(username=data['username']).first()
+    
+    if not user or not user.check_password(data['password']):
+        return jsonify({"error": "Invalid username or password"}), 401
+    
+    return jsonify({
+        "message": "Login successful",
+        "user": user.to_dict()
+    }), 200
+
+# --- Get user by username ---
+@app.route('/api/users/<username>', methods=['GET'])
+def get_user(username):
+    user = User.query.filter_by(username=username).first()
     if not user:
         return jsonify({"error": "User not found"}), 404
     return jsonify(user.to_dict())
@@ -102,17 +133,17 @@ def get_user(email):
 def save_favorite():
     data = request.json
     
-    required_fields = ['user_id', 'start_location', 'end_location', 'path_coordinates']
+    required_fields = ['username', 'start_location', 'end_location', 'path_coordinates']
     if not all(field in data for field in required_fields):
         return jsonify({"error": "Missing required fields"}), 400
     
     # Verify user exists
-    user = User.query.get(data['user_id'])
+    user = User.query.filter_by(username=data['username']).first()
     if not user:
         return jsonify({"error": "User not found"}), 404
     
     favorite = FavoriteRoute(
-        user_id=data['user_id'],
+        username=data['username'],
         nickname=data.get('nickname', ''),
         start_location=data['start_location'],
         end_location=data['end_location'],
@@ -125,13 +156,13 @@ def save_favorite():
     return jsonify(favorite.to_dict()), 201
 
 # --- Get all favorites for a user ---
-@app.route('/api/users/<int:user_id>/favorites', methods=['GET'])
-def get_user_favorites(user_id):
-    user = User.query.get(user_id)
+@app.route('/api/users/<username>/favorites', methods=['GET'])
+def get_user_favorites(username):
+    user = User.query.filter_by(username=username).first()
     if not user:
         return jsonify({"error": "User not found"}), 404
     
-    favorites = FavoriteRoute.query.filter_by(user_id=user_id).all()
+    favorites = FavoriteRoute.query.filter_by(username=username).all()
     return jsonify([fav.to_dict() for fav in favorites])
 
 # --- Delete a favorite route ---
