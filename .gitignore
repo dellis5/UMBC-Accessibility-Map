@@ -1,0 +1,33 @@
+# IDE and editor folders
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# --- Python/Backend Specific ---
+# Python virtual environment
+BackendCode/venv/
+__pycache__/
+*.pyc
+
+# Environment variables - IMPORTANT
+.env
+.env.*
+!.env.example
+
+# --- JavaScript/Frontend Specific ---
+# Node dependencies folder inside FrontEndCode
+/FrontEndCode/node_modules/
+
+# Production build folder
+/FrontEndCode/build/
+
+# More log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
