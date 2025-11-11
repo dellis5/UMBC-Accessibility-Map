@@ -79,17 +79,6 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
 
     return final_path
 
-#get_edge_ids(Dictionary of edges, list of node dictionaries that are on the path)
-#Returns a list of the edge ids on the path
-def get_edge_ids(edges, path):
-    ids = []
-    for i in path:
-        for j in edges["edge"]:
-            if (i["name"] == j["node 1"] or i["name"] == j["node 2"]) and (i["previous"] == j["node 1"] or i["previous"] == j["node 2"]):
-                ids.append(j["id"])
-
-    return ids
-
 #Returns a list of size 2
 #path[0] contains the names of the nodes on the path
 #path[1] contains the ids of the edges on the path
@@ -101,13 +90,10 @@ def get_path(start, finish):
 
     init_nodes(node_list)
     path_nodes = find_path(node_list, start, finish)
-    path_edges = get_edge_ids(edge_list, path_nodes)
 
-    path = [[], []]
+    path = []
     for i in path_nodes:
-        path[0].append(i["name"])
-    for i in path_edges:
-        path[1].append(i)
+        path.append(i["name"])
     
     return path
 
