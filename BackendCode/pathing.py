@@ -50,12 +50,13 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
             queue.append(i)
     
 
-    for node in queue:
-        if node["name"] == finish:
-            searched.append(node)
+    while len(queue) > 0:
+    # for node in queue[0]:
+        if queue[0]["name"] == finish:
+            searched.append(queue[0])
             
             searched.reverse()
-            last = node["previous"]
+            last = queue[0]["previous"]
             for i in searched:#Traces back the path from the finish to the start
                 if (i["name"] == last) or (i == searched[0]):
                     final_path.append(i)
@@ -64,15 +65,16 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
             final_path.reverse()
             return final_path
 
-        for neighbor in node["neighbors"]:
+        for neighbor in queue[0]["neighbors"]:
             if type(neighbor[0]) != str:#Prevents error when a neighbor's name is not the name of an existing node
-                if neighbor[0]["distance"] > neighbor[1] + node["distance"] and neighbor[2]:#Checks if path is shorter and open
-                    neighbor[0]["distance"] = neighbor[1] + node["distance"]
+                if neighbor[0]["distance"] > neighbor[1] + queue[0]["distance"] and neighbor[2]:#Checks if path is shorter and open
+                    neighbor[0]["distance"] = neighbor[1] + queue[0]["distance"]
                     neighbor[0]["combined_distance"] = neighbor[0]["distance"] + neighbor[0]["gps_distance"]
-                    neighbor[0]["previous"] = node["name"]
+                    neighbor[0]["previous"] = queue[0]["name"]
 
 
-        searched.append(node)
+        searched.append(queue[0])
+        del queue[0]
         queue.sort(key=lambda dict:dict["combined_distance"])
 
     return final_path

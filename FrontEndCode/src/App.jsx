@@ -492,7 +492,9 @@ function App() {
     setPath([]);
     setPathNames([]); // Clear old path names
 
-    axios.get(`${API_BASE_URL}/api/path?start=${startName}&end=${endName}`)
+    const encodedStart = encodeURIComponent(startName);
+    const encodedEnd = encodeURIComponent(endName);
+    axios.get(`${API_BASE_URL}/api/path?start=${encodedStart}&end=${encodedEnd}`)
       .then(response => {
         if (response.data.path && response.data.path.length > 0) {
           setPath(response.data.path);
