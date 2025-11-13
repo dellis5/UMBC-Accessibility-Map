@@ -29,7 +29,7 @@ def get_locations():
         with open("nodes.json", "r") as f:
             node_data = json.load(f)
         # This is the NEW, correct line that includes coords:
-        locations = [{"id": node["id"], "name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
+        locations = [{"name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
         return jsonify(locations)
     except FileNotFoundError:
         return jsonify({"error": "nodes.json not found"}), 404

@@ -80,13 +80,10 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
     return final_path
 
 #Returns a list of size 2
-#path[0] contains the names of the nodes on the path
-#path[1] contains the ids of the edges on the path
+#path contains the names of the nodes on the path
 def get_path(start, finish):
     with open("nodes.json", "r") as f:
         node_list = json.load(f)
-    with open("edges.json", "r") as f:
-        edge_list = json.load(f)
 
     init_nodes(node_list)
     path_nodes = find_path(node_list, start, finish)
