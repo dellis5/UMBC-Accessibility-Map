@@ -249,7 +249,6 @@
 //   );
 // }
 
-// export default App;
 import React, { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -288,47 +287,118 @@ function Notification({ message, type, onDismiss }) {
   );
 }
 
-// --- NEW: Login Modal Component ---
-function LoginModal({ onLogin, onDismiss }) {
-  const [emailInput, setEmailInput] = useState("");
+// --- NEW: Login/Sign Up Modal Component ---
+function LoginModal({ onDismiss, onLoginSuccess }) {
+  const [mode, setMode] = useState('login'); // 'login' or 'signup'
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [error, setError] = useState('');
 
-  const handleLogin = () => {
-    if (!emailInput) return;
-    onLogin(emailInput);
+  const handleLogin = (e) => {
+    e.preventDefault(); // Prevent form from reloading page
+    if (!username || !password) {
+      setError("Username and password are required.");
+      return;
+    }
+    setError('');
+    axios.post(`${API_BASE_URL}/api/login`, { username, password })
+      .then(response => {
+        onLoginSuccess(response.data.user); // Pass the user object up
+      })
+      .catch(err => {
+        setError(err.response?.data?.error || "Invalid username or password");
+      });
   };
 
-  // This handles the "Enter" key press
+  const handleSignUp = (e) => {
+    e.preventDefault(); // Prevent form from reloading page
+    if (!username || !password || !email || !name) {
+      setError("All fields are required for signup.");
+      return;
+    }
+    setError('');
+    axios.post(`${API_BASE_URL}/api/users`, { username, email, name, password })
+      .then(response => {
+        // Automatically log them in after successful signup
+        onLoginSuccess(response.data);
+      })
+      .catch(err => {
+        setError(err.response?.data?.error || "Could not create account");
+      });
+  };
+
+  // Handle 'Enter' key press in any field
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      handleLogin();
+      if (mode === 'login') {
+        handleLogin(e);
+      } else {
+        handleSignUp(e);
+      }
     }
   };
 
   return (
     <div className="modal-overlay" onClick={onDismiss}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2>Login or Sign Up</h2>
-        <p>Enter your email to save and view favorite routes.</p>
-        <input
-          type="email"
-          value={emailInput}
-          onChange={(e) => setEmailInput(e.target.value)}
-          onKeyDown={handleKeyDown} // ⭐️ ADDED "ENTER" KEY SUPPORT ⭐️
-          placeholder="Enter your email"
-          className="login-input"
-        />
-        <button onClick={handleLogin} className="login-button">Login / Sign Up</button>
+        <h2>{mode === 'login' ? 'Login' : 'Sign Up'}</h2>
+        <form onSubmit={mode === 'login' ? handleLogin : handleSignUp}>
+          {error && <p className="modal-error">{error}</p>}
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Username"
+            className="login-input"
+          />
+          {mode === 'signup' && (
+            <>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Email (e.g., user@umbc.edu)"
+                className="login-input"
+              />
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Your Name"
+                className="login-input"
+              />
+            </>
+          )}
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Password"
+            className="login-input"
+          />
+          <button type="submit" className="login-button">
+            {mode === 'login' ? 'Login' : 'Sign Up'}
+          </button>
+        </form>
+        <button onClick={() => { setMode(mode === 'login' ? 'signup' : 'login'); setError(''); }} className="modal-toggle-button">
+          {mode === 'login' ? 'Need an account? Sign Up' : 'Already have an account? Login'}
+        </button>
       </div>
     </div>
   );
 }
 
-// --- NEW: Text Directions Component (for Debugging) ---
+// --- Text Directions Component ---
 function TextDirections({ pathNames }) {
   if (!pathNames || pathNames.length === 0) {
-    return null; // Don't render anything if there's no path
+    return null;
   }
-
   return (
     <div className="text-directions-container">
       <h3>Text-Based Route</h3>
@@ -344,10 +414,8 @@ function TextDirections({ pathNames }) {
 // --- Main Application Component ---
 function App() {
   const [notification, setNotification] = useState(null);
-
-  // --- UPDATED: User/Login State ---
   const [userMode, setUserMode] = useState('guest'); // 'guest', 'login', 'loggedIn'
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null); // Will store the user object { username, email, name, ... }
   
   const [allLocations, setAllLocations] = useState([]);
   const [favoriteRoutes, setFavoriteRoutes] = useState([]);
@@ -362,7 +430,7 @@ function App() {
   
   // Map and loading state
   const [path, setPath] = useState([]);
-  const [pathNames, setPathNames] = useState([]); // ⭐️ NEW: For text directions
+  const [pathNames, setPathNames] = useState([]);
   const [loading, setLoading] = useState(false);
   const mapRef = useRef(null); 
 
@@ -386,28 +454,10 @@ function App() {
   }, [path]); 
 
   // --- User and Favorites API Functions ---
-  const handleLogin = (email) => {
-    axios.get(`${API_BASE_URL}/api/users/${email}`)
-      .then(response => {
-        setCurrentUser(response.data);
-        fetchFavoriteRoutes(response.data.id);
-        setUserMode('loggedIn'); // Close modal and set mode to logged in
-      })
-      .catch(error => {
-        if (error.response && error.response.status === 404) {
-          const name = email.split('@')[0]; 
-          axios.post(`${API_BASE_URL}/api/users`, { email: email, name })
-            .then(response => {
-              setCurrentUser(response.data);
-              setFavoriteRoutes([]); 
-              setUserMode('loggedIn'); // Close modal and set mode to logged in
-            })
-            .catch(err => console.error("Error creating user:", err));
-        } else {
-          console.error("Error fetching user:", error);
-          setNotification({ message: "Could not log in. Check backend.", type: "error" });
-        }
-      });
+  const handleLoginSuccess = (user) => {
+    setCurrentUser(user);
+    fetchFavoriteRoutes(user.username); // Fetch favorites using USERNAME
+    setUserMode('loggedIn');
   };
 
   const handleLogout = () => {
@@ -416,8 +466,8 @@ function App() {
     setUserMode('guest');
   };
 
-  const fetchFavoriteRoutes = (userId) => {
-    axios.get(`${API_BASE_URL}/api/users/${userId}/favorites`)
+  const fetchFavoriteRoutes = (username) => {
+    axios.get(`${API_BASE_URL}/api/users/${username}/favorites`)
       .then(response => setFavoriteRoutes(response.data || []))
       .catch(error => console.error("Error fetching favorites:", error));
   };
@@ -431,7 +481,7 @@ function App() {
     if (nickname === null) return; 
 
     const newFavorite = {
-      user_id: currentUser.id,
+      username: currentUser.username, // Use USERNAME
       start_location: startLocation.name,
       end_location: endLocation.name,
       path_coordinates: path, 
@@ -441,7 +491,7 @@ function App() {
     axios.post(`${API_BASE_URL}/api/favorites`, newFavorite)
       .then(() => {
         setNotification({ message: "Route saved successfully!", type: "success" });
-        fetchFavoriteRoutes(currentUser.id); 
+        fetchFavoriteRoutes(currentUser.username); 
       })
       .catch(error => {
         setNotification({ message: "Failed to save route.", type: "error" });
@@ -453,7 +503,7 @@ function App() {
     axios.delete(`${API_BASE_URL}/api/favorites/${favoriteId}`)
     .then(() => {
         setNotification({ message: "Favorite deleted.", type: "success" });
-        fetchFavoriteRoutes(currentUser.id); 
+        fetchFavoriteRoutes(currentUser.username); 
     })
     .catch(error => {
       setNotification({ message: "Failed to delete route.", type: "error" });
@@ -486,11 +536,10 @@ function App() {
     }
   };
 
-  // REFACTORED: This is the core logic, callable from anywhere
   const findRoute = (startName, endName) => {
     setLoading(true);
     setPath([]);
-    setPathNames([]); // Clear old path names
+    setPathNames([]); 
 
     const encodedStart = encodeURIComponent(startName);
     const encodedEnd = encodeURIComponent(endName);
@@ -498,7 +547,7 @@ function App() {
       .then(response => {
         if (response.data.path && response.data.path.length > 0) {
           setPath(response.data.path);
-          setPathNames(response.data.names); // ⭐️ SET THE NAMES
+          setPathNames(response.data.names); 
         } else {
           setNotification({ message: "No accessible path found.", type: "error" });
         }
@@ -510,7 +559,6 @@ function App() {
       .finally(() => setLoading(false));
   };
 
-  // This is the click handler for the button
   const handleFindRouteClick = () => {
     if (!startLocation || !endLocation) {
       setNotification({ message: "Please select both a start and end location.", type: "error" });
@@ -519,15 +567,12 @@ function App() {
     findRoute(startLocation.name, endLocation.name);
   };
 
-  // REFACTORED: This now calls the main findRoute function
   const loadFavoriteRoute = (favorite) => {
     const start = allLocations.find(loc => loc.name === favorite.start_location);
     const end = allLocations.find(loc => loc.name === favorite.end_location);
     if (start && end) {
         handleSelectLocation(start, 'start');
         handleSelectLocation(end, 'end');
-        
-        // This will find the route and set both path and pathNames
         findRoute(start.name, end.name);
     } else {
         setNotification({ message: "Could not load route. Location data may have changed.", type: "error" });
@@ -536,7 +581,7 @@ function App() {
   
   const handleClearRoute = () => {
     setPath([]);
-    setPathNames([]); // ⭐️ Clear text directions
+    setPathNames([]);
     setStartLocation(null);
     setEndLocation(null);
     setStartSearch("");
@@ -552,18 +597,16 @@ function App() {
   // --- Render Main Application View ---
   return (
     <div className="app-container">
-      {/* --- NEW: Conditional Login Modal --- */}
-      {userMode === 'login' && <LoginModal onLogin={handleLogin} onDismiss={() => setUserMode('guest')} />}
+      {userMode === 'login' && <LoginModal onLoginSuccess={handleLoginSuccess} onDismiss={() => setUserMode('guest')} />}
       
       {notification && <Notification message={notification.message} type={notification.type} onDismiss={() => setNotification(null)} />}
       
       <header className="app-header">
         <h1>UMBC Accessibility GPS System</h1>
-        {/* --- UPDATED: Login/Logout Button --- */}
         <div className="user-info">
           {userMode === 'loggedIn' ? (
             <>
-              Logged in as: {currentUser.email}
+              Welcome, {currentUser.name}! 
               <button onClick={handleLogout} className="header-button">Logout</button>
             </>
           ) : (
@@ -586,7 +629,6 @@ function App() {
             <button onClick={handleFindRouteClick} className="find-route-button" disabled={loading}>{loading ? 'Calculating...' : 'Find Route'}</button>
             {path.length > 0 && (
               <>
-                {/* --- UPDATED: Save button now checks for login --- */}
                 {userMode === 'loggedIn' && (
                   <button onClick={handleSaveRoute} className="save-route-button">Save</button>
                 )}
@@ -598,7 +640,7 @@ function App() {
           <div className="map-wrapper">
             <MapContainer center={UMBC_CENTER} zoom={16} scrollWheelZoom={true} className="leaflet-container" ref={mapRef}>
               <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="httpsS://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               {startLocation && startLocation.coords && (startLocation.coords[0] !== 0 || startLocation.coords[1] !== 0) && (
@@ -616,9 +658,7 @@ function App() {
           </div>
         </div>
 
-        {/* --- UPDATED: Favorites section now depends on login --- */}
         <div className={`favorites-section ${userMode !== 'loggedIn' ? 'favorites-section-guest' : ''}`}>
-          {/* --- NEW: Text Directions Debugger --- */}
           <TextDirections pathNames={pathNames} />
           
           <h2>My Favorite Routes</h2>
