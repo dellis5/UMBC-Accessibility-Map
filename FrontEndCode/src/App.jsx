@@ -166,7 +166,10 @@ function App() {
   const [userMode, setUserMode] = useState('guest'); // 'guest', 'login', 'loggedIn'
   const [currentUser, setCurrentUser] = useState(null); // Will store the user object { username, email, name, ... }
   
+  // RAW data for all nodes (including intersections/entrances)
   const [allLocations, setAllLocations] = useState([]);
+  // FILTERED data: ONLY valid origins/destinations for the dropdowns
+  const [selectableLocations, setSelectableLocations] = useState([]); 
   const [favoriteRoutes, setFavoriteRoutes] = useState([]);
 
   // Search and selection state
@@ -183,13 +186,26 @@ function App() {
   const [loading, setLoading] = useState(false);
   const mapRef = useRef(null); 
 
-  // --- Data Fetching on Load ---
+  // --- Data Fetching on Load (FINAL Filtering: Exclusion) ---
   useEffect(() => {
     axios.get(`${API_BASE_URL}/api/locations`)
-      .then(response => setAllLocations(response.data))
+      .then(response => {
+        const all = response.data;
+        setAllLocations(all);
+        
+        // **FINAL FILTERING LOGIC:** Keep ALL locations that do NOT contain
+        // 'entrance' or 'intersection' in their name (case-insensitive).
+        const filtered = all.filter(loc => {
+          const name = loc.name.toLowerCase();
+          
+          return !name.includes('entrance') && !name.includes('intersection');
+        });
+        
+        setSelectableLocations(filtered); // This is the list used for selection/search
+      })
       .catch(error => {
         console.error("Error fetching locations:", error);
-        setNotification({ message: "Cannot connect to backend server.", type: "error" });
+        setNotification({ message: "Cannot connect to backend server or API error.", type: "error" });
       });
   }, []);
 
@@ -259,13 +275,15 @@ function App() {
     });
   };
 
-  // --- Search and Pathfinding Functions ---
+  // --- Search and Pathfinding Functions (Uses selectableLocations for filtering) ---
   const handleSearchChange = (e, type) => {
     const query = e.target.value;
     const setter = type === 'start' ? setStartSearch : setEndSearch;
     const resultsSetter = type === 'start' ? setStartResults : setEndResults;
     setter(query);
-    resultsSetter(query ? allLocations.filter(l => l.name.toLowerCase().includes(query.toLowerCase())) : []);
+    
+    // Filtering search results based on the selectable list
+    resultsSetter(query ? selectableLocations.filter(l => l.name.toLowerCase().includes(query.toLowerCase())) : []);
   };
 
   const handleSelectLocation = (location, type) => {
@@ -368,12 +386,42 @@ function App() {
         <div className="map-and-controls-section">
           <div className="controls-container">
             <div className="search-wrapper">
-              <input type="text" placeholder="Start Location" value={startSearch} onChange={(e) => handleSearchChange(e, 'start')} className="search-input"/>
-              {startResults.length > 0 && <div className="results-container">{startResults.map(loc => (<div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'start')}>{loc.name}</div>))}</div>}
+              <input 
+                type="text" 
+                placeholder="Start Location (Building or Floor)" 
+                value={startSearch} 
+                onChange={(e) => handleSearchChange(e, 'start')} 
+                className="search-input"
+              />
+              {startResults.length > 0 && 
+                <div className="results-container">
+                  {/* Limiting results to the top 7 for a clean dropdown look */}
+                  {startResults.slice(0, 7).map(loc => (
+                    <div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'start')}>
+                      {loc.name}
+                    </div>
+                  ))}
+                </div>
+              }
             </div>
             <div className="search-wrapper">
-              <input type="text" placeholder="Destination" value={endSearch} onChange={(e) => handleSearchChange(e, 'end')} className="search-input"/>
-              {endResults.length > 0 && <div className="results-container">{endResults.map(loc => (<div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'end')}>{loc.name}</div>))}</div>}
+              <input 
+                type="text" 
+                placeholder="Destination (Building or Floor)" 
+                value={endSearch} 
+                onChange={(e) => handleSearchChange(e, 'end')} 
+                className="search-input"
+              />
+              {endResults.length > 0 && 
+                <div className="results-container">
+                  {/* Limiting results to the top 7 for a clean dropdown look */}
+                  {endResults.slice(0, 7).map(loc => (
+                    <div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'end')}>
+                      {loc.name}
+                    </div>
+                  ))}
+                </div>
+              }
             </div>
             <button onClick={handleFindRouteClick} className="find-route-button" disabled={loading}>{loading ? 'Calculating...' : 'Find Route'}</button>
             {path.length > 0 && (
@@ -389,7 +437,7 @@ function App() {
           <div className="map-wrapper">
             <MapContainer center={UMBC_CENTER} zoom={16} scrollWheelZoom={true} className="leaflet-container" ref={mapRef}>
               <TileLayer
-                attribution='&copy; <a href="httpsS://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               {startLocation && startLocation.coords && (startLocation.coords[0] !== 0 || startLocation.coords[1] !== 0) && (
