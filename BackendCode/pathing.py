@@ -21,16 +21,16 @@ def init_nodes(data):#Changes node neighbors[0] from str to corresponding node d
 def find_path(data, start, finish):#Finds the shortest path, returns a list of the nodes on the path
     
     finish_coords = []
-    for i in data["node"]:#Ensures past searches dont mess up this search
-        i["distance"] = 9999
-        i["previous"] = ""
+    for node in data["node"]:#Ensures past searches dont mess up this search
+        node["distance"] = 9999
+        node["previous"] = ""
 
-        if i["name"] == finish:
-            finish_coords = i["coords"]
+        if node["name"] == finish:
+            finish_coords = node["coords"]
     
     
-    for i in data["node"]:#Gets the distance from each node to the finish node
-        i["gps_distance"] = ((i["coords"][0] - finish_coords[0]) ** 2 + (i["coords"][1] - finish_coords[1]) ** 2) ** .5
+    for node in data["node"]:#Gets the distance from each node to the finish node
+        node["gps_distance"] = ((node["coords"][0] - finish_coords[0]) ** 2 + (node["coords"][1] - finish_coords[1]) ** 2) ** .5
     
 
 
@@ -39,30 +39,32 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
     queue = []
     final_path = []
     searched = []
-    for i in data["node"]:#Ensures the start is at the begining of the queue
-        if i["name"] == start:
-            i["distance"] = 0
-            i["combined_distance"] = i["gps_distance"]
-            queue.append(i)
-    for i in data["node"]:
-        if i["name"] != start:
-            i["combined_distance"] = i["gps_distance"] + i["distance"]
-            queue.append(i)
+    for node in data["node"]:#Ensures the start is at the begining of the queue
+        if node["name"] == start:
+            node["distance"] = 0
+            node["combined_distance"] = node["gps_distance"]
+            queue.append(node)
+    for node in data["node"]:
+        if node["name"] != start:
+            node["combined_distance"] = node["gps_distance"] + node["distance"]
+            queue.append(node)
     
 
     while len(queue) > 0:
-    # for node in queue[0]:
         if queue[0]["name"] == finish:
             searched.append(queue[0])
             
             searched.reverse()
-            last = queue[0]["previous"]
-            for i in searched:#Traces back the path from the finish to the start
-                if (i["name"] == last) or (i == searched[0]):
-                    final_path.append(i)
-                    last = i["previous"]
+            previous = queue[0]["previous"]
+            for node in searched:#Traces back the path from the finish to the start
+                if (node["name"] == previous) or (node == searched[0]):
+                    final_path.append(node)
+                    previous = node["previous"]
 
             final_path.reverse()
+            if len(final_path) < 2:
+                return []
+            
             return final_path
 
         for neighbor in queue[0]["neighbors"]:
