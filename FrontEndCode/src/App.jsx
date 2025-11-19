@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import './App.css'; 
 import axios from 'axios';
 import L from 'leaflet';
+import MapClickHandler from './MapClickHandler'; 
 
 // --- FIX for broken Leaflet icons in React ---
 import icon from 'leaflet/dist/images/marker-icon.png';
@@ -36,9 +37,9 @@ function Notification({ message, type, onDismiss }) {
   );
 }
 
-// --- NEW: Login/Sign Up Modal Component ---
+// --- Login/Sign Up Modal Component ---
 function LoginModal({ onDismiss, onLoginSuccess }) {
-  const [mode, setMode] = useState('login'); // 'login' or 'signup'
+  const [mode, setMode] = useState('login'); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -46,7 +47,7 @@ function LoginModal({ onDismiss, onLoginSuccess }) {
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Prevent form from reloading page
+    e.preventDefault(); 
     if (!username || !password) {
       setError("Username and password are required.");
       return;
@@ -54,7 +55,7 @@ function LoginModal({ onDismiss, onLoginSuccess }) {
     setError('');
     axios.post(`${API_BASE_URL}/api/login`, { username, password })
       .then(response => {
-        onLoginSuccess(response.data.user); // Pass the user object up
+        onLoginSuccess(response.data.user); 
       })
       .catch(err => {
         setError(err.response?.data?.error || "Invalid username or password");
@@ -62,7 +63,7 @@ function LoginModal({ onDismiss, onLoginSuccess }) {
   };
 
   const handleSignUp = (e) => {
-    e.preventDefault(); // Prevent form from reloading page
+    e.preventDefault(); 
     if (!username || !password || !email || !name) {
       setError("All fields are required for signup.");
       return;
@@ -70,7 +71,6 @@ function LoginModal({ onDismiss, onLoginSuccess }) {
     setError('');
     axios.post(`${API_BASE_URL}/api/users`, { username, email, name, password })
       .then(response => {
-        // Automatically log them in after successful signup
         onLoginSuccess(response.data);
       })
       .catch(err => {
@@ -78,7 +78,6 @@ function LoginModal({ onDismiss, onLoginSuccess }) {
       });
   };
 
-  // Handle 'Enter' key press in any field
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       if (mode === 'login') {
@@ -163,12 +162,10 @@ function TextDirections({ pathNames }) {
 // --- Main Application Component ---
 function App() {
   const [notification, setNotification] = useState(null);
-  const [userMode, setUserMode] = useState('guest'); // 'guest', 'login', 'loggedIn'
-  const [currentUser, setCurrentUser] = useState(null); // Will store the user object { username, email, name, ... }
+  const [userMode, setUserMode] = useState('guest'); 
+  const [currentUser, setCurrentUser] = useState(null); 
   
-  // RAW data for all nodes (including intersections/entrances)
   const [allLocations, setAllLocations] = useState([]);
-  // FILTERED data: ONLY valid origins/destinations for the dropdowns
   const [selectableLocations, setSelectableLocations] = useState([]); 
   const [favoriteRoutes, setFavoriteRoutes] = useState([]);
 
@@ -186,22 +183,23 @@ function App() {
   const [loading, setLoading] = useState(false);
   const mapRef = useRef(null); 
 
-  // --- Data Fetching on Load (FINAL Filtering: Exclusion) ---
+  // Map selection mode state
+  const [isSelectionMode, setIsSelectionMode] = useState(false); 
+  const [locationToSet, setLocationToSet] = useState('end'); 
+
+  // --- Data Fetching on Load ---
   useEffect(() => {
     axios.get(`${API_BASE_URL}/api/locations`)
       .then(response => {
         const all = response.data;
         setAllLocations(all);
         
-        // **FINAL FILTERING LOGIC:** Keep ALL locations that do NOT contain
-        // 'entrance' or 'intersection' in their name (case-insensitive).
         const filtered = all.filter(loc => {
           const name = loc.name.toLowerCase();
-          
           return !name.includes('entrance') && !name.includes('intersection');
         });
         
-        setSelectableLocations(filtered); // This is the list used for selection/search
+        setSelectableLocations(filtered);
       })
       .catch(error => {
         console.error("Error fetching locations:", error);
@@ -209,7 +207,7 @@ function App() {
       });
   }, []);
 
-  // --- Auto-zoom map effect for path ---
+  // --- Auto-zoom map effect ---
   useEffect(() => {
     const map = mapRef.current;
     if (map && path.length > 0) {
@@ -218,10 +216,10 @@ function App() {
     }
   }, [path]); 
 
-  // --- User and Favorites API Functions ---
+  // --- User / Favorite Functions ---
   const handleLoginSuccess = (user) => {
     setCurrentUser(user);
-    fetchFavoriteRoutes(user.username); // Fetch favorites using USERNAME
+    fetchFavoriteRoutes(user.username); 
     setUserMode('loggedIn');
   };
 
@@ -246,7 +244,7 @@ function App() {
     if (nickname === null) return; 
 
     const newFavorite = {
-      username: currentUser.username, // Use USERNAME
+      username: currentUser.username, 
       start_location: startLocation.name,
       end_location: endLocation.name,
       path_coordinates: path, 
@@ -275,18 +273,19 @@ function App() {
     });
   };
 
-  // --- Search and Pathfinding Functions (Uses selectableLocations for filtering) ---
+  // --- Search and Pathfinding ---
   const handleSearchChange = (e, type) => {
+    if(isSelectionMode) setIsSelectionMode(false); 
+
     const query = e.target.value;
     const setter = type === 'start' ? setStartSearch : setEndSearch;
     const resultsSetter = type === 'start' ? setStartResults : setEndResults;
     setter(query);
     
-    // Filtering search results based on the selectable list
     resultsSetter(query ? selectableLocations.filter(l => l.name.toLowerCase().includes(query.toLowerCase())) : []);
   };
 
-  const handleSelectLocation = (location, type) => {
+  const handleSelectLocation = (location, type, isFromMap = false) => {
     if (type === 'start') {
       setStartLocation(location);
       setStartSearch(location.name);
@@ -300,6 +299,11 @@ function App() {
     const map = mapRef.current;
     if (map && location.coords && (location.coords[0] !== 0 || location.coords[1] !== 0)) {
       map.flyTo(location.coords, 17);
+    }
+
+    if (isFromMap) {
+        setIsSelectionMode(false);
+        setNotification({ message: `${location.name} set as ${type === 'start' ? 'START' : 'DESTINATION'}.`, type: "success" });
     }
   };
 
@@ -355,13 +359,26 @@ function App() {
     setEndSearch("");
     setStartResults([]);
     setEndResults([]);
+    setIsSelectionMode(false);
+    
     const map = mapRef.current;
     if (map) {
       map.flyTo(UMBC_CENTER, 16); 
     }
   };
 
-  // --- Render Main Application View ---
+  const handleToggleSelectionMode = (type) => {
+    if (!isSelectionMode || locationToSet !== type) {
+        setIsSelectionMode(true);
+        setLocationToSet(type);
+        setNotification({ message: `Click a location on the map to set the ${type.toUpperCase()}.`, type: "info" });
+    } else {
+        setIsSelectionMode(false);
+        setNotification(null);
+    }
+  };
+
+  // --- Render ---
   return (
     <div className="app-container">
       {userMode === 'login' && <LoginModal onLoginSuccess={handleLoginSuccess} onDismiss={() => setUserMode('guest')} />}
@@ -384,46 +401,73 @@ function App() {
       
       <main className="main-content">
         <div className="map-and-controls-section">
+            
+          {/* Single Row Container for all Controls */}
           <div className="controls-container">
-            <div className="search-wrapper">
-              <input 
-                type="text" 
-                placeholder="Start Location (Building or Floor)" 
-                value={startSearch} 
-                onChange={(e) => handleSearchChange(e, 'start')} 
-                className="search-input"
-              />
-              {startResults.length > 0 && 
-                <div className="results-container">
-                  {/* Limiting results to the top 7 for a clean dropdown look */}
-                  {startResults.slice(0, 7).map(loc => (
-                    <div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'start')}>
-                      {loc.name}
-                    </div>
-                  ))}
-                </div>
-              }
+            
+            {/* Start Location Row */}
+            <div className="search-row">
+              <div className="search-wrapper">
+                <input 
+                  type="text" 
+                  placeholder="Start" 
+                  value={startSearch} 
+                  onChange={(e) => handleSearchChange(e, 'start')} 
+                  className="search-input"
+                />
+                {startResults.length > 0 && 
+                  <div className="results-container">
+                    {startResults.slice(0, 7).map(loc => (
+                      <div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'start')}>
+                        {loc.name}
+                      </div>
+                    ))}
+                  </div>
+                }
+              </div>
+              <button 
+                onClick={() => handleToggleSelectionMode('start')} 
+                className={`icon-button ${isSelectionMode && locationToSet === 'start' ? 'active' : ''}`}
+                title="Select Start on Map"
+              >
+                📍
+              </button>
             </div>
-            <div className="search-wrapper">
-              <input 
-                type="text" 
-                placeholder="Destination (Building or Floor)" 
-                value={endSearch} 
-                onChange={(e) => handleSearchChange(e, 'end')} 
-                className="search-input"
-              />
-              {endResults.length > 0 && 
-                <div className="results-container">
-                  {/* Limiting results to the top 7 for a clean dropdown look */}
-                  {endResults.slice(0, 7).map(loc => (
-                    <div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'end')}>
-                      {loc.name}
-                    </div>
-                  ))}
-                </div>
-              }
+
+            {/* Destination Row */}
+            <div className="search-row">
+              <div className="search-wrapper">
+                <input 
+                  type="text" 
+                  placeholder="Destination" 
+                  value={endSearch} 
+                  onChange={(e) => handleSearchChange(e, 'end')} 
+                  className="search-input"
+                />
+                {endResults.length > 0 && 
+                  <div className="results-container">
+                    {endResults.slice(0, 7).map(loc => (
+                      <div key={loc.id} className="result-item" onClick={() => handleSelectLocation(loc, 'end')}>
+                        {loc.name}
+                      </div>
+                    ))}
+                  </div>
+                }
+              </div>
+              <button 
+                onClick={() => handleToggleSelectionMode('end')} 
+                className={`icon-button ${isSelectionMode && locationToSet === 'end' ? 'active' : ''}`}
+                title="Select Destination on Map"
+              >
+                📍
+              </button>
             </div>
-            <button onClick={handleFindRouteClick} className="find-route-button" disabled={loading}>{loading ? 'Calculating...' : 'Find Route'}</button>
+
+            {/* Buttons on the same line */}
+            <button onClick={handleFindRouteClick} className="find-route-button" disabled={loading}>
+              {loading ? '...' : 'Find Route'}
+            </button>
+            
             {path.length > 0 && (
               <>
                 {userMode === 'loggedIn' && (
@@ -432,6 +476,7 @@ function App() {
                 <button onClick={handleClearRoute} className="clear-route-button">Clear</button>
               </>
             )}
+
           </div>
 
           <div className="map-wrapper">
@@ -451,6 +496,24 @@ function App() {
                 </Marker>
               )}
               {path.length > 0 && <Polyline positions={path} color="#007bff" weight={6} />}
+              
+              <MapClickHandler
+                  isSelectionMode={isSelectionMode}
+                  locationToSet={locationToSet}
+                  selectableLocations={selectableLocations}
+                  onLocationSelect={(loc, type) => handleSelectLocation(loc, type, true)}
+                  onSelectionEnd={(name) => {
+                      if (name) {
+                        if (locationToSet === 'start') {
+                            setStartSearch(name);
+                        } else {
+                            setEndSearch(name);
+                        }
+                      }
+                      setIsSelectionMode(false); 
+                  }}
+              />
+
             </MapContainer>
           </div>
         </div>
