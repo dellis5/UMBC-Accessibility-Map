@@ -21,16 +21,16 @@ def init_nodes(data):#Changes node neighbors[0] from str to corresponding node d
 def find_path(data, start, finish):#Finds the shortest path, returns a list of the nodes on the path
     
     finish_coords = []
-    for i in data["node"]:#Ensures past searches dont mess up this search
-        i["distance"] = 9999
-        i["previous"] = ""
+    for node in data["node"]:#Ensures past searches dont mess up this search
+        node["distance"] = 9999
+        node["previous"] = ""
 
-        if i["name"] == finish:
-            finish_coords = i["coords"]
+        if node["name"] == finish:
+            finish_coords = node["coords"]
     
     
-    for i in data["node"]:#Gets the distance from each node to the finish node
-        i["gps_distance"] = ((i["coords"][0] - finish_coords[0]) ** 2 + (i["coords"][1] - finish_coords[1]) ** 2) ** .5
+    for node in data["node"]:#Gets the distance from each node to the finish node
+        node["gps_distance"] = ((node["coords"][0] - finish_coords[0]) ** 2 + (node["coords"][1] - finish_coords[1]) ** 2) ** .5
     
 
 
@@ -39,30 +39,32 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
     queue = []
     final_path = []
     searched = []
-    for i in data["node"]:#Ensures the start is at the begining of the queue
-        if i["name"] == start:
-            i["distance"] = 0
-            i["combined_distance"] = i["gps_distance"]
-            queue.append(i)
-    for i in data["node"]:
-        if i["name"] != start:
-            i["combined_distance"] = i["gps_distance"] + i["distance"]
-            queue.append(i)
+    for node in data["node"]:#Ensures the start is at the begining of the queue
+        if node["name"] == start:
+            node["distance"] = 0
+            node["combined_distance"] = node["gps_distance"]
+            queue.append(node)
+    for node in data["node"]:
+        if node["name"] != start:
+            node["combined_distance"] = node["gps_distance"] + node["distance"]
+            queue.append(node)
     
 
     while len(queue) > 0:
-    # for node in queue[0]:
         if queue[0]["name"] == finish:
             searched.append(queue[0])
             
             searched.reverse()
-            last = queue[0]["previous"]
-            for i in searched:#Traces back the path from the finish to the start
-                if (i["name"] == last) or (i == searched[0]):
-                    final_path.append(i)
-                    last = i["previous"]
+            previous = queue[0]["previous"]
+            for node in searched:#Traces back the path from the finish to the start
+                if (node["name"] == previous) or (node == searched[0]):
+                    final_path.append(node)
+                    previous = node["previous"]
 
             final_path.reverse()
+            if len(final_path) < 2:
+                return []
+            
             return final_path
 
         for neighbor in queue[0]["neighbors"]:
@@ -79,39 +81,52 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
 
     return final_path
 
-#get_edge_ids(Dictionary of edges, list of node dictionaries that are on the path)
-#Returns a list of the edge ids on the path
-def get_edge_ids(edges, path):
-    ids = []
-    for i in path:
-        for j in edges["edge"]:
-            if (i["name"] == j["node 1"] or i["name"] == j["node 2"]) and (i["previous"] == j["node 1"] or i["previous"] == j["node 2"]):
-                ids.append(j["id"])
-
-    return ids
-
 #Returns a list of size 2
-#path[0] contains the names of the nodes on the path
-#path[1] contains the ids of the edges on the path
+#path contains the names of the nodes on the path
 def get_path(start, finish):
     with open("nodes.json", "r") as f:
         node_list = json.load(f)
-    with open("edges.json", "r") as f:
-        edge_list = json.load(f)
 
     init_nodes(node_list)
     path_nodes = find_path(node_list, start, finish)
-    path_edges = get_edge_ids(edge_list, path_nodes)
 
-    path = [[], []]
-    for i in path_nodes:
-        path[0].append(i["name"])
-    for i in path_edges:
-        path[1].append(i)
+    return get_directions(path_nodes)
+
+
+def get_directions(path_nodes):
+    path = []
+    previous_floor = ""
+    for node in path_nodes:
+        try:
+            if previous_floor == "":
+                previous_floor = node["floor"]
+            elif node["floor"] != previous_floor:
+                previous_floor = node["floor"]
+
+                elevator_text = ["Take the elevator to the ", " floor"]
+                match node["floor"]:
+                    case "g":
+                        path.append((elevator_text[0] + "ground" + elevator_text[1]))
+                    case "l":
+                        path.append((elevator_text[0] + "lobby"))
+                    case "m":
+                        path.append((elevator_text[0] + "mezzanine"))
+                    case "1":
+                        path.append((elevator_text[0] + "1st" + elevator_text[1]))
+                    case "2":
+                        path.append((elevator_text[0] + "2nd" + elevator_text[1]))
+                    case "3":
+                        path.append((elevator_text[0] + "3rd" + elevator_text[1]))
+                    case _:
+                        path.append((elevator_text[0] + node["floor"] + "th" + elevator_text[1]))
+
+        except:
+            previous_floor = ""
+        
+        path.append(node["name"])
+        
     
     return path
-
-
 #testing and sample usage
 
 # final_path = get_path("Performing Arts & Humanities Building Entrance 1", "Interdisciplinary Life Sciences Building Entrance 2")

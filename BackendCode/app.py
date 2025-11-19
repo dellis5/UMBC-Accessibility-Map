@@ -29,7 +29,7 @@ def get_locations():
         with open("nodes.json", "r") as f:
             node_data = json.load(f)
         # This is the NEW, correct line that includes coords:
-        locations = [{"id": node["id"], "name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
+        locations = [{"name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
         return jsonify(locations)
     except FileNotFoundError:
         return jsonify({"error": "nodes.json not found"}), 404
@@ -45,8 +45,7 @@ def find_accessible_path():
 
     try:
         # 1. Run your partner's pathfinding code
-        path_result = get_path(start_name, end_name)
-        path_node_names = path_result[0]
+        path_node_names = get_path(start_name, end_name)
 
         if not path_node_names:
             return jsonify({"path": []}) # Return an empty path if none is found
