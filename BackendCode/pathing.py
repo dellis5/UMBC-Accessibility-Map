@@ -90,13 +90,43 @@ def get_path(start, finish):
     init_nodes(node_list)
     path_nodes = find_path(node_list, start, finish)
 
+    return get_directions(path_nodes)
+
+
+def get_directions(path_nodes):
     path = []
-    for i in path_nodes:
-        path.append(i["name"])
+    previous_floor = ""
+    for node in path_nodes:
+        try:
+            if previous_floor == "":
+                previous_floor = node["floor"]
+            elif node["floor"] != previous_floor:
+                previous_floor = node["floor"]
+
+                elevator_text = ["Take the elevator to the ", " floor"]
+                match node["floor"]:
+                    case "g":
+                        path.append((elevator_text[0] + "ground" + elevator_text[1]))
+                    case "l":
+                        path.append((elevator_text[0] + "lobby"))
+                    case "m":
+                        path.append((elevator_text[0] + "mezzanine"))
+                    case "1":
+                        path.append((elevator_text[0] + "1st" + elevator_text[1]))
+                    case "2":
+                        path.append((elevator_text[0] + "2nd" + elevator_text[1]))
+                    case "3":
+                        path.append((elevator_text[0] + "3rd" + elevator_text[1]))
+                    case _:
+                        path.append((elevator_text[0] + node["floor"] + "th" + elevator_text[1]))
+
+        except:
+            previous_floor = ""
+        
+        path.append(node["name"])
+        
     
     return path
-
-
 #testing and sample usage
 
 # final_path = get_path("Performing Arts & Humanities Building Entrance 1", "Interdisciplinary Life Sciences Building Entrance 2")
