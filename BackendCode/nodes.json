@@ -887,7 +887,7 @@
                         ]
         },
         {
-	        "name": " University Center Entrance 5",
+	        "name": "University Center Entrance 5",
 	        "type": "entrance",
 	        "coords": [39.25439977940451, -76.71345630116191],
             "floor": "3",
@@ -1029,7 +1029,7 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Floor b",
+	        "name": "Biological Sciences Building Floor b",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "b",
@@ -1047,7 +1047,7 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 1",
+	        "name": "Biological Sciences Building Floor 1",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "1",
@@ -1065,7 +1065,7 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 2",
+	        "name": "Biological Sciences Building Floor 2",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "2",
@@ -1083,7 +1083,7 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 3",
+	        "name": "Biological Sciences Building Floor 3",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "3",
@@ -1101,7 +1101,7 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 4",
+	        "name": "Biological Sciences Building Floor 4",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "4",
@@ -2022,7 +2022,7 @@
 	        "coords": [39.25468868683044, -76.71183146811391],
             "floor": "g",
             "neighbors": [
-                            ["Lecture 1 Hall", 30, true],
+                            ["Lecture Hall 1", 30, true],
                             ["Intersection 44", 6, true]
                         ]
         },
@@ -2481,7 +2481,6 @@
             "neighbors": [
                             ["University Center Entrance 5", 0, true],
                             ["Engineering Building Entrance 2", 0, true],
-                            ["Information Technology/Engineering Building Entrance 2", 12, true],
                             ["Intersection 16", 14, true],
                             ["Intersection 18", 11, true]
                         ]
@@ -2756,7 +2755,7 @@
 	        "type": "intersection",
 	        "coords": [39.25451609447329, -76.71194694230246],
             "neighbors": [
-                            ["Lecture Hall Entrance 1", 6, true],
+                            ["Lecture Hall 1 Entrance 1", 6, true],
                             ["Intersection 45", 17, true],
                             ["Intersection 47", 3, true]
                         ]
