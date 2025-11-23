@@ -90,13 +90,6 @@ def get_path(start, finish):
     init_nodes(node_list)
     path_nodes = find_path(node_list, start, finish)
 
-    # # 1. New: Extract JUST the names from the list of node dictionaries
-    # path_names = [node["name"] for node in path_nodes]
-
-    # # 2. Fix: Return ONLY the raw list of names.
-    # # The direction generation logic should be moved/handled separately.
-    # return path_names
-
     return get_directions(path_nodes)
 
 
