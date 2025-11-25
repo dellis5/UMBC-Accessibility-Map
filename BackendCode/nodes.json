@@ -85,7 +85,7 @@
         {
 	        "name": "Performing Arts & Humanities Building Entrance 2",
 	        "type": "entrance",
-	        "coords": [39.25527916906842, -76.71483564313267],
+	        "coords": [39.255214034610496, -76.7148079523884],
             "floor": "1",
             "neighbors": [
                             ["Performing Arts & Humanities Building", 40, true],
@@ -721,7 +721,7 @@
         {
 	        "name": "Meyerhoff Building Entrance 5",
 	        "type": "entrance",
-	        "coords": [39.25478320974927, -76.71321066559564],
+	        "coords": [39.254892689864306, -76.71322186628896],
             "floor": "2",
             "neighbors": [
                             ["Meyerhoff Building", 30, true],
@@ -1159,7 +1159,7 @@
         {
 	        "name": "Biological Sciences Building Entrance 3",
 	        "type": "entrance",
-	        "coords": [39.25507651973138, -76.7120494312263],
+	        "coords": [39.25506317288864, -76.71210976994155],
             "floor": "1",
             "neighbors": [
                             ["Biological Sciences Building", 30, true],
@@ -1178,7 +1178,7 @@
         {
 	        "name": "Biological Sciences Building Entrance 4",
 	        "type": "entrance",
-	        "coords": [39.255199058643015, -76.7120427257041],
+	        "coords": [39.255125496280565, -76.7120671708239],
             "floor": "1",
             "neighbors": [
                             ["Biological Sciences Building", 30, true],
@@ -2187,7 +2187,7 @@
         {
 	        "name": "Albin O. Kuhn Library & Gallery Entrance 3",
 	        "type": "entrance",
-	        "coords": [39.25652836173167, -76.71237179868484],
+	        "coords": [39.256499534366064, -76.71234029935455],
             "floor": "g",
             "neighbors": [
                             ["Office Of Financial Aid & Scholarships", 0, true],
@@ -2499,7 +2499,7 @@
         {
 	        "name": "Intersection 19",
 	        "type": "intersection",
-	        "coords": [39.25650480474567, -76.71241738627505],
+	        "coords": [39.25648119664218, -76.7123854085485],
             "neighbors": [
                             ["Albin O. Kuhn Library & Gallery Entrance 3", 0, true],
                             ["Intersection 20", 11, true],
@@ -2509,7 +2509,7 @@
         {
 	        "name": "Intersection 20",
 	        "type": "intersection",
-	        "coords": [39.25619950121993, -76.71241738627505],
+	        "coords": [39.25617550121993, -76.71241738627505],
             "neighbors": [
                             ["Intersection 19", 11, true],
                             ["Intersection 26", 28, true]
@@ -2519,7 +2519,7 @@
         {
 	        "name": "Intersection 21",
 	        "type": "intersection",
-	        "coords": [39.25615470827811, -76.71202546863229],
+	        "coords": [39.25615470827811, -76.71202946863229],
             "neighbors": [
                             ["Albin O. Kuhn Library & Gallery Entrance 2", 0, true],
                             ["Intersection 19", 11, true],
@@ -2539,7 +2539,7 @@
         {
 	        "name": "Intersection 23",
 	        "type": "intersection",
-	        "coords": [39.254069074506134, -76.7130325169765],
+	        "coords": [39.254023259881045, -76.71300610862818],
             "neighbors": [
                             ["University Center Entrance 3", 1, true],
                             ["Intersection 22", 8, true],
@@ -2549,7 +2549,7 @@
         {
 	        "name": "Intersection 24",
 	        "type": "intersection",
-	        "coords": [39.252914273896494, -76.71357298209249],
+	        "coords": [39.252914273896494, -76.71357998209249],
             "neighbors": [
                             ["Administration Building Entrance 2", 0, true],
                             ["Intersection 35", 4, true]
@@ -2590,7 +2590,7 @@
         {
 	        "name": "Intersection 28",
 	        "type": "intersection",
-	        "coords": [39.254813193160196, -76.7123841264113],
+	        "coords": [39.25480966454947, -76.71241066719111],
             "neighbors": [
                             ["Meyerhoff Building Entrance 2", 1, true],
                             ["Intersection 27", 5, true],
@@ -2640,7 +2640,7 @@
         {
 	        "name": "Intersection 33",
 	        "type": "intersection",
-	        "coords": [39.25380960484145, -76.71269662367236],
+	        "coords": [39.253988329644464, -76.71280762814006],
             "neighbors": [
                             ["Intersection 23", 3, true],
                             ["Intersection 32", 8, true],
@@ -2650,7 +2650,7 @@
         {
 	        "name": "Intersection 34",
 	        "type": "intersection",
-	        "coords": [39.25296303791617, -76.71326258923882],
+	        "coords": [39.25292469561829, -76.71328353020348],
             "neighbors": [
                             ["Sondheim Hall Entrance 2", 9, true],
                             ["Administration Building Entrance 1", 2, true],
@@ -2701,7 +2701,7 @@
         {
 	        "name": "Intersection 39",
 	        "type": "intersection",
-	        "coords": [39.25380960485102, -76.71268053044632],
+	        "coords": [39.253823197508275, -76.71274537148456],
             "neighbors": [
                             ["Math & Psychology Building Entrance 2", 2, true],
                             ["Sondheim Hall Entrance 1", 3, true],
@@ -2837,7 +2837,7 @@
         {
 	        "name": "Intersection 52",
 	        "type": "intersection",
-	        "coords": [39.254249898855655, -76.71125047909693],
+	        "coords": [39.254249898855655, -76.71129047909693],
             "neighbors": [
                             ["Interdisciplinary Life Sciences Building Entrance 2", 5, true],
                             ["Intersection 45", 22, true],
