@@ -194,16 +194,13 @@ def get_directions(nodes):
                     case _:
                         path.append((elevator_text[0] + node["floor"] + "th" + elevator_text[1]))
         except:
-            previous_floor = ""
-        
+            if node["type"] != "inside":
+                previous_floor = ""
+            else:
+                pass
        
         previous_type = node["type"]
-        
-    
-    print("Get Directions returning>")
-    for i in path:
-        print(i, end=', ')
-    print("<")
+
     return path
 
 
