@@ -45,7 +45,8 @@ def find_accessible_path():
 
     try:
         # 1. Run your partner's pathfinding code
-        path_node_names = get_path(start_name, end_name)
+        path_result = get_path(start_name, end_name)
+        path_node_names = path_result[0]
 
         if not path_node_names:
             return jsonify({"path": []}) # Return an empty path if none is found

@@ -1,5 +1,5 @@
 import json
-
+import math
 
 #init_nodes(dictionary of nodes from JSON file)
 def init_nodes(data):#Changes node neighbors[0] from str to corresponding node dictionary
@@ -81,8 +81,10 @@ def find_path(data, start, finish):#Finds the shortest path, returns a list of t
 
     return final_path
 
+#get_path(start node name (string), destination node name (string))
 #Returns a list of size 2
-#path contains the names of the nodes on the path
+#The first element of the list is a list of node names on the path
+#The second element of the list is a list of text-based directions for the path
 def get_path(start, finish):
     with open("nodes.json", "r") as f:
         node_list = json.load(f)
@@ -90,14 +92,86 @@ def get_path(start, finish):
     init_nodes(node_list)
     path_nodes = find_path(node_list, start, finish)
 
-    return get_directions(path_nodes)
+    # return get_directions(path_nodes)
 
+    path = [[]]
+    for node in path_nodes:       
+        path[0].append(node["name"])
 
-def get_directions(path_nodes):
+    path.append(get_directions(path_nodes))
+    return path
+
+#get_directions(list of nodes returned from find_path())
+#Returns a list of text based directions for the path
+def get_directions(nodes):
     path = []
     previous_floor = ""
-    for node in path_nodes:
-        try:
+
+    old_coords = []
+    previous_type = "null"
+    previous_name = ""
+    previous_angle = 0
+    current_angle = 0
+    for node in nodes:
+        coords = node["coords"]
+        
+        if(old_coords):#Determines if user needs to turn left or right into a building
+            current_angle = math.atan2((coords[0] - old_coords[0]), coords[1] - old_coords[1])
+            if previous_type == "intersection" and node["type"] == "entrance":#Indicate turn into a building
+                turn = ""
+
+                if abs(previous_angle - current_angle) > math.pi:
+                    if previous_angle > 0:
+                        previous_angle -= 2 * math.pi
+                    else:
+                        previous_angle += 2 * math.pi
+
+                if abs(previous_angle - current_angle) < math.pi / 8:
+                    turn = "Enter "
+                elif previous_angle > current_angle:
+                    turn = "Turn right into "
+                else:
+                    turn = "Turn left into "
+                
+                name = node["name"]
+                if "Building" in name or "University Center" in name:
+                    turn += "the "
+                
+                name = name.replace(" Entrance ", "")
+                
+                path.append((turn + name[:-1]))
+            
+            elif previous_type == "entrance" and node["type"] == "intersection":#Indicate turn when exiting a building
+                turn = "Exit "
+                name = previous_name
+                if "Building" in name or "University Center" in name:
+                    turn += "the "
+                name = name.replace(" Entrance ", "")
+                turn += (name[:-1] + " and ")
+
+                if abs(previous_angle - current_angle) > math.pi:
+                    if previous_angle > 0:
+                        previous_angle -= 2 * math.pi
+                    else:
+                        previous_angle += 2 * math.pi
+
+                if abs(previous_angle - current_angle) < math.pi / 8:
+                    turn += "go straight"
+                elif previous_angle > current_angle:
+                    turn += "turn right"
+                else:
+                    turn += "turn left"
+                
+                path.append(turn)
+            
+            previous_angle = current_angle
+        
+        old_coords = coords
+        previous_name = node["name"]
+        
+
+
+        try:#Tells the user what floor they need to take the elevator to
             if previous_floor == "":
                 previous_floor = node["floor"]
             elif node["floor"] != previous_floor:
@@ -119,14 +193,21 @@ def get_directions(path_nodes):
                         path.append((elevator_text[0] + "3rd" + elevator_text[1]))
                     case _:
                         path.append((elevator_text[0] + node["floor"] + "th" + elevator_text[1]))
-
         except:
-            previous_floor = ""
-        
-        path.append(node["name"])
-        
-    
+            if node["type"] != "inside":
+                previous_floor = ""
+            else:
+                pass
+       
+        previous_type = node["type"]
+
     return path
+
+
+    
+
+
+
 #testing and sample usage
 
 # final_path = get_path("Performing Arts & Humanities Building Entrance 1", "Interdisciplinary Life Sciences Building Entrance 2")

@@ -5,9 +5,8 @@
 	        "type": "building",
 	        "coords": [39.255112128062244, -76.71522151660801],
             "neighbors": [
-                            ["Performing Arts & Humanities Building Entrance 1", 0, true],
-                            ["Performing Arts & Humanities Building Entrance 2", 0, true],
-                            ["Performing Arts & Humanities Building Entrance 3", 0, true]
+                            ["Performing Arts & Humanities Building Inside 1", 1, true],
+                            ["Performing Arts & Humanities Building Inside 2", 1, true]
                         ]
         },
         {
@@ -19,9 +18,8 @@
                             ["Performing Arts & Humanities Building Floor 2", 30, true],
                             ["Performing Arts & Humanities Building Floor 3", 30, true],
                             ["Performing Arts & Humanities Building Floor 4", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 1", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 2", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 3", 1, true]
+                            ["Performing Arts & Humanities Building Inside 1", 1, true],
+                            ["Performing Arts & Humanities Building Inside 2", 1, true]
                         ]
         },
         {
@@ -33,9 +31,8 @@
                             ["Performing Arts & Humanities Building Floor 1", 30, true],
                             ["Performing Arts & Humanities Building Floor 3", 30, true],
                             ["Performing Arts & Humanities Building Floor 4", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 1", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 2", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 3", 1, true]
+                            ["Performing Arts & Humanities Building Inside 1", 1, true],
+                            ["Performing Arts & Humanities Building Inside 2", 1, true]
                         ]
         },
         {
@@ -47,9 +44,8 @@
                             ["Performing Arts & Humanities Building Floor 1", 30, true],
                             ["Performing Arts & Humanities Building Floor 2", 30, true],
                             ["Performing Arts & Humanities Building Floor 4", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 1", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 2", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 3", 1, true]
+                            ["Performing Arts & Humanities Building Inside 1", 1, true],
+                            ["Performing Arts & Humanities Building Inside 2", 1, true]
                         ]
         },
         {
@@ -61,9 +57,8 @@
                             ["Performing Arts & Humanities Building Floor 1", 30, true],
                             ["Performing Arts & Humanities Building Floor 2", 30, true],
                             ["Performing Arts & Humanities Building Floor 3", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 1", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 2", 1, true],
-                            ["Performing Arts & Humanities Building Entrance 3", 1, true]
+                            ["Performing Arts & Humanities Building Inside 1", 1, true],
+                            ["Performing Arts & Humanities Building Inside 2", 1, true]
                         ]
         },
         {
@@ -72,29 +67,17 @@
 	        "coords": [39.255600174488954, -76.71539310246226],
             "floor": "2",
             "neighbors": [
-                            ["Performing Arts & Humanities Building", 40, true],
-                            ["Performing Arts & Humanities Building Floor 1", 30, true],
-                            ["Performing Arts & Humanities Building Floor 2", 30, true],
-                            ["Performing Arts & Humanities Building Floor 3", 30, true],
-                            ["Performing Arts & Humanities Building Floor 4", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 2", 30, true], 
-                            ["Performing Arts & Humanities Building Entrance 3", 30, true], 
+                            ["Performing Arts & Humanities Building Inside 1", 7, true],
                             ["Intersection 1", 8, true]
                         ]
         },
         {
 	        "name": "Performing Arts & Humanities Building Entrance 2",
 	        "type": "entrance",
-	        "coords": [39.25527916906842, -76.71483564313267],
+	        "coords": [39.255214034610496, -76.7148079523884],
             "floor": "1",
             "neighbors": [
-                            ["Performing Arts & Humanities Building", 40, true],
-                            ["Performing Arts & Humanities Building Floor 1", 30, true],
-                            ["Performing Arts & Humanities Building Floor 2", 30, true],
-                            ["Performing Arts & Humanities Building Floor 3", 30, true],
-                            ["Performing Arts & Humanities Building Floor 4", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 1", 30, true], 
-                            ["Performing Arts & Humanities Building Entrance 3", 7, true], 
+                            ["Performing Arts & Humanities Building Inside 2", 2, true],
                             ["Intersection 3", 0, true]
                         ]
         },
@@ -104,13 +87,7 @@
 	        "coords": [39.255112888207236, -76.71467165975928],
             "floor": "1",
             "neighbors": [
-                            ["Performing Arts & Humanities Building", 40, true],
-                            ["Performing Arts & Humanities Building Floor 1", 30, true],
-                            ["Performing Arts & Humanities Building Floor 2", 30, true],
-                            ["Performing Arts & Humanities Building Floor 3", 30, true],
-                            ["Performing Arts & Humanities Building Floor 4", 30, true],
-                            ["Performing Arts & Humanities Building Entrance 1", 30, true], 
-                            ["Performing Arts & Humanities Building Entrance 2", 7, true], 
+                            ["Performing Arts & Humanities Building Inside 2", 6, true],
                             ["Intersection 5", 0, true]
                         ]
         },
@@ -120,10 +97,8 @@
 	        "type": "building",
 	        "coords": [39.25510482822823, -76.71344349749904],
             "neighbors": [
-                            ["Fine Arts Building Entrance 1", 0, true],
-                            ["Fine Arts Building Entrance 2", 0, true], 
-                            ["Fine Arts Building Entrance 3", 0, true], 
-                            ["Fine Arts Building Entrance 4", 0, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -137,10 +112,8 @@
                             ["Fine Arts Building Floor 3", 30, true],
                             ["Fine Arts Building Floor 4", 30, true],
                             ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 1, true],
-                            ["Fine Arts Building Entrance 2", 1, true], 
-                            ["Fine Arts Building Entrance 3", 1, true], 
-                            ["Fine Arts Building Entrance 4", 1, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -154,10 +127,8 @@
                             ["Fine Arts Building Floor 3", 30, true],
                             ["Fine Arts Building Floor 4", 30, true],
                             ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 1, true],
-                            ["Fine Arts Building Entrance 2", 1, true], 
-                            ["Fine Arts Building Entrance 3", 1, true], 
-                            ["Fine Arts Building Entrance 4", 1, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -171,10 +142,8 @@
                             ["Fine Arts Building Floor 3", 30, true],
                             ["Fine Arts Building Floor 4", 30, true],
                             ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 1, true],
-                            ["Fine Arts Building Entrance 2", 1, true], 
-                            ["Fine Arts Building Entrance 3", 1, true], 
-                            ["Fine Arts Building Entrance 4", 1, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -188,10 +157,8 @@
                             ["Fine Arts Building Floor 2", 30, true],
                             ["Fine Arts Building Floor 4", 30, true],
                             ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 1, true],
-                            ["Fine Arts Building Entrance 2", 1, true], 
-                            ["Fine Arts Building Entrance 3", 1, true], 
-                            ["Fine Arts Building Entrance 4", 1, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -205,10 +172,8 @@
                             ["Fine Arts Building Floor 2", 30, true],
                             ["Fine Arts Building Floor 3", 30, true],
                             ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 1, true],
-                            ["Fine Arts Building Entrance 2", 1, true], 
-                            ["Fine Arts Building Entrance 3", 1, true], 
-                            ["Fine Arts Building Entrance 4", 1, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -222,10 +187,8 @@
                             ["Fine Arts Building Floor 2", 30, true],
                             ["Fine Arts Building Floor 3", 30, true],
                             ["Fine Arts Building Floor 4", 30, true],
-                            ["Fine Arts Building Entrance 1", 1, true],
-                            ["Fine Arts Building Entrance 2", 1, true], 
-                            ["Fine Arts Building Entrance 3", 1, true], 
-                            ["Fine Arts Building Entrance 4", 1, true]
+                            ["Fine Arts Building Inside 2", 1, true],
+                            ["Fine Arts Building Inside 3", 1, true]
                         ]
         },
         {
@@ -234,16 +197,7 @@
 	        "coords": [39.25542310441748, -76.71346355731548],
             "floor": "1",
             "neighbors": [
-                            ["Fine Arts Building", 30, true],
-                            ["Fine Arts Building Floor g", 30, true],
-                            ["Fine Arts Building Floor 1", 30, true],
-                            ["Fine Arts Building Floor 2", 30, true],
-                            ["Fine Arts Building Floor 3", 30, true],
-                            ["Fine Arts Building Floor 4", 30, true],
-                            ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 2", 20, true], 
-                            ["Fine Arts Building Entrance 3", 20, true], 
-                            ["Fine Arts Building Entrance 4", 20, true], 
+                            ["Fine Arts Building Inside 1", 3, true],
                             ["Intersection 12", 11, true]
                         ]
         },
@@ -253,17 +207,8 @@
 	        "coords": [39.25496583203078, -76.71340206354793],
             "floor": "g",
             "neighbors": [
-                            ["Fine Arts Building", 30, true],
-                            ["Fine Arts Building Floor g", 30, true],
-                            ["Fine Arts Building Floor 1", 30, true],
-                            ["Fine Arts Building Floor 2", 30, true],
-                            ["Fine Arts Building Floor 3", 30, true],
-                            ["Fine Arts Building Floor 4", 30, true],
-                            ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 20, true], 
-                            ["Fine Arts Building Entrance 3", 20, true], 
-                            ["Fine Arts Building Entrance 4", 20, true], 
-                            ["Intersection 16", 2, true]
+                            ["Fine Arts Building Inside 3", 4, true],
+                            ["Intersection 16", 4, true]
                         ]
         },
         {
@@ -272,16 +217,7 @@
 	        "coords": [39.2548666498658, -76.71370661961555],
             "floor": "1",
             "neighbors": [
-                            ["Fine Arts Building", 30, true],
-                            ["Fine Arts Building Floor g", 30, true],
-                            ["Fine Arts Building Floor 1", 30, true],
-                            ["Fine Arts Building Floor 2", 30, true],
-                            ["Fine Arts Building Floor 3", 30, true],
-                            ["Fine Arts Building Floor 4", 30, true],
-                            ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 20, true], 
-                            ["Fine Arts Building Entrance 2", 20, true], 
-                            ["Fine Arts Building Entrance 4", 20, true], 
+                            ["Fine Arts Building Inside 4", 4, true], 
                             ["Engineering Building Entrance 1", 2, true]
                         ]
         },
@@ -291,16 +227,7 @@
 	        "coords": [39.25514128647431, -76.71383729959359],
             "floor": "2",
             "neighbors": [
-                            ["Fine Arts Building", 30, true],
-                            ["Fine Arts Building Floor g", 30, true],
-                            ["Fine Arts Building Floor 1", 30, true],
-                            ["Fine Arts Building Floor 2", 30, true],
-                            ["Fine Arts Building Floor 3", 30, true],
-                            ["Fine Arts Building Floor 4", 30, true],
-                            ["Fine Arts Building Floor 5", 30, true],
-                            ["Fine Arts Building Entrance 1", 20, true], 
-                            ["Fine Arts Building Entrance 2", 20, true], 
-                            ["Fine Arts Building Entrance 3", 20, true], 
+                            ["Fine Arts Building Inside 5", 3, true],
                             ["Intersection 14", 5, true]
                         ]
         },
@@ -310,9 +237,11 @@
 	        "type": "building",
 	        "coords": [39.254537941520624, -76.71398592737971],
             "neighbors": [
-                            ["Engineering Building Entrance 1", 0, true],
-                            ["Engineering Building Entrance 2", 0, true],
-                            ["Engineering Building Entrance 3", 0, true]
+                            ["Engineering Building Inside 1", 1, true],
+                            ["Engineering Building Inside 2", 1, true],
+                            ["Engineering Building Inside 3", 1, true],
+                            ["Engineering Building Inside 4", 1, true],
+                            ["Engineering Building Inside 5", 1, true]
                         ]
         },
         {
@@ -324,9 +253,11 @@
                             ["Engineering Building Floor 1", 30, true],
                             ["Engineering Building Floor 2", 30, true],
                             ["Engineering Building Floor 3", 30, true],
-                            ["Engineering Building Entrance 1", 1, true],
-                            ["Engineering Building Entrance 2", 1, true],
-                            ["Engineering Building Entrance 3", 1, true]
+                            ["Engineering Building Inside 1", 1, true],
+                            ["Engineering Building Inside 2", 1, true],
+                            ["Engineering Building Inside 3", 1, true],
+                            ["Engineering Building Inside 4", 1, true],
+                            ["Engineering Building Inside 5", 1, true]
                         ]
         },
         {
@@ -338,9 +269,11 @@
                             ["Engineering Building Floor g", 30, true],
                             ["Engineering Building Floor 2", 30, true],
                             ["Engineering Building Floor 3", 30, true],
-                            ["Engineering Building Entrance 1", 1, true],
-                            ["Engineering Building Entrance 2", 1, true],
-                            ["Engineering Building Entrance 3", 1, true]
+                            ["Engineering Building Inside 1", 1, true],
+                            ["Engineering Building Inside 2", 1, true],
+                            ["Engineering Building Inside 3", 1, true],
+                            ["Engineering Building Inside 4", 1, true],
+                            ["Engineering Building Inside 5", 1, true]
                         ]
         },
         {
@@ -352,9 +285,11 @@
                             ["Engineering Building Floor g", 30, true],
                             ["Engineering Building Floor 1", 30, true],
                             ["Engineering Building Floor 3", 30, true],
-                            ["Engineering Building Entrance 1", 1, true],
-                            ["Engineering Building Entrance 2", 1, true],
-                            ["Engineering Building Entrance 3", 1, true]
+                            ["Engineering Building Inside 1", 1, true],
+                            ["Engineering Building Inside 2", 1, true],
+                            ["Engineering Building Inside 3", 1, true],
+                            ["Engineering Building Inside 4", 1, true],
+                            ["Engineering Building Inside 5", 1, true]
                         ]
         },
         {
@@ -366,9 +301,11 @@
                             ["Engineering Building Floor g", 30, true],
                             ["Engineering Building Floor 1", 30, true],
                             ["Engineering Building Floor 2", 30, true],
-                            ["Engineering Building Entrance 1", 1, true],
-                            ["Engineering Building Entrance 2", 1, true],
-                            ["Engineering Building Entrance 3", 1, true]
+                            ["Engineering Building Inside 1", 1, true],
+                            ["Engineering Building Inside 2", 1, true],
+                            ["Engineering Building Inside 3", 1, true],
+                            ["Engineering Building Inside 4", 1, true],
+                            ["Engineering Building Inside 5", 1, true]
                         ]
         },
         {
@@ -377,13 +314,7 @@
 	        "coords": [39.254801513960466, -76.71381129799161],
             "floor": "1",
             "neighbors": [
-                            ["Engineering Building", 30, true],
-                            ["Engineering Building Floor g", 30, true],
-                            ["Engineering Building Floor 1", 30, true],
-                            ["Engineering Building Floor 2", 30, true],
-                            ["Engineering Building Floor 3", 30, true],
-                            ["Engineering Building Entrance 2", 20, true], 
-                            ["Engineering Building Entrance 3", 20, true], 
+                            ["Engineering Building Inside 2", 2, true],
                             ["Fine Arts Building Entrance 3", 2, true]
                         ]
         },
@@ -393,13 +324,7 @@
 	        "coords": [39.25444635620251, -76.7136570709725],
             "floor": "g",
             "neighbors": [
-                            ["Engineering Building", 30, true],
-                            ["Engineering Building Floor g", 30, true],
-                            ["Engineering Building Floor 1", 30, true],
-                            ["Engineering Building Floor 2", 30, true],
-                            ["Engineering Building Floor 3", 30, true],
-                            ["Engineering Building Entrance 1", 20, true], 
-                            ["Engineering Building Entrance 3", 20, true], 
+                            ["Engineering Building Inside 4", 3, true],
                             ["Intersection 17", 0, true]
                         ]
         },
@@ -409,13 +334,7 @@
 	        "coords": [39.2546743558192, -76.71428092816339],
             "floor": "2",
             "neighbors": [
-                            ["Engineering Building", 30, true],
-                            ["Engineering Building Floor g", 30, true],
-                            ["Engineering Building Floor 1", 30, true],
-                            ["Engineering Building Floor 2", 30, true],
-                            ["Engineering Building Floor 3", 30, true],
-                            ["Engineering Building Entrance 1", 20, true], 
-                            ["Engineering Building Entrance 2", 20, true],
+                            ["Engineering Building Inside 5", 3, true],
                             ["Intersection 15", 7, true]
                         ]
         },
@@ -425,8 +344,8 @@
 	        "type": "building",
 	        "coords": [39.25379481364249, -76.71427800503817],
             "neighbors": [
-                            ["Information Technology/Engineering Building Entrance 1", 0, true],
-                            ["Information Technology/Engineering Building Entrance 2", 0, true]
+                            ["Information Technology/Engineering Building Inside 1", 0, true],
+                            ["Information Technology/Engineering Building Inside 2", 0, true]
                         ]
         },
         {
@@ -438,8 +357,8 @@
                             ["Information Technology/Engineering Building Floor 2", 30, true],
                             ["Information Technology/Engineering Building Floor 3", 30, true],
                             ["Information Technology/Engineering Building Floor 4", 30, true],
-                            ["Information Technology/Engineering Building Entrance 1", 1, true],
-                            ["Information Technology/Engineering Building Entrance 2", 1, true]
+                            ["Information Technology/Engineering Building Inside 1", 0, true],
+                            ["Information Technology/Engineering Building Inside 2", 0, true]
                         ]
         },
         {
@@ -451,8 +370,8 @@
                             ["Information Technology/Engineering Building Floor 1", 30, true],
                             ["Information Technology/Engineering Building Floor 3", 30, true],
                             ["Information Technology/Engineering Building Floor 4", 30, true],
-                            ["Information Technology/Engineering Building Entrance 1", 1, true],
-                            ["Information Technology/Engineering Building Entrance 2", 1, true]
+                            ["Information Technology/Engineering Building Inside 1", 0, true],
+                            ["Information Technology/Engineering Building Inside 2", 0, true]
                         ]
         },
         {
@@ -464,8 +383,8 @@
                             ["Information Technology/Engineering Building Floor 1", 30, true],
                             ["Information Technology/Engineering Building Floor 2", 30, true],
                             ["Information Technology/Engineering Building Floor 4", 30, true],
-                            ["Information Technology/Engineering Building Entrance 1", 1, true],
-                            ["Information Technology/Engineering Building Entrance 2", 1, true]
+                            ["Information Technology/Engineering Building Inside 1", 0, true],
+                            ["Information Technology/Engineering Building Inside 2", 0, true]
                         ]
         },
         {
@@ -477,8 +396,8 @@
                             ["Information Technology/Engineering Building Floor 1", 30, true],
                             ["Information Technology/Engineering Building Floor 2", 30, true],
                             ["Information Technology/Engineering Building Floor 3", 30, true],
-                            ["Information Technology/Engineering Building Entrance 1", 1, true],
-                            ["Information Technology/Engineering Building Entrance 2", 1, true]
+                            ["Information Technology/Engineering Building Inside 1", 0, true],
+                            ["Information Technology/Engineering Building Inside 2", 0, true]
                         ]
         },
         {
@@ -487,12 +406,7 @@
 	        "coords": [39.25420428127206, -76.71447494979421],
             "floor": "3",
             "neighbors": [
-                            ["Information Technology/Engineering Building", 30, true],
-                            ["Information Technology/Engineering Building Floor 1", 30, true],
-                            ["Information Technology/Engineering Building Floor 2", 30, true],
-                            ["Information Technology/Engineering Building Floor 3", 30, true],
-                            ["Information Technology/Engineering Building Floor 4", 30, true],
-                            ["Information Technology/Engineering Building Entrance 2", 20, true], 
+                            ["Information Technology/Engineering Building Inside 1", 1, true], 
                             ["Intersection 11", 4, true]
                         ]
         },
@@ -502,12 +416,7 @@
 	        "coords": [39.25397321927168, -76.71384597178816],
             "floor": "1",
             "neighbors": [
-                            ["Information Technology/Engineering Building", 30, true],
-                            ["Information Technology/Engineering Building Floor 1", 30, true],
-                            ["Information Technology/Engineering Building Floor 2", 30, true],
-                            ["Information Technology/Engineering Building Floor 3", 30, true],
-                            ["Information Technology/Engineering Building Floor 4", 30, true],
-                            ["Information Technology/Engineering Building Entrance 1", 20, true], 
+                            ["Information Technology/Engineering Building Inside 2", 1, true], 
                             ["Intersection 18", 1, true]
                         ]
         },
@@ -517,11 +426,8 @@
 	        "type": "building",
 	        "coords": [39.254996150817945, -76.71305658934534],
             "neighbors": [
-                            ["Meyerhoff Building Entrance 1", 0, true],
-                            ["Meyerhoff Building Entrance 3", 0, true],
-                            ["Meyerhoff Building Entrance 4", 0, true],
-                            ["Meyerhoff Building Entrance 5", 0, true],
-                            ["Meyerhoff Building Entrance 6", 0, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -535,12 +441,8 @@
                             ["Meyerhoff Building Floor 3", 30, true],
                             ["Meyerhoff Building Floor 4", 30, true],
                             ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 30, true],
-                            ["Meyerhoff Building Entrance 4", 30, true],
-                            ["Meyerhoff Building Entrance 5", 30, true],
-                            ["Meyerhoff Building Entrance 6", 30, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -554,12 +456,8 @@
                             ["Meyerhoff Building Floor 3", 30, true],
                             ["Meyerhoff Building Floor 4", 30, true],
                             ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 30, true],
-                            ["Meyerhoff Building Entrance 4", 30, true],
-                            ["Meyerhoff Building Entrance 5", 30, true],
-                            ["Meyerhoff Building Entrance 6", 30, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -573,12 +471,8 @@
                             ["Meyerhoff Building Floor 3", 30, true],
                             ["Meyerhoff Building Floor 4", 30, true],
                             ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 30, true],
-                            ["Meyerhoff Building Entrance 4", 30, true],
-                            ["Meyerhoff Building Entrance 5", 30, true],
-                            ["Meyerhoff Building Entrance 6", 30, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -592,12 +486,8 @@
                             ["Meyerhoff Building Floor 2", 30, true],
                             ["Meyerhoff Building Floor 4", 30, true],
                             ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 30, true],
-                            ["Meyerhoff Building Entrance 4", 30, true],
-                            ["Meyerhoff Building Entrance 5", 30, true],
-                            ["Meyerhoff Building Entrance 6", 30, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -611,12 +501,8 @@
                             ["Meyerhoff Building Floor 2", 30, true],
                             ["Meyerhoff Building Floor 3", 30, true],
                             ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 10, true],
-                            ["Meyerhoff Building Entrance 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 30, true],
-                            ["Meyerhoff Building Entrance 4", 30, true],
-                            ["Meyerhoff Building Entrance 5", 30, true],
-                            ["Meyerhoff Building Entrance 6", 30, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -630,11 +516,8 @@
                             ["Meyerhoff Building Floor 2", 30, true],
                             ["Meyerhoff Building Floor 3", 30, true],
                             ["Meyerhoff Building Floor 4", 30, true],
-                            ["Meyerhoff Building Entrance 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 30, true],
-                            ["Meyerhoff Building Entrance 4", 30, true],
-                            ["Meyerhoff Building Entrance 5", 30, true],
-                            ["Meyerhoff Building Entrance 6", 30, true]
+                            ["Meyerhoff Building Inside 1", 0, true],
+                            ["Meyerhoff Building Inside 2", 0, true]
                         ]
         },
         {
@@ -651,18 +534,7 @@
 	        "coords": [39.25507063188563, -76.71242901511691],
             "floor": "g",
             "neighbors": [
-                            ["Meyerhoff Building", 30, true],
-                            ["Meyerhoff Building Floor b", 30, true],
-                            ["Meyerhoff Building Floor 1", 30, true],
-                            ["Meyerhoff Building Floor 2", 30, true],
-                            ["Meyerhoff Building Floor 3", 30, true],
-                            ["Meyerhoff Building Floor 4", 30, true],
-                            ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 3", 20, true],
-                            ["Meyerhoff Building Entrance 4", 20, true],
-                            ["Meyerhoff Building Entrance 5", 20, true],
-                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Meyerhoff Building Inside 1", 13, true],
                             ["Intersection 27", 2, true]
                         ]
         },
@@ -682,18 +554,8 @@
 	        "coords": [39.254634474657436, -76.7126328629948],
             "floor": "g",
             "neighbors": [
-                            ["Meyerhoff Building", 30, true],
-                            ["Meyerhoff Building Floor b", 30, true],
-                            ["Meyerhoff Building Floor 1", 30, true],
-                            ["Meyerhoff Building Floor 2", 30, true],
-                            ["Meyerhoff Building Floor 3", 30, true],
-                            ["Meyerhoff Building Floor 4", 30, true],
-                            ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 20, true],
-                            ["Meyerhoff Building Entrance 4", 20, true],
-                            ["Meyerhoff Building Entrance 5", 20, true],
-                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Meyerhoff Building Bridge 1", 10, true],
+                            ["Meyerhoff Building Inside 3", 9, true],
                             ["Intersection 29", 2, true]
                         ]
         },
@@ -703,39 +565,17 @@
 	        "coords": [39.25464901327585, -76.71300166673139],
             "floor": "1",
             "neighbors": [
-                            ["Meyerhoff Building", 30, true],
-                            ["Meyerhoff Building Floor b", 30, true],
-                            ["Meyerhoff Building Floor 1", 30, true],
-                            ["Meyerhoff Building Floor 2", 30, true],
-                            ["Meyerhoff Building Floor 3", 30, true],
-                            ["Meyerhoff Building Floor 4", 30, true],
-                            ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 20, true],
-                            ["Meyerhoff Building Entrance 3", 20, true],
-                            ["Meyerhoff Building Entrance 5", 20, true],
-                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Meyerhoff Building Inside 3", 3, true],
                             ["University Center Entrance 1", 2, true]
                         ]
         },
         {
 	        "name": "Meyerhoff Building Entrance 5",
 	        "type": "entrance",
-	        "coords": [39.25478320974927, -76.71321066559564],
+	        "coords": [39.254892689864306, -76.71322186628896],
             "floor": "2",
             "neighbors": [
-                            ["Meyerhoff Building", 30, true],
-                            ["Meyerhoff Building Floor b", 30, true],
-                            ["Meyerhoff Building Floor 1", 30, true],
-                            ["Meyerhoff Building Floor 2", 30, true],
-                            ["Meyerhoff Building Floor 3", 30, true],
-                            ["Meyerhoff Building Floor 4", 30, true],
-                            ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 20, true],
-                            ["Meyerhoff Building Entrance 3", 20, true],
-                            ["Meyerhoff Building Entrance 4", 20, true],
-                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Meyerhoff Building Inside 2", 2, true],
                             ["Intersection 16", 2, true]
                         ]
         },
@@ -745,18 +585,7 @@
 	        "coords": [39.255239096862574, -76.71299072446715],
             "floor": "2",
             "neighbors": [
-                            ["Meyerhoff Building", 30, true],
-                            ["Meyerhoff Building Floor b", 30, true],
-                            ["Meyerhoff Building Floor 1", 30, true],
-                            ["Meyerhoff Building Floor 2", 30, true],
-                            ["Meyerhoff Building Floor 3", 30, true],
-                            ["Meyerhoff Building Floor 4", 30, true],
-                            ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Bridge 1", 30, true],
-                            ["Meyerhoff Building Entrance 1", 20, true],
-                            ["Meyerhoff Building Entrance 3", 20, true],
-                            ["Meyerhoff Building Entrance 4", 20, true],
-                            ["Meyerhoff Building Entrance 5", 20, true],
+                            ["Meyerhoff Building Inside 1", 2, true],
                             ["Intersection 16", 10, true]
                         ]
         },
@@ -766,11 +595,8 @@
 	        "type": "building",
 	        "coords": [39.25426771410519, -76.71331452807658],
             "neighbors": [
-                            ["University Center Entrance 1", 0, true],
-                            ["University Center Entrance 2", 0, true],
-                            ["University Center Entrance 3", 0, true],
-                            ["University Center Entrance 4", 0, true],
-                            ["University Center Entrance 5", 0, true]
+                            ["University Center Inside 1", 0, true],
+                            ["University Center Inside 2", 0, true]
                         ]
         },
         {
@@ -781,11 +607,8 @@
             "neighbors": [
                             ["University Center Floor 2", 30, true],
                             ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 1", 30, true],
-                            ["University Center Entrance 2", 30, true],
-                            ["University Center Entrance 3", 30, true],
-                            ["University Center Entrance 4", 30, true],
-                            ["University Center Entrance 5", 30, true]
+                            ["University Center Inside 1", 0, true],
+                            ["University Center Inside 2", 0, true]
                         ]
         },
         {
@@ -796,11 +619,8 @@
             "neighbors": [
                             ["University Center Floor 1", 30, true],
                             ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 1", 30, true],
-                            ["University Center Entrance 2", 30, true],
-                            ["University Center Entrance 3", 30, true],
-                            ["University Center Entrance 4", 30, true],
-                            ["University Center Entrance 5", 30, true]
+                            ["University Center Inside 1", 0, true],
+                            ["University Center Inside 2", 0, true]
                         ]
         },
         {
@@ -811,11 +631,8 @@
             "neighbors": [
                             ["University Center Floor 1", 30, true],
                             ["University Center Floor 2", 30, true],
-                            ["University Center Entrance 1", 30, true],
-                            ["University Center Entrance 2", 30, true],
-                            ["University Center Entrance 3", 30, true],
-                            ["University Center Entrance 4", 30, true],
-                            ["University Center Entrance 5", 30, true]
+                            ["University Center Inside 1", 0, true],
+                            ["University Center Inside 2", 0, true]
                         ]
         },
         {
@@ -824,14 +641,7 @@
 	        "coords": [39.254535819666266, -76.7130459231933],
             "floor": "2",
             "neighbors": [
-                            ["University Center", 30, true],
-                            ["University Center Floor 1", 30, true],
-                            ["University Center Floor 2", 30, true],
-                            ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 2", 20, true],
-                            ["University Center Entrance 3", 20, true],
-                            ["University Center Entrance 4", 20, true],
-                            ["University Center Entrance 5", 20, true],
+                            ["University Center Inside 1", 2, true],
                             ["Meyerhoff Building Entrance 4", 2, true]
                         ]
         },
@@ -841,14 +651,7 @@
 	        "coords": [39.254461049479055, -76.71302848883556],
             "floor": "1",
             "neighbors": [
-                            ["University Center", 30, true],
-                            ["University Center Floor 1", 30, true],
-                            ["University Center Floor 2", 30, true],
-                            ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 1", 20, true],
-                            ["University Center Entrance 3", 20, true],
-                            ["University Center Entrance 4", 20, true],
-                            ["University Center Entrance 5", 20, true],
+                            ["University Center Inside 1", 3, true],
                             ["Intersection 22", 3, true]
                         ]
         },
@@ -858,14 +661,7 @@
 	        "coords": [39.254077851012916, -76.7130660397579],
             "floor": "1",
             "neighbors": [
-                            ["University Center", 30, true],
-                            ["University Center Floor 1", 30, true],
-                            ["University Center Floor 2", 30, true],
-                            ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 1", 20, true],
-                            ["University Center Entrance 2", 20, true],
-                            ["University Center Entrance 4", 20, true],
-                            ["University Center Entrance 5", 20, true],
+                            ["University Center Inside 2", 2, true],
                             ["Intersection 23", 1, true]
                         ]
         },
@@ -875,30 +671,17 @@
 	        "coords": [39.254048455997726, -76.71325720536478],
             "floor": "2",
             "neighbors": [
-                            ["University Center", 30, true],
-                            ["University Center Floor 1", 30, true],
-                            ["University Center Floor 2", 30, true],
-                            ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 1", 20, true],
-                            ["University Center Entrance 2", 20, true],
-                            ["University Center Entrance 3", 20, true],
-                            ["University Center Entrance 5", 20, true],
+                            ["University Center Inside 2", 2, true],
                             ["Sherman Hall Entrance 1", 3, true]
                         ]
         },
         {
-	        "name": " University Center Entrance 5",
+	        "name": "University Center Entrance 5",
 	        "type": "entrance",
 	        "coords": [39.25439977940451, -76.71345630116191],
             "floor": "3",
             "neighbors": [
-                            ["University Center", 30, true],
-                            ["University Center Floor 1", 30, true],
-                            ["University Center Floor 2", 30, true],
-                            ["University Center Floor 3", 30, true],
-                            ["University Center Entrance 1", 20, true],
-                            ["University Center Entrance 2", 20, true],
-                            ["University Center Entrance 3", 20, true],
+                            ["University Center Inside 2", 10, true],
                             ["Intersection 17", 0, true]
                         ]
         },
@@ -908,9 +691,8 @@
 	        "type": "building",
 	        "coords": [39.253545144416826, -76.71365971072791],
             "neighbors": [
-                            ["Sherman Hall Entrance 1", 0, true],
-                            ["Sherman Hall Entrance 2", 0, true],
-                            ["Sherman Hall Entrance 3", 0, true]
+                            ["Sherman Hall Inside 1", 0, true],
+                            ["Sherman Hall Inside 3", 0, true]
                         ]
         },
         {
@@ -922,9 +704,8 @@
                             ["Sherman Hall Floor 2", 30, true],
                             ["Sherman Hall Floor 3", 30, true],
                             ["Sherman Hall Floor 4", 30, true],
-                            ["Sherman Hall Entrance 1", 30, true],
-                            ["Sherman Hall Entrance 2", 30, true],
-                            ["Sherman Hall Entrance 3", 30, true]
+                            ["Sherman Hall Inside 1", 0, true],
+                            ["Sherman Hall Inside 3", 0, true]
                         ]
         },
         {
@@ -936,9 +717,8 @@
                             ["Sherman Hall Floor 1", 30, true],
                             ["Sherman Hall Floor 3", 30, true],
                             ["Sherman Hall Floor 4", 30, true],
-                            ["Sherman Hall Entrance 1", 30, true],
-                            ["Sherman Hall Entrance 2", 30, true],
-                            ["Sherman Hall Entrance 3", 30, true]
+                            ["Sherman Hall Inside 1", 0, true],
+                            ["Sherman Hall Inside 3", 0, true]
                         ]
         },
         {
@@ -950,9 +730,8 @@
                             ["Sherman Hall Floor 1", 30, true],
                             ["Sherman Hall Floor 2", 30, true],
                             ["Sherman Hall Floor 4", 30, true],
-                            ["Sherman Hall Entrance 1", 30, true],
-                            ["Sherman Hall Entrance 2", 30, true],
-                            ["Sherman Hall Entrance 3", 30, true]
+                            ["Sherman Hall Inside 1", 0, true],
+                            ["Sherman Hall Inside 3", 0, true]
                         ]
         },
         {
@@ -964,9 +743,8 @@
                             ["Sherman Hall Floor 1", 30, true],
                             ["Sherman Hall Floor 2", 30, true],
                             ["Sherman Hall Floor 3", 30, true],
-                            ["Sherman Hall Entrance 1", 30, true],
-                            ["Sherman Hall Entrance 2", 30, true],
-                            ["Sherman Hall Entrance 3", 30, true]
+                            ["Sherman Hall Inside 1", 0, true],
+                            ["Sherman Hall Inside 3", 0, true]
                         ]
         },
         {
@@ -974,13 +752,7 @@
 	        "type": "entrance",
 	        "coords": [39.25393214597474, -76.71330012070429],
             "neighbors": [
-                            ["Sherman Hall", 30, true],
-                            ["Sherman Hall Floor 1", 30, true],
-                            ["Sherman Hall Floor 2", 30, true],
-                            ["Sherman Hall Floor 3", 30, true],
-                            ["Sherman Hall Floor 4", 30, true],
-                            ["Sherman Hall Entrance 2", 20, true],
-                            ["Sherman Hall Entrance 3", 20, true],
+                            ["Sherman Hall Inside 2", 2, true],
                             ["University Center Entrance 4", 3, true]
                         ]
         },
@@ -990,13 +762,7 @@
 	        "coords": [39.25351675146043, -76.71385802011801],
             "floor": "2",
             "neighbors": [
-                            ["Sherman Hall", 30, true],
-                            ["Sherman Hall Floor 1", 30, true],
-                            ["Sherman Hall Floor 2", 30, true],
-                            ["Sherman Hall Floor 3", 30, true],
-                            ["Sherman Hall Floor 4", 30, true],
-                            ["Sherman Hall Entrance 1", 20, true],
-                            ["Sherman Hall Entrance 3", 20, true],
+                            ["Sherman Hall Inside 3", 3, true],
                             ["Intersection 18", 11, true]
                         ]
         },
@@ -1006,13 +772,7 @@
 	        "coords": [39.25394045383992, -76.71365149004659],
             "floor": "2",
             "neighbors": [
-                            ["Sherman Hall", 30, true],
-                            ["Sherman Hall Floor 1", 30, true],
-                            ["Sherman Hall Floor 2", 30, true],
-                            ["Sherman Hall Floor 3", 30, true],
-                            ["Sherman Hall Floor 4", 30, true],
-                            ["Sherman Hall Entrance 1", 20, true],
-                            ["Sherman Hall Entrance 2", 20, true],
+                            ["Sherman Hall Inside 1", 3, true],
                             ["Intersection 18", 1, true]
                         ]
         },
@@ -1022,14 +782,12 @@
 	        "type": "building",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "neighbors": [
-                            ["Biological Sciences Building Entrance 1", 0, true],
-                            ["Biological Sciences Building Entrance 2", 0, true],
-                            ["Biological Sciences Building Entrance 3", 0, true],
-                            ["Biological Sciences Building Entrance 4", 0, true]
+                            ["Biological Sciences Building Inside 2", 0, true],
+                            ["Biological Sciences Building Inside 3", 0, true]
                         ]
         },
         {
-	        "name": "Biological Sciences Floor b",
+	        "name": "Biological Sciences Building Floor b",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "b",
@@ -1038,16 +796,12 @@
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 1", 30, true],
-                            ["Biological Sciences Building Entrance 2", 30, true],
-                            ["Biological Sciences Building Entrance 3", 30, true],
-                            ["Biological Sciences Building Entrance 4", 30, true]
+                            ["Biological Sciences Building Inside 2", 0, true],
+                            ["Biological Sciences Building Inside 3", 0, true]
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 1",
+	        "name": "Biological Sciences Building Floor 1",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "1",
@@ -1056,16 +810,12 @@
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 1", 30, true],
-                            ["Biological Sciences Building Entrance 2", 30, true],
-                            ["Biological Sciences Building Entrance 3", 30, true],
-                            ["Biological Sciences Building Entrance 4", 30, true]
+                            ["Biological Sciences Building Inside 2", 0, true],
+                            ["Biological Sciences Building Inside 3", 0, true]
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 2",
+	        "name": "Biological Sciences Building Floor 2",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "2",
@@ -1074,16 +824,12 @@
                             ["Biological Sciences Building Floor 1", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 1", 30, true],
-                            ["Biological Sciences Building Entrance 2", 30, true],
-                            ["Biological Sciences Building Entrance 3", 30, true],
-                            ["Biological Sciences Building Entrance 4", 30, true]
+                            ["Biological Sciences Building Inside 2", 0, true],
+                            ["Biological Sciences Building Inside 3", 0, true]
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 3",
+	        "name": "Biological Sciences Building Floor 3",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "3",
@@ -1092,16 +838,12 @@
                             ["Biological Sciences Building Floor 1", 30, true],
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 1", 30, true],
-                            ["Biological Sciences Building Entrance 2", 30, true],
-                            ["Biological Sciences Building Entrance 3", 30, true],
-                            ["Biological Sciences Building Entrance 4", 30, true]
+                            ["Biological Sciences Building Inside 2", 0, true],
+                            ["Biological Sciences Building Inside 3", 0, true]
                         ]
         },
         {
-	        "name": "Biological Sciences Floor 4",
+	        "name": "Biological Sciences Building Floor 4",
 	        "type": "floor",
 	        "coords": [39.254746485865745, -76.71218035643324],
             "floor": "4",
@@ -1110,12 +852,8 @@
                             ["Biological Sciences Building Floor 1", 30, true],
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
-                            ["Biological Sciences Building Bridge 1", 10, true],
-                            ["Biological Sciences Building Bridge 2", 10, true],
-                            ["Biological Sciences Building Entrance 1", 30, true],
-                            ["Biological Sciences Building Entrance 2", 30, true],
-                            ["Biological Sciences Building Entrance 3", 30, true],
-                            ["Biological Sciences Building Entrance 4", 30, true]
+                            ["Biological Sciences Building Inside 2", 0, true],
+                            ["Biological Sciences Building Inside 3", 0, true]
                         ]
         },
         {
@@ -1124,16 +862,7 @@
 	        "coords": [39.25495709600892, -76.71204406679345],
             "floor": "1",
             "neighbors": [
-                            ["Biological Sciences Building", 30, true],
-                            ["Biological Sciences Building Floor b", 30, true],
-                            ["Biological Sciences Building Floor 1", 30, true],
-                            ["Biological Sciences Building Floor 2", 30, true],
-                            ["Biological Sciences Building Floor 3", 30, true],
-                            ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 2", 20, true],
-                            ["Biological Sciences Building Entrance 3", 20, true],
+                            ["Biological Sciences Building Inside 3", 3, true],
                             ["Intersection 43", 4, true]
                         ]
         },
@@ -1143,52 +872,27 @@
 	        "coords": [39.25451989959715, -76.71237666072109],
             "floor": "1",
             "neighbors": [
-                            ["Biological Sciences Building", 30, true],
-                            ["Biological Sciences Building Floor b", 30, true],
-                            ["Biological Sciences Building Floor 1", 30, true],
-                            ["Biological Sciences Building Floor 2", 30, true],
-                            ["Biological Sciences Building Floor 3", 30, true],
-                            ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 1", 20, true],
-                            ["Biological Sciences Building Entrance 3", 20, true],
+                            ["Biological Sciences Building Inside 3", 2, true],
                             ["Intersection 30", 4, true]
                         ]
         },
         {
 	        "name": "Biological Sciences Building Entrance 3",
 	        "type": "entrance",
-	        "coords": [39.25507651973138, -76.7120494312263],
+	        "coords": [39.25506317288864, -76.71210976994155],
             "floor": "1",
             "neighbors": [
-                            ["Biological Sciences Building", 30, true],
-                            ["Biological Sciences Building Floor b", 30, true],
-                            ["Biological Sciences Building Floor 1", 30, true],
-                            ["Biological Sciences Building Floor 2", 30, true],
-                            ["Biological Sciences Building Floor 3", 30, true],
-                            ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
-                            ["Biological Sciences Building Entrance 1", 20, true],
-                            ["Biological Sciences Building Entrance 2", 20, true],
+                            ["Biological Sciences Building Inside 2", 2, true],
                             ["Intersection 38", 0, true]
                         ]
         },
         {
 	        "name": "Biological Sciences Building Entrance 4",
 	        "type": "entrance",
-	        "coords": [39.255199058643015, -76.7120427257041],
+	        "coords": [39.255125496280565, -76.7120671708239],
             "floor": "1",
             "neighbors": [
-                            ["Biological Sciences Building", 30, true],
-                            ["Biological Sciences Building Floor b", 30, true],
-                            ["Biological Sciences Building Floor 1", 30, true],
-                            ["Biological Sciences Building Floor 2", 30, true],
-                            ["Biological Sciences Building Floor 3", 30, true],
-                            ["Biological Sciences Building Floor 4", 30, true],
-                            ["Biological Sciences Building Bridge 1", 30, true],
-                            ["Biological Sciences Building Bridge 2", 30, true],
+                            ["Biological Sciences Building Inside 1", 1, true],
                             ["Intersection 38", 0, true]
                         ]
         },
@@ -1727,7 +1431,7 @@
                             ["Administration Building Floor 8", 30, true],
                             ["Administration Building Floor 9", 30, true],
                             ["Administration Building Floor 10", 30, true],
-                            ["Administration Building Entrance 2", 20, true],
+                            ["Administration Building Entrance 2", 10, true],
                             ["Intersection 34", 2, true]
                         ]
         },
@@ -1749,7 +1453,7 @@
                             ["Administration Building Floor 8", 30, true],
                             ["Administration Building Floor 9", 30, true],
                             ["Administration Building Floor 10", 30, true],
-                            ["Administration Building Entrance 1", 20, true],
+                            ["Administration Building Entrance 1", 10, true],
                             ["Intersection 24", 0, true]
                         ]
         },
@@ -1887,18 +1591,7 @@
 	        "coords": [39.2551002897489, -76.71063472566124],
             "floor": "l",
             "neighbors": [
-                            ["The Commons", 30, true],
-                            ["The Commons Floor g", 30, true],
-                            ["The Commons Floor m", 30, true],
-                            ["The Commons Floor l", 30, true],
-                            ["The Commons Floor 1", 30, true],
-                            ["The Commons Floor 2", 30, true],
-                            ["The Commons Floor 3", 30, true],
-                            ["The Commons Entrance 6", 20, true],
-                            ["The Commons Entrance 2", 20, true],
-                            ["The Commons Entrance 3", 20, true],
-                            ["The Commons Entrance 4", 20, true],
-                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Inside 3", 7, true],
                             ["Intersection 54", 0, true]
                         ]
         },
@@ -1908,18 +1601,7 @@
 	        "coords": [39.25444276796987, -76.71096199666974],
             "floor": "g",
             "neighbors": [
-                            ["The Commons", 30, true],
-                            ["The Commons Floor g", 30, true],
-                            ["The Commons Floor m", 30, true],
-                            ["The Commons Floor l", 30, true],
-                            ["The Commons Floor 1", 30, true],
-                            ["The Commons Floor 2", 30, true],
-                            ["The Commons Floor 3", 30, true],
-                            ["The Commons Entrance 6", 20, true],
-                            ["The Commons Entrance 1", 20, true],
-                            ["The Commons Entrance 3", 20, true],
-                            ["The Commons Entrance 4", 20, true],
-                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Inside 4", 2, true],
                             ["Intersection 61", 18, true]
                         ]
         },
@@ -1929,18 +1611,7 @@
 	        "coords": [39.254451075774575, -76.71115243350049],
             "floor": "g",
             "neighbors": [
-                            ["The Commons", 30, true],
-                            ["The Commons Floor g", 30, true],
-                            ["The Commons Floor m", 30, true],
-                            ["The Commons Floor l", 30, true],
-                            ["The Commons Floor 1", 30, true],
-                            ["The Commons Floor 2", 30, true],
-                            ["The Commons Floor 3", 30, true],
-                            ["The Commons Entrance 6", 20, true],
-                            ["The Commons Entrance 1", 20, true],
-                            ["The Commons Entrance 2", 20, true],
-                            ["The Commons Entrance 4", 20, true],
-                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Inside 4", 2, true],
                             ["Intersection 51", 5, true]
                         ]
         },
@@ -1950,18 +1621,7 @@
 	        "coords": [39.25492254208516, -76.71103709852797],
             "floor": "1",
             "neighbors": [
-                            ["The Commons", 30, true],
-                            ["The Commons Floor g", 30, true],
-                            ["The Commons Floor m", 30, true],
-                            ["The Commons Floor l", 30, true],
-                            ["The Commons Floor 1", 30, true],
-                            ["The Commons Floor 2", 30, true],
-                            ["The Commons Floor 3", 30, true],
-                            ["The Commons Entrance 6", 20, true],
-                            ["The Commons Entrance 1", 20, true],
-                            ["The Commons Entrance 2", 20, true],
-                            ["The Commons Entrance 3", 20, true],
-                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Inside 3", 2, true],
                             ["Intersection 46", 13, true]
                         ]
         },
@@ -1971,18 +1631,7 @@
 	        "coords": [39.25510531231015, -76.71160036239358],
             "floor": "1",
             "neighbors": [
-                            ["The Commons", 30, true],
-                            ["The Commons Floor g", 30, true],
-                            ["The Commons Floor m", 30, true],
-                            ["The Commons Floor l", 30, true],
-                            ["The Commons Floor 1", 30, true],
-                            ["The Commons Floor 2", 30, true],
-                            ["The Commons Floor 3", 30, true],
-                            ["The Commons Entrance 6", 20, true],
-                            ["The Commons Entrance 1", 20, true],
-                            ["The Commons Entrance 2", 20, true],
-                            ["The Commons Entrance 3", 20, true],
-                            ["The Commons Entrance 4", 20, true],
+                            ["The Commons Inside 1", 2, true],
                             ["Intersection 46", 3, true]
                         ]
         },
@@ -1992,18 +1641,7 @@
 	        "coords": [39.25518068847342, -76.71090324961358],
             "floor": "l",
             "neighbors": [
-                            ["The Commons", 30, true],
-                            ["The Commons Floor g", 30, true],
-                            ["The Commons Floor m", 30, true],
-                            ["The Commons Floor l", 30, true],
-                            ["The Commons Floor 1", 30, true],
-                            ["The Commons Floor 2", 30, true],
-                            ["The Commons Floor 3", 30, true],
-                            ["The Commons Entrance 1", 20, true],
-                            ["The Commons Entrance 2", 20, true],
-                            ["The Commons Entrance 3", 20, true],
-                            ["The Commons Entrance 4", 20, true],
-                            ["The Commons Entrance 5", 20, true],
+                            ["The Commons Inside 3", 7, true],
                             ["Intersection 50", 0, true]
                         ]
         },
@@ -2022,7 +1660,7 @@
 	        "coords": [39.25468868683044, -76.71183146811391],
             "floor": "g",
             "neighbors": [
-                            ["Lecture 1 Hall", 30, true],
+                            ["Lecture Hall 1", 30, true],
                             ["Intersection 44", 6, true]
                         ]
         },
@@ -2114,10 +1752,10 @@
             "floor": "1",
             "neighbors": [
                             ["Interdisciplinary Life Sciences Building", 30, true],
-                            ["Interdisciplinary Life Sciences Building Floor 1", 0, true],
-                            ["Interdisciplinary Life Sciences Building Floor 2", 0, true],
-                            ["Interdisciplinary Life Sciences Building Floor 3", 0, true],
-                            ["Interdisciplinary Life Sciences Building Floor 4", 0, true],
+                            ["Interdisciplinary Life Sciences Building Floor 1", 30, true],
+                            ["Interdisciplinary Life Sciences Building Floor 2", 30, true],
+                            ["Interdisciplinary Life Sciences Building Floor 3", 30, true],
+                            ["Interdisciplinary Life Sciences Building Floor 4", 30, true],
                             ["Interdisciplinary Life Sciences Building Entrance 2", 20, true],
                             ["Intersection 56", 0, true]
                         ]
@@ -2129,10 +1767,10 @@
             "floor": "1",
             "neighbors": [
                             ["Interdisciplinary Life Sciences Building", 30, true],
-                            ["Interdisciplinary Life Sciences Building Floor 1", 0, true],
-                            ["Interdisciplinary Life Sciences Building Floor 2", 0, true],
-                            ["Interdisciplinary Life Sciences Building Floor 3", 0, true],
-                            ["Interdisciplinary Life Sciences Building Floor 4", 0, true],
+                            ["Interdisciplinary Life Sciences Building Floor 1", 30, true],
+                            ["Interdisciplinary Life Sciences Building Floor 2", 30, true],
+                            ["Interdisciplinary Life Sciences Building Floor 3", 30, true],
+                            ["Interdisciplinary Life Sciences Building Floor 4", 30, true],
                             ["Interdisciplinary Life Sciences Building Entrance 1", 20, true],
                             ["Intersection 52", 5, true]
                         ]
@@ -2187,7 +1825,7 @@
         {
 	        "name": "Albin O. Kuhn Library & Gallery Entrance 3",
 	        "type": "entrance",
-	        "coords": [39.25652836173167, -76.71237179868484],
+	        "coords": [39.256499534366064, -76.71234029935455],
             "floor": "g",
             "neighbors": [
                             ["Office Of Financial Aid & Scholarships", 0, true],
@@ -2481,7 +2119,6 @@
             "neighbors": [
                             ["University Center Entrance 5", 0, true],
                             ["Engineering Building Entrance 2", 0, true],
-                            ["Information Technology/Engineering Building Entrance 2", 12, true],
                             ["Intersection 16", 14, true],
                             ["Intersection 18", 11, true]
                         ]
@@ -2500,7 +2137,7 @@
         {
 	        "name": "Intersection 19",
 	        "type": "intersection",
-	        "coords": [39.25650480474567, -76.71241738627505],
+	        "coords": [39.25648119664218, -76.7123854085485],
             "neighbors": [
                             ["Albin O. Kuhn Library & Gallery Entrance 3", 0, true],
                             ["Intersection 20", 11, true],
@@ -2510,7 +2147,7 @@
         {
 	        "name": "Intersection 20",
 	        "type": "intersection",
-	        "coords": [39.25619950121993, -76.71241738627505],
+	        "coords": [39.25617550121993, -76.71241738627505],
             "neighbors": [
                             ["Intersection 19", 11, true],
                             ["Intersection 26", 28, true]
@@ -2520,7 +2157,7 @@
         {
 	        "name": "Intersection 21",
 	        "type": "intersection",
-	        "coords": [39.25615470827811, -76.71202546863229],
+	        "coords": [39.25615470827811, -76.71202946863229],
             "neighbors": [
                             ["Albin O. Kuhn Library & Gallery Entrance 2", 0, true],
                             ["Intersection 19", 11, true],
@@ -2540,7 +2177,7 @@
         {
 	        "name": "Intersection 23",
 	        "type": "intersection",
-	        "coords": [39.254069074506134, -76.7130325169765],
+	        "coords": [39.254023259881045, -76.71300610862818],
             "neighbors": [
                             ["University Center Entrance 3", 1, true],
                             ["Intersection 22", 8, true],
@@ -2550,7 +2187,7 @@
         {
 	        "name": "Intersection 24",
 	        "type": "intersection",
-	        "coords": [39.252914273896494, -76.71357298209249],
+	        "coords": [39.252914273896494, -76.71357998209249],
             "neighbors": [
                             ["Administration Building Entrance 2", 0, true],
                             ["Intersection 35", 4, true]
@@ -2591,7 +2228,7 @@
         {
 	        "name": "Intersection 28",
 	        "type": "intersection",
-	        "coords": [39.254813193160196, -76.7123841264113],
+	        "coords": [39.25480966454947, -76.71241066719111],
             "neighbors": [
                             ["Meyerhoff Building Entrance 2", 1, true],
                             ["Intersection 27", 5, true],
@@ -2641,7 +2278,7 @@
         {
 	        "name": "Intersection 33",
 	        "type": "intersection",
-	        "coords": [39.25380960484145, -76.71269662367236],
+	        "coords": [39.253988329644464, -76.71280762814006],
             "neighbors": [
                             ["Intersection 23", 3, true],
                             ["Intersection 32", 8, true],
@@ -2651,7 +2288,7 @@
         {
 	        "name": "Intersection 34",
 	        "type": "intersection",
-	        "coords": [39.25296303791617, -76.71326258923882],
+	        "coords": [39.25292469561829, -76.71328353020348],
             "neighbors": [
                             ["Sondheim Hall Entrance 2", 9, true],
                             ["Administration Building Entrance 1", 2, true],
@@ -2702,7 +2339,7 @@
         {
 	        "name": "Intersection 39",
 	        "type": "intersection",
-	        "coords": [39.25380960485102, -76.71268053044632],
+	        "coords": [39.253823197508275, -76.71274537148456],
             "neighbors": [
                             ["Math & Psychology Building Entrance 2", 2, true],
                             ["Sondheim Hall Entrance 1", 3, true],
@@ -2756,7 +2393,7 @@
 	        "type": "intersection",
 	        "coords": [39.25451609447329, -76.71194694230246],
             "neighbors": [
-                            ["Lecture Hall Entrance 1", 6, true],
+                            ["Lecture Hall 1 Entrance 1", 6, true],
                             ["Intersection 45", 17, true],
                             ["Intersection 47", 3, true]
                         ]
@@ -2838,7 +2475,7 @@
         {
 	        "name": "Intersection 52",
 	        "type": "intersection",
-	        "coords": [39.254249898855655, -76.71125047909693],
+	        "coords": [39.254249898855655, -76.71129047909693],
             "neighbors": [
                             ["Interdisciplinary Life Sciences Building Entrance 2", 5, true],
                             ["Intersection 45", 22, true],
@@ -2975,11 +2612,7 @@
                             ["Meyerhoff Building Floor 3", 30, true],
                             ["Meyerhoff Building Floor 4", 10, true],
                             ["Meyerhoff Building Floor 5", 30, true],
-                            ["Meyerhoff Building Entrance 1", 20, true],
-                            ["Meyerhoff Building Entrance 3", 20, true],
-                            ["Meyerhoff Building Entrance 4", 20, true],
-                            ["Meyerhoff Building Entrance 5", 20, true],
-                            ["Meyerhoff Building Entrance 6", 20, true],
+                            ["Meyerhoff Building Inside 3", 10, true],
                             ["Biological Sciences Building Bridge 2", 6, true]
                         ]
         },
@@ -3071,6 +2704,465 @@
                             ["Sondheim Hall Entrance 1", 30, true],
                             ["Sondheim Hall Entrance 2", 30, true],
                             ["Math & Psychology Building Bridge 2", 4, true]
+                        ]
+        },
+
+        {
+	        "name": "Performing Arts & Humanities Building Inside 1",
+	        "type": "inside",
+	        "coords": [39.25534705623261, -76.71547810125959],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building", 40, true],
+                            ["Performing Arts & Humanities Building Floor 1", 30, true],
+                            ["Performing Arts & Humanities Building Floor 2", 30, true],
+                            ["Performing Arts & Humanities Building Floor 3", 30, true],
+                            ["Performing Arts & Humanities Building Floor 4", 30, true],
+                            ["Performing Arts & Humanities Building Entrance 1", 7, true],
+                            ["Performing Arts & Humanities Building Inside 2", 12, true]
+                        ]
+        },
+        {
+	        "name": "Performing Arts & Humanities Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.255155978917614, -76.71484510000171],
+            "neighbors": [
+                            ["Performing Arts & Humanities Building", 40, true],
+                            ["Performing Arts & Humanities Building Floor 1", 30, true],
+                            ["Performing Arts & Humanities Building Floor 2", 30, true],
+                            ["Performing Arts & Humanities Building Floor 3", 30, true],
+                            ["Performing Arts & Humanities Building Floor 4", 30, true],
+                            ["Performing Arts & Humanities Building Entrance 2", 2, true],
+                            ["Performing Arts & Humanities Building Entrance 3", 6, true],
+                            ["Performing Arts & Humanities Building Inside 1", 12, true]
+                        ]
+        },
+
+        {
+	        "name": "Fine Arts Building Inside 1",
+	        "type": "inside",
+	        "coords": [39.25532317159783, -76.71349326664087],
+            "neighbors": [
+                            ["Fine Arts Building", 30, true],
+                            ["Fine Arts Building Floor g", 30, true],
+                            ["Fine Arts Building Floor 1", 30, true],
+                            ["Fine Arts Building Floor 2", 30, true],
+                            ["Fine Arts Building Floor 3", 30, true],
+                            ["Fine Arts Building Floor 4", 30, true],
+                            ["Fine Arts Building Floor 5", 30, true],
+                            ["Fine Arts Building Entrance 1", 3, true], 
+                            ["Fine Arts Building Inside 2", 4, true],
+                            ["Fine Arts Building Inside 2", 4, true]
+                        ]
+        },
+        {
+	        "name": "Fine Arts Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.255296171564844, -76.71334306295256],
+            "neighbors": [
+                            ["Fine Arts Building Inside 1", 4, true],
+                            ["Fine Arts Building Inside 3", 9, true]
+                        ]
+        },
+        {
+	        "name": "Fine Arts Building Inside 3",
+	        "type": "inside",
+	        "coords": [39.25499501664024, -76.71349997215796],
+            "neighbors": [
+                            ["Fine Arts Building", 30, true],
+                            ["Fine Arts Building Floor g", 30, true],
+                            ["Fine Arts Building Floor 1", 30, true],
+                            ["Fine Arts Building Floor 2", 30, true],
+                            ["Fine Arts Building Floor 3", 30, true],
+                            ["Fine Arts Building Floor 4", 30, true],
+                            ["Fine Arts Building Floor 5", 30, true],
+                            ["Fine Arts Building Entrance 2", 3, true], 
+                            ["Fine Arts Building Inside 2", 9, true],
+                            ["Fine Arts Building Inside 4", 10, true]
+                        ]
+        },
+        {
+	        "name": "Fine Arts Building Inside 4",
+	        "type": "inside",
+	        "coords": [39.25501890138792, -76.7136488347419],
+            "neighbors": [
+                            ["Fine Arts Building", 30, true],
+                            ["Fine Arts Building Floor g", 30, true],
+                            ["Fine Arts Building Floor 1", 30, true],
+                            ["Fine Arts Building Floor 2", 30, true],
+                            ["Fine Arts Building Floor 3", 30, true],
+                            ["Fine Arts Building Floor 4", 30, true],
+                            ["Fine Arts Building Floor 5", 30, true],
+                            ["Fine Arts Building Entrance 3", 4, true], 
+                            ["Fine Arts Building Inside 3", 10, true],
+                            ["Fine Arts Building Inside 5", 2, true]
+                        ]
+        },
+        {
+	        "name": "Fine Arts Building Inside 5",
+	        "type": "inside",
+	        "coords": [39.25509367098024, -76.71386279917002],
+            "neighbors": [
+                            ["Fine Arts Building", 30, true],
+                            ["Fine Arts Building Floor g", 30, true],
+                            ["Fine Arts Building Floor 1", 30, true],
+                            ["Fine Arts Building Floor 2", 30, true],
+                            ["Fine Arts Building Floor 3", 30, true],
+                            ["Fine Arts Building Floor 4", 30, true],
+                            ["Fine Arts Building Floor 5", 30, true],
+                            ["Fine Arts Building Entrance 4", 4, true], 
+                            ["Fine Arts Building Inside 4", 2, true]
+                        ]
+        },
+
+        {
+	        "name": "Engineering Building Inside 1",
+	        "type": "inside",
+	        "coords": [39.25481016918015, -76.7141034691404],
+            "neighbors": [
+                            ["Engineering Building Inside 2", 6, true],
+                            ["Engineering Building Inside 5", 6, true]
+                        ]
+        },
+        {
+	        "name": "Engineering Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.25473643775681, -76.71386548139921],
+            "neighbors": [
+                            ["Engineering Building", 30, true],
+                            ["Engineering Building Floor g", 30, true],
+                            ["Engineering Building Floor 1", 30, true],
+                            ["Engineering Building Floor 2", 30, true],
+                            ["Engineering Building Floor 3", 30, true],
+                            ["Engineering Building Entrance 1", 2, true],
+                            ["Engineering Building Inside 1", 6, true],
+                            ["Engineering Building Inside 3", 6, true]
+                        ]
+        },
+        {
+	        "name": "Engineering Building Inside 3",
+	        "type": "inside",
+	        "coords": [39.25468047570065, -76.71361128384032],
+            "neighbors": [
+                            ["Engineering Building", 30, true],
+                            ["Engineering Building Floor g", 30, true],
+                            ["Engineering Building Floor 1", 30, true],
+                            ["Engineering Building Floor 2", 30, true],
+                            ["Engineering Building Floor 3", 30, true],
+                            ["Engineering Building Inside 2", 6, true],
+                            ["Engineering Building Inside 4", 6, true]
+                        ]
+        },
+        {
+	        "name": "Engineering Building Inside 4",
+	        "type": "inside",
+	        "coords": [39.25445604994022, -76.71371723110026],
+            "neighbors": [
+                            ["Engineering Building", 30, true],
+                            ["Engineering Building Floor g", 30, true],
+                            ["Engineering Building Floor 1", 30, true],
+                            ["Engineering Building Floor 2", 30, true],
+                            ["Engineering Building Floor 3", 30, true],
+                            ["Engineering Building Entrance 2", 3, true],
+                            ["Engineering Building Inside 3", 6, true]
+                        ]
+        },
+        {
+	        "name": "Engineering Building Inside 5",
+	        "type": "inside",
+	        "coords": [39.254649206111026, -76.71421612194366],
+            "neighbors": [
+                            ["Engineering Building", 30, true],
+                            ["Engineering Building Floor g", 30, true],
+                            ["Engineering Building Floor 1", 30, true],
+                            ["Engineering Building Floor 2", 30, true],
+                            ["Engineering Building Floor 3", 30, true],
+                            ["Engineering Building Entrance 3", 1, true],
+                            ["Engineering Building Inside 1", 6, true]
+                        ]
+        },
+
+        {
+	        "name": "Information Technology/Engineering Building Inside 1",
+	        "type": "inside",
+	        "coords": [39.25416318862781, -76.71449515925198],
+            "neighbors": [
+                            ["Information Technology/Engineering Building Floor 1", 30, true],
+                            ["Information Technology/Engineering Building Floor 2", 30, true],
+                            ["Information Technology/Engineering Building Floor 3", 30, true],
+                            ["Information Technology/Engineering Building Floor 4", 30, true],
+                            ["Information Technology/Engineering Building Entrance 1", 1, true],
+                            ["Information Technology/Engineering Building Inside 2", 12, true]
+                        ]
+        },
+        {
+	        "name": "Information Technology/Engineering Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.25398929201679, -76.71388495675734],
+            "neighbors": [
+                            ["Information Technology/Engineering Building Floor 1", 30, true],
+                            ["Information Technology/Engineering Building Floor 2", 30, true],
+                            ["Information Technology/Engineering Building Floor 3", 30, true],
+                            ["Information Technology/Engineering Building Floor 4", 30, true],
+                            ["Information Technology/Engineering Building Entrance 2", 1, true],
+                            ["Information Technology/Engineering Building Inside 1", 12, true]
+                        ]
+        },
+
+        {
+	        "name": "Meyerhoff Building Inside 1",
+	        "type": "inside",
+	        "coords": [39.25523270169538, -76.71296596803917],
+            "neighbors": [
+                            ["Meyerhoff Building", 30, true],
+                            ["Meyerhoff Building Floor b", 30, true],
+                            ["Meyerhoff Building Floor 1", 30, true],
+                            ["Meyerhoff Building Floor 2", 30, true],
+                            ["Meyerhoff Building Floor 3", 30, true],
+                            ["Meyerhoff Building Floor 4", 30, true],
+                            ["Meyerhoff Building Floor 5", 30, true],
+                            ["Meyerhoff Building Entrance 1", 13, true],
+                            ["Meyerhoff Building Entrance 6", 2, true],
+                            ["Meyerhoff Building Inside 2", 10, true]
+                        ]
+        },
+        {
+	        "name": "Meyerhoff Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.254880892147195, -76.71315372264957],
+            "neighbors": [
+                            ["Meyerhoff Building", 30, true],
+                            ["Meyerhoff Building Floor b", 30, true],
+                            ["Meyerhoff Building Floor 1", 30, true],
+                            ["Meyerhoff Building Floor 2", 30, true],
+                            ["Meyerhoff Building Floor 3", 30, true],
+                            ["Meyerhoff Building Floor 4", 30, true],
+                            ["Meyerhoff Building Floor 5", 30, true],
+                            ["Meyerhoff Building Entrance 5", 2, true],
+                            ["Meyerhoff Building Inside 1", 10, true],
+                            ["Meyerhoff Building Inside 3", 5, true]
+                        ]
+        },
+        {
+	        "name": "Meyerhoff Building Inside 3",
+	        "type": "inside",
+	        "coords": [39.25472904486765, -76.71304643430886],
+            "neighbors": [
+                            ["Meyerhoff Building", 30, true],
+                            ["Meyerhoff Building Floor b", 30, true],
+                            ["Meyerhoff Building Floor 1", 30, true],
+                            ["Meyerhoff Building Floor 2", 30, true],
+                            ["Meyerhoff Building Floor 3", 30, true],
+                            ["Meyerhoff Building Floor 4", 30, true],
+                            ["Meyerhoff Building Floor 5", 30, true],
+                            ["Meyerhoff Building Entrance 4", 2, true],
+                            ["Meyerhoff Building Entrance 3", 9, true],
+                            ["Meyerhoff Building Bridge 1", 10, true],
+                            ["Meyerhoff Building Inside 2", 5, true]
+                        ]
+        },
+
+        {
+	        "name": "University Center Inside 1",
+	        "type": "inside",
+	        "coords": [39.25448165549835, -76.71307840328105],
+            "neighbors": [
+                            ["University Center", 30, true],
+                            ["University Center Floor 1", 30, true],
+                            ["University Center Floor 2", 30, true],
+                            ["University Center Floor 3", 30, true],
+                            ["University Center Entrance 1", 3, true],
+                            ["University Center Entrance 2", 3, true],
+                            ["University Center Inside 2", 5, true]
+                        ]
+        },
+        {
+	        "name": "University Center Inside 2",
+	        "type": "inside",
+	        "coords": [39.254247132639385, -76.71322592698567],
+            "neighbors": [
+                            ["University Center", 30, true],
+                            ["University Center Floor 1", 30, true],
+                            ["University Center Floor 2", 30, true],
+                            ["University Center Floor 3", 30, true],
+                            ["University Center Entrance 3", 6, true],
+                            ["University Center Entrance 4", 5, true],
+                            ["University Center Entrance 5", 9, true],
+                            ["University Center Inside 1", 5, true]
+                        ]
+        },
+
+        {
+	        "name": "Sherman Hall Inside 1",
+	        "type": "inside",
+	        "coords": [39.25391836876852, -76.7135583805098],
+            "neighbors": [
+                            ["Sherman Hall", 30, true],
+                            ["Sherman Hall Floor 1", 30, true],
+                            ["Sherman Hall Floor 2", 30, true],
+                            ["Sherman Hall Floor 3", 30, true],
+                            ["Sherman Hall Floor 4", 30, true],
+                            ["Sherman Hall Entrance 3", 1, true],
+                            ["Sherman Hall Inside 2", 5, true],
+                            ["Sherman Hall Inside 3", 11, true]
+                        ]
+        },
+        {
+	        "name": "Sherman Hall Inside 2",
+	        "type": "inside",
+	        "coords": [39.25385600266165, -76.71333589881667],
+            "neighbors": [
+                            ["Sherman Hall", 30, true],
+                            ["Sherman Hall Floor 1", 30, true],
+                            ["Sherman Hall Floor 2", 30, true],
+                            ["Sherman Hall Floor 3", 30, true],
+                            ["Sherman Hall Floor 4", 30, true],
+                            ["Sherman Hall Entrance 1", 1, true],
+                            ["Sherman Hall Inside 1", 5, true]
+                        ]
+        },
+        {
+	        "name": "Sherman Hall Inside 3",
+	        "type": "inside",
+	        "coords": [39.253500947032904, -76.71375614202022],
+            "neighbors": [
+                            ["Sherman Hall", 30, true],
+                            ["Sherman Hall Floor 1", 30, true],
+                            ["Sherman Hall Floor 2", 30, true],
+                            ["Sherman Hall Floor 3", 30, true],
+                            ["Sherman Hall Floor 4", 30, true],
+                            ["Sherman Hall Entrance 2", 1, true],
+                            ["Sherman Hall Inside 1", 11, true]
+                        ]
+        },
+        {
+	        "name": "Biological Sciences Building Inside 1",
+	        "type": "inside",
+	        "coords": [39.25514315124225, -76.71203418318507],
+            "neighbors": [
+                            ["Biological Sciences Building", 30, true],
+                            ["Biological Sciences Building Floor b", 30, true],
+                            ["Biological Sciences Building Floor 1", 30, true],
+                            ["Biological Sciences Building Floor 2", 30, true],
+                            ["Biological Sciences Building Floor 3", 30, true],
+                            ["Biological Sciences Building Floor 4", 30, true],
+                            ["Biological Sciences Building Entrance 4", 1, true],
+                            ["Biological Sciences Building Inside 2", 1, true]
+                        ]
+        },
+        {
+	        "name": "Biological Sciences Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.255026136753344, -76.71209988404779],
+            "neighbors": [
+                            ["Biological Sciences Building", 30, true],
+                            ["Biological Sciences Building Floor b", 30, true],
+                            ["Biological Sciences Building Floor 1", 30, true],
+                            ["Biological Sciences Building Floor 2", 30, true],
+                            ["Biological Sciences Building Floor 3", 30, true],
+                            ["Biological Sciences Building Floor 4", 30, true],
+                            ["Biological Sciences Building Entrance 1", 3, true],
+                            ["Biological Sciences Building Entrance 3", 2, true],
+                            ["Biological Sciences Building Inside 1", 3, true]
+                        ]
+        },
+        {
+	        "name": "Biological Sciences Building Inside 2",
+	        "type": "inside",
+	        "coords": [39.254996136753344, -76.71209988404779],
+            "neighbors": [
+                            ["Biological Sciences Building", 30, true],
+                            ["Biological Sciences Building Floor b", 30, true],
+                            ["Biological Sciences Building Floor 1", 30, true],
+                            ["Biological Sciences Building Floor 2", 30, true],
+                            ["Biological Sciences Building Floor 3", 30, true],
+                            ["Biological Sciences Building Floor 4", 30, true],
+                            ["Biological Sciences Building Entrance 1", 3, true],
+                            ["Biological Sciences Building Entrance 3", 2, true],
+                            ["Biological Sciences Building Inside 1", 3, true]
+                        ]
+        },
+        {
+	        "name": "Biological Sciences Building Inside 3",
+	        "type": "inside",
+	        "coords": [39.255026136753344, -76.71209988404779],
+            "neighbors": [
+                            ["Biological Sciences Building", 30, true],
+                            ["Biological Sciences Building Floor b", 30, true],
+                            ["Biological Sciences Building Floor 1", 30, true],
+                            ["Biological Sciences Building Floor 2", 30, true],
+                            ["Biological Sciences Building Floor 3", 30, true],
+                            ["Biological Sciences Building Floor 4", 30, true],
+                            ["Biological Sciences Building Entrance 2", 3, true],
+                            ["Biological Sciences Building Bridge 1", 5, true],
+                            ["Biological Sciences Building Bridge 2", 5, true],
+                            ["Biological Sciences Building Inside 2", 13, true]
+                        ]
+        },
+        {
+	        "name": "The Commons Inside 1",
+	        "type": "inside",
+	        "coords": [39.255131799098905, -76.71159098535452],
+            "neighbors": [
+                            ["The Commons", 30, true],
+                            ["The Commons Floor g", 30, true],
+                            ["The Commons Floor m", 30, true],
+                            ["The Commons Floor l", 30, true],
+                            ["The Commons Floor 1", 30, true],
+                            ["The Commons Floor 2", 30, true],
+                            ["The Commons Floor 3", 30, true],
+                            ["The Commons Inside 2", 10, true],
+                            ["The Commons Entrance 5", 1, true]
+                        ]
+        },
+        {
+	        "name": "The Commons Inside 2",
+	        "type": "inside",
+	        "coords": [39.25500343242657, -76.7110102044056],
+            "neighbors": [
+                            ["The Commons", 30, true],
+                            ["The Commons Floor g", 30, true],
+                            ["The Commons Floor m", 30, true],
+                            ["The Commons Floor l", 30, true],
+                            ["The Commons Floor 1", 30, true],
+                            ["The Commons Floor 2", 30, true],
+                            ["The Commons Floor 3", 30, true],
+                            ["The Commons Inside 1", 10, true],
+                            ["The Commons Inside 3", 5, true]
+                        ]
+        },
+        {
+	        "name": "The Commons Inside 3",
+	        "type": "inside",
+	        "coords": [39.25500779864072, -76.71084668354938],
+            "neighbors": [
+                            ["The Commons", 30, true],
+                            ["The Commons Floor g", 30, true],
+                            ["The Commons Floor m", 30, true],
+                            ["The Commons Floor l", 30, true],
+                            ["The Commons Floor 1", 30, true],
+                            ["The Commons Floor 2", 30, true],
+                            ["The Commons Floor 3", 30, true],
+                            ["The Commons Inside 2", 5, true],
+                            ["The Commons Inside 4", 12, true],
+                            ["The Commons Entrance 1", 7, true],
+                            ["The Commons Entrance 6", 7, true]
+                        ]
+        },
+        {
+	        "name": "The Commons Inside 4",
+	        "type": "inside",
+	        "coords": [39.25449782262698, -76.71105869675351],
+            "neighbors": [
+                            ["The Commons", 30, true],
+                            ["The Commons Floor g", 30, true],
+                            ["The Commons Floor m", 30, true],
+                            ["The Commons Floor l", 30, true],
+                            ["The Commons Floor 1", 30, true],
+                            ["The Commons Floor 2", 30, true],
+                            ["The Commons Floor 3", 30, true],
+                            ["The Commons Inside 3", 12, true],
+                            ["The Commons Entrance 2", 2, true],
+                            ["The Commons Entrance 3", 2, true]
                         ]
         }
     ]
