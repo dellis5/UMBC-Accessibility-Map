@@ -104,6 +104,12 @@ def get_path(start, finish):
 #get_directions(list of nodes returned from find_path())
 #Returns a list of text based directions for the path
 def get_directions(nodes):
+    """
+    Generate text directions from a list of node dicts.
+    Keeps behavior you already have (enter/exit, elevator),
+    and adds support for bridges (e.g., BioSci 4th -> Meyerhoff 4th).
+    """
+
     path = []
     previous_floor = ""
 
@@ -112,12 +118,45 @@ def get_directions(nodes):
     previous_name = ""
     previous_angle = 0
     current_angle = 0
-    for node in nodes:
+
+    # helper: get a nice building name from a node name
+    def pretty_building_name(raw_name: str) -> str:
+        name = raw_name
+
+        # Strip common suffixes
+        for token in [" Entrance", " Floor", " Bridge", " Inside"]:
+            if token in name:
+                name = name.split(token)[0]
+        name = name.strip()
+
+        # Decide whether to add "the "
+        if any(word in name for word in ["Building", "Center", "Hall", "Gallery", "Library", "Commons", "University Center"]):
+            return "the " + name
+        return name
+
+    # helper: find destination building for a bridge segment
+    def find_bridge_destination(idx: int) -> str | None:
+        """
+        Look ahead from index idx+1 to find the first node whose
+        name looks like a building name.
+        """
+        for j in range(idx + 1, len(nodes)):
+            candidate = nodes[j]
+            cname = candidate["name"]
+            # heuristic: if it mentions "Building", "Center", "Hall", etc., treat as building
+            if any(word in cname for word in ["Building", "Center", "Hall", "Gallery", "Library", "Commons", "University Center"]):
+                return pretty_building_name(cname)
+        return None
+
+    for idx, node in enumerate(nodes):
         coords = node["coords"]
-        
-        if(old_coords):#Determines if user needs to turn left or right into a building
+
+        # ----- ANGLE / TURN HANDLING FOR ENTER/EXIT -----
+        if old_coords:
             current_angle = math.atan2((coords[0] - old_coords[0]), coords[1] - old_coords[1])
-            if previous_type == "intersection" and node["type"] == "entrance":#Indicate turn into a building
+
+            # Entering a building: intersection -> entrance
+            if previous_type == "intersection" and node["type"] == "entrance":
                 turn = ""
 
                 if abs(previous_angle - current_angle) > math.pi:
@@ -134,20 +173,15 @@ def get_directions(nodes):
                     turn = "Turn left into "
                 
                 name = node["name"]
-                if "Building" in name or "University Center" in name:
-                    turn += "the "
+                # 'the' added in pretty_building_name
+                turn += pretty_building_name(name)
                 
-                name = name.replace(" Entrance ", "")
-                
-                path.append((turn + name[:-1]))
-            
-            elif previous_type == "entrance" and node["type"] == "intersection":#Indicate turn when exiting a building
+                path.append(turn)
+
+            # Exiting a building: entrance -> intersection
+            elif previous_type == "entrance" and node["type"] == "intersection":
                 turn = "Exit "
-                name = previous_name
-                if "Building" in name or "University Center" in name:
-                    turn += "the "
-                name = name.replace(" Entrance ", "")
-                turn += (name[:-1] + " and ")
+                turn += pretty_building_name(previous_name) + " and "
 
                 if abs(previous_angle - current_angle) > math.pi:
                     if previous_angle > 0:
@@ -163,15 +197,15 @@ def get_directions(nodes):
                     turn += "turn left"
                 
                 path.append(turn)
+
             
             previous_angle = current_angle
         
         old_coords = coords
         previous_name = node["name"]
-        
 
-
-        try:#Tells the user what floor they need to take the elevator to
+        # ----- ELEVATOR / FLOOR HANDLING -----
+        try:
             if previous_floor == "":
                 previous_floor = node["floor"]
             elif node["floor"] != previous_floor:
@@ -180,40 +214,35 @@ def get_directions(nodes):
                 elevator_text = ["Take the elevator to the ", " floor"]
                 match node["floor"]:
                     case "g":
-                        path.append((elevator_text[0] + "ground" + elevator_text[1]))
+                        path.append(elevator_text[0] + "ground" + elevator_text[1])
                     case "l":
-                        path.append((elevator_text[0] + "lobby"))
+                        path.append(elevator_text[0] + "lobby")
                     case "m":
-                        path.append((elevator_text[0] + "mezzanine"))
+                        path.append(elevator_text[0] + "mezzanine")
                     case "1":
-                        path.append((elevator_text[0] + "1st" + elevator_text[1]))
+                        path.append(elevator_text[0] + "1st" + elevator_text[1])
                     case "2":
-                        path.append((elevator_text[0] + "2nd" + elevator_text[1]))
+                        path.append(elevator_text[0] + "2nd" + elevator_text[1])
                     case "3":
-                        path.append((elevator_text[0] + "3rd" + elevator_text[1]))
+                        path.append(elevator_text[0] + "3rd" + elevator_text[1])
                     case _:
-                        path.append((elevator_text[0] + node["floor"] + "th" + elevator_text[1]))
+                        path.append(elevator_text[0] + node["floor"] + "th" + elevator_text[1])
         except:
+            # If this node doesn't have a floor and isn't an inside node,
+            # reset previous_floor so the next building floor change is handled correctly.
             if node["type"] != "inside":
                 previous_floor = ""
             else:
                 pass
-       
+        
+        # NEW: using a bridge (only once per bridge segment)
+        if previous_type != "bridge" and node["type"] == "bridge":
+            dest_building = find_bridge_destination(idx)
+            if dest_building:
+                path.append(f"Use the bridge to cross into {dest_building}.")
+            else:
+                path.append("Use the bridge to cross to the connected building.")
+
         previous_type = node["type"]
 
     return path
-
-
-    
-
-
-
-#testing and sample usage
-
-# final_path = get_path("Performing Arts & Humanities Building Entrance 1", "Interdisciplinary Life Sciences Building Entrance 2")
-# print("\n")
-# for i in final_path[0]:
-#     print(i, end=", ")
-# print("\n")
-# for i in final_path[1]:
-#     print(i, end=", ")
