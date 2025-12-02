@@ -1945,6 +1945,562 @@
                         ]
         },
 
+        {
+	        "name": "Parking Services",
+	        "type": "building",
+	        "coords": [39.26014698560127, -76.71535740042387],
+            "neighbors": [
+                            ["Parking Services Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Parking Services Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.26005405646865, -76.71526948795417],
+            "neighbors": [
+                            ["Parking Services", 0, true],
+                            ["Intersection 65", 2, true]
+                        ]
+        },
+
+        {
+	        "name": "Walker Avenue Apartments",
+	        "type": "building",
+	        "coords": [39.259503776626104, -76.71398046304705],
+            "neighbors": [
+                            ["Walker Avenue Apartments Entrance 1", 30, true],
+                            ["Walker Avenue Apartments Entrance 2", 30, true],
+                            ["Walker Avenue Apartments Entrance 3", 30, true]
+                        ]
+        },
+        {
+	        "name": "Walker Avenue Apartments Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25880372980339, -76.71446500012021],
+            "neighbors": [
+                            ["Walker Avenue Apartments", 0, true],
+                            ["Intersection 71", 1, true]
+                        ]
+        },
+        {
+	        "name": "Walker Avenue Apartments Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25892721827598, -76.71427999742198],
+            "neighbors": [
+                            ["Walker Avenue Apartments", 0, true],
+                            ["Intersection 73", 2, true]
+                        ]
+        },
+        {
+	        "name": "Walker Avenue Apartments Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.25927545459707, -76.71393869934077],
+            "neighbors": [
+                            ["Walker Avenue Apartments", 0, true],
+                            ["Intersection 75", 2, true]
+                        ]
+        },
+
+        {
+	        "name": "Central Plant",
+	        "type": "building",
+	        "coords": [39.25730061841294, -76.71422305002487],
+            "neighbors": [
+                            ["Central Plant Entrance 1", 20, true],
+                            ["Central Plant Entrance 2", 20, true]
+                        ]
+        },
+        {
+	        "name": "Central Plant Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25758711747893, -76.71368399043868],
+            "neighbors": [
+                            ["Central Plant", 0, true]
+                        ]
+        },
+        {
+	        "name": "Central Plant Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25724875207758, -76.71424537793675],
+            "neighbors": [
+                            ["Central Plant", 0, true],
+                            ["Intersection 81", 41, true]
+                        ]
+        },
+
+        {
+	        "name": "West Hill Apartments",
+	        "type": "building",
+	        "coords": [39.25890992990329, -76.71279997562598],
+            "neighbors": [
+                            ["West Hill Apartments Entrance 1", 30, true],
+                            ["West Hill Apartments Entrance 2", 30, true],
+                            ["West Hill Apartments Entrance 3", 30, true]
+                        ]
+        },
+        {
+	        "name": "West Hill Apartments Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.2589519159454, -76.71246824662394],
+            "neighbors": [
+                            ["West Hill Apartments", 0, true],
+                            ["West Hill Apartments Entrance 2", 10, true]
+                        ]
+        },
+        {
+	        "name": "West Hill Apartments Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25855922198689, -76.71261178320015],
+            "neighbors": [
+                            ["West Hill Apartments", 0, true],
+                            ["West Hill Apartments Entrance 2", 10, true],
+                            ["Intersection 82", 4, true]
+                        ]
+        },
+        {
+	        "name": "West Hill Apartments Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.258823487974624, -76.71186220330216],
+            "neighbors": [
+                            ["West Hill Apartments", 0, true],
+                            ["Intersection 84", 1, true]
+                        ]
+        },
+
+        {
+	        "name": "Apartment Community Center",
+	        "type": "building",
+	        "coords": [39.25819863313404, -76.71212375883542],
+            "neighbors": [
+                            ["Apartment Community Center Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Apartment Community Center Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.258238149810005, -76.71211737943204],
+            "neighbors": [
+                            ["Intersection 83", 8, true]
+                        ]
+        },
+
+        {
+	        "name": "Walker Avenue Garage",
+	        "type": "building",
+	        "coords": [39.25730703219069, -76.71241083200117],
+            "neighbors": [
+                            ["Walker Avenue Garage Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Walker Avenue Garage Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25691679885658, -76.71261816261126],
+            "neighbors": [
+                            ["Walker Avenue Garage", 0, true],
+                            ["Intersection 20", 22, true]
+                        ]
+        },
+
+        {
+	        "name": "Hillside Apartments",
+	        "type": "building",
+	        "coords": [39.25806032458147, -76.70910630084273],
+            "neighbors": [
+                            ["Hillside Apartments Entrance 1", 30, true],
+                            ["Hillside Apartments Entrance 2", 30, true],
+                            ["Hillside Apartments Entrance 3", 30, true],
+                            ["Hillside Apartments Entrance 4", 30, true]
+                        ]
+        },
+        {
+	        "name": "Hillside Apartments Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.257865210282404, -76.70954647967643],
+            "neighbors": [
+                            ["Hillside Apartments", 0, true],
+                            ["Intersection 98", 0, true]
+                        ]
+        },
+        {
+	        "name": "Hillside Apartments Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25776888783329, -76.70932320055789],
+            "neighbors": [
+                            ["Hillside Apartments", 0, true],
+                            ["Intersection 100", 4, true]
+                        ]
+        },
+        {
+	        "name": "Hillside Apartments Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.25788990832497, -76.70899466128346],
+            "neighbors": [
+                            ["Hillside Apartments", 0, true],
+                            ["Intersection 103", 0, true]
+                        ]
+        },
+        {
+	        "name": "Hillside Apartments Entrance 4",
+	        "type": "entrance",
+	        "coords": [39.257697263362274, -76.70887345261909],
+            "neighbors": [
+                            ["Hillside Apartments", 0, true],
+                            ["Intersection 103", 14, true]
+                        ]
+        },
+
+        {
+	        "name": "Erickson Hall",
+	        "type": "building",
+	        "coords": [39.257253761481664, -76.70970760818975],
+            "neighbors": [
+                            ["Erickson Hall Entrance 1", 30, true],
+                            ["Erickson Hall Entrance 2", 30, true],
+                            ["Erickson Hall Entrance 3", 30, true],
+                            ["Erickson Hall Entrance 4", 30, true],
+                            ["Erickson Hall Entrance 5", 30, true]
+                        ]
+        },
+        {
+	        "name": "Erickson Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25691107742017, -76.71041034687433],
+            "floor": "2",
+            "neighbors": [
+                            ["Erickson Hall", 0, true],
+                            ["Intersection 94", 0, true]
+                        ]
+        },
+        {
+	        "name": "Erickson Hall Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25679061838248, -76.71000801556634],
+            "floor": "1",
+            "neighbors": [
+                            ["Erickson Hall", 0, true],
+                            ["Intersection 99", 0, true]
+                        ]
+        },
+        {
+	        "name": "Erickson Hall Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.25701699812713, -76.70979612107749],
+            "floor": "1",
+            "neighbors": [
+                            ["Erickson Hall", 0, true],
+                            ["Intersection 102", 1, true]
+                        ]
+        },
+        {
+	        "name": "Erickson Hall Entrance 4",
+	        "type": "entrance",
+	        "coords": [39.256917308054405, -76.70950912474447],
+            "floor": "1",
+            "neighbors": [
+                            ["Erickson Hall", 0, true],
+                            ["Intersection 102", 4, true]
+                        ]
+        },
+        {
+	        "name": "Erickson Hall Entrance 5",
+	        "type": "entrance",
+	        "coords": [39.25664898226544, -76.70935925778505],
+            "floor": "1",
+            "neighbors": [
+                            ["Erickson Hall", 0, true],
+                            ["Intersection 105", 1, true]
+                        ]
+        },
+
+        {
+	        "name": "Preschool Center",
+	        "type": "building",
+	        "coords": [39.258024416444606, -76.70810798998379],
+            "neighbors": [
+                            ["Preschool Center Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Preschool Center Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.257901882471025, -76.70818040961923],
+            "neighbors": [
+                            ["Preschool Center", 0, true],
+                            ["Intersection 115", 4, true]
+                        ]
+        },
+
+        {
+	        "name": "Harbor Hall",
+	        "type": "building",
+	        "coords": [39.257447051095056, -76.70853714337099],
+            "neighbors": [
+                            ["Harbor Hall Entrance 1", 20, true],
+                            ["Harbor Hall Entrance 2", 20, true],
+                            ["Harbor Hall Entrance 3", 20, true],
+                            ["Harbor Hall Entrance 4", 20, true]
+                        ]
+        },
+        {
+	        "name": "Harbor Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25750728007585, -76.70842180839604],
+            "neighbors": [
+                            ["Harbor Hall", 0, true],
+                            ["Intersection 125", 0, true]
+                        ]
+        },
+        {
+	        "name": "Harbor Hall Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.257455358543766, -76.70845131269195],
+            "neighbors": [
+                            ["Harbor Hall", 0, true],
+                            ["Intersection 125", 0, true]
+                        ]
+        },
+        {
+	        "name": "Harbor Hall Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.25718951969707, -76.70796583291366],
+            "neighbors": [
+                            ["Harbor Hall", 0, true],
+                            ["Intersection 139", 1, true]
+                        ]
+        },
+        {
+	        "name": "Harbor Hall Entrance 4",
+	        "type": "entrance",
+	        "coords": [39.25715005915733, -76.70783976910384],
+            "neighbors": [
+                            ["Harbor Hall", 0, true],
+                            ["Intersection 139", 1, true]
+                        ]
+        },
+
+        {
+	        "name": "Chesapeake Hall",
+	        "type": "building",
+	        "coords": [39.25682331145132, -76.70864660750827],
+            "neighbors": [
+                            ["Chesapeake Hall Entrance 1", 20, true],
+                            ["Chesapeake Hall Entrance 2", 20, true]
+                        ]
+        },
+        {
+	        "name": "Chesapeake Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25660939240508, -76.70789290685802],
+            "neighbors": [
+                            ["Chesapeake Hall", 0, true],
+                            ["Intersection 143", 4, true]
+                        ]
+        },
+        {
+	        "name": "Chesapeake Hall Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25679838887758, -76.70878608236171],
+            "neighbors": [
+                            ["Chesapeake Hall", 0, true],
+                            ["Intersection 120", 0, true]
+                        ]
+        },
+
+        {
+	        "name": "Center For Well-Being",
+	        "type": "building",
+	        "coords": [39.25604447682456, -76.70890678179333],
+            "neighbors": [
+                            ["Center For Well-Being Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Center For Well-Being Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25611509151981, -76.70914013395195],
+            "neighbors": [
+                            ["Center For Well-Being", 0, true],
+                            ["Intersection 122", 1, true]
+                        ]
+        },
+
+        {
+	        "name": "Susquehanna Hall",
+	        "type": "building",
+	        "coords": [39.25561040256929, -76.70853663697903],
+            "neighbors": [
+                            ["Susquehanna Hall Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Susquehanna Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25552109509405, -76.70863319649295],
+            "neighbors": [
+                            ["Susquehanna Hall", 0, true],
+                            ["Intersection 140", 2, true]
+                        ]
+        },
+
+        {
+	        "name": "Public Policy Building",
+	        "type": "building",
+	        "coords": [39.255186710281116, -76.70908917197532],
+            "neighbors": [
+                            ["Public Policy Building Entrance 1", 20, true],
+                            ["Public Policy Building Entrance 2", 20, true]
+                        ]
+        },
+        {
+	        "name": "Public Policy Building Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.255311325925774, -76.70913745173227],
+            "neighbors": [
+                            ["Public Policy Building", 0, true],
+                            ["Intersection 131", 3, true]
+                        ]
+        },
+        {
+	        "name": "Public Policy Building Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25519917185557, -76.70947004561351],
+            "neighbors": [
+                            ["Public Policy Building", 0, true],
+                            ["Intersection 113", 4, true]
+                        ]
+        },
+
+        {
+	        "name": "True Grits",
+	        "type": "building",
+	        "coords": [39.25573709437269, -76.7077587963656],
+            "neighbors": [
+                            ["True Grits Entrance 1", 20, true],
+                            ["True Grits Entrance 2", 20, true],
+                            ["True Grits Entrance 3", 20, true]
+                        ]
+        },
+        {
+	        "name": "True Grits Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25600501563169, -76.7074342491105],
+            "neighbors": [
+                            ["True Grits", 0, true],
+                            ["Intersection 156", 6, true]
+                        ]
+        },
+        {
+	        "name": "True Grits Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.255552248876214, -76.7078687669231],
+            "neighbors": [
+                            ["True Grits", 0, true],
+                            ["Intersection 153", 3, true]
+                        ]
+        },
+        {
+	        "name": "True Grits Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.255759940411444, -76.70812089454279],
+            "neighbors": [
+                            ["True Grits", 0, true],
+                            ["Intersection 151", 1, true]
+                        ]
+        },
+
+        {
+	        "name": "Potomac Hall",
+	        "type": "building",
+	        "coords": [39.25584509376744, -76.70664299742926],
+            "neighbors": [
+                            ["Potomac Hall Entrance 1", 20, true],
+                            ["Potomac Hall Entrance 2", 20, true]
+                        ]
+        },
+        {
+	        "name": "Potomac Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25605278443518, -76.70650620478453],
+            "neighbors": [
+                            ["Potomac Hall", 0, true]
+                        ]
+        },
+        {
+	        "name": "Potomac Hall Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.255984246582834, -76.70675296798676],
+            "neighbors": [
+                            ["Potomac Hall", 0, true],
+                            ["Intersection 166", 3, true]
+                        ]
+        },
+
+        {
+	        "name": "Patapsco Hall",
+	        "type": "building",
+	        "coords": [39.25511817157552, -76.7067636968417],
+            "neighbors": [
+                            ["Patapsco Hall Entrance 1", 20, true]
+                        ]
+        },
+        {
+	        "name": "Patapsco Hall Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.255203325706574, -76.70747716436118],
+            "neighbors": [
+                            ["Patapsco Hall", 0, true],
+                            ["Intersection 162", 0, true]
+                        ]
+        },
+
+        {
+	        "name": "Chesapeake Arena",
+	        "type": "building",
+	        "coords": [39.25215332009707, -76.70743389167198],
+            "neighbors": [
+                            ["Chesapeake Arena Entrance 1", 40, true],
+                            ["Chesapeake Arena Entrance 2", 40, true],
+                            ["Chesapeake Arena Entrance 3", 40, true]
+                        ]
+        },
+        {
+	        "name": "Chesapeake Arena Entrance 1",
+	        "type": "entrance",
+	        "coords": [39.25159459973063, -76.70707715791224],
+            "neighbors": [
+                            ["Chesapeake Arena", 0, true],
+                            ["Intersection 170", 20, true]
+                        ]
+        },
+        {
+	        "name": "Chesapeake Arena Entrance 2",
+	        "type": "entrance",
+	        "coords": [39.25187084492917, -76.70775575671836],
+            "neighbors": [
+                            ["Chesapeake Arena", 0, true],
+                            ["Intersection 170", 6, true]
+                        ]
+        },
+        {
+	        "name": "Chesapeake Arena Entrance 3",
+	        "type": "entrance",
+	        "coords": [39.25224470887836, -76.70781208310146],
+            "neighbors": [
+                            ["Chesapeake Arena", 0, true],
+                            ["Intersection 168", 13, true]
+                        ]
+        },
+
+        {
+	        "name": "Ticket Booth",
+	        "type": "building",
+	        "coords": [39.25044197208068, -76.70865373579527],
+            "neighbors": [
+                            ["Intersection 171", 0, true]
+                        ]
+        },
+
 
 
 
@@ -1954,7 +2510,9 @@
 	        "coords": [39.25584690262942, -76.71562163298408],
             "neighbors": [
                             ["Performing Arts & Humanities Building Entrance 1", 8, true],
-                            ["Intersection 2", 18, true]
+                            ["Intersection 2", 18, true],
+                            ["Intersection 70", 13, true],
+                            ["Intersection 79", 5, true]
                         ]
         },
         {
@@ -2026,7 +2584,8 @@
                             ["Intersection 2", 11, true],
                             ["Intersection 4", 10, true],
                             ["Intersection 9", 11, true],
-                            ["Intersection 13", 3, true]
+                            ["Intersection 13", 3, true],
+                            ["Intersection 81", 9, true]
                         ]
         },
         {
@@ -2067,7 +2626,8 @@
 	        "coords": [39.25576761287134, -76.71376862975298],
             "neighbors": [
                             ["Fine Arts Building Entrance 1", 11, true],
-                            ["Intersection 13", 10, true]
+                            ["Intersection 13", 10, true],
+                            ["Intersection 81", 17, true]
                         ]
         },
         {
@@ -2149,6 +2709,7 @@
 	        "type": "intersection",
 	        "coords": [39.25617550121993, -76.71241738627505],
             "neighbors": [
+                            ["Walker Avenue Garage Entrance 1", 22, true],
                             ["Intersection 19", 11, true],
                             ["Intersection 26", 28, true]
                         ]
@@ -2190,7 +2751,8 @@
 	        "coords": [39.252914273896494, -76.71357998209249],
             "neighbors": [
                             ["Administration Building Entrance 2", 0, true],
-                            ["Intersection 35", 4, true]
+                            ["Intersection 35", 4, true],
+                            ["Intersection 87", 8, true]
                         ]
         },
         {
@@ -2313,7 +2875,8 @@
 	        "coords": [39.252672257995684, -76.71341547513586],
             "neighbors": [
                             ["Intersection 35", 2, true],
-                            ["Intersection 40", 8, true]
+                            ["Intersection 40", 8, true],
+                            ["Intersection 88", 5, true]
                         ]
         },
         {
@@ -2322,7 +2885,8 @@
 	        "coords": [39.25622931647323, -76.7115200002003],
             "neighbors": [
                             ["Albin O. Kuhn Library & Gallery Entrance 1", 0, true],
-                            ["Intersection 41", 6, true]
+                            ["Intersection 41", 6, true],
+                            ["Intersection 91", 19, true]
                         ]
         },
         {
@@ -2352,7 +2916,8 @@
 	        "coords": [39.252473997908936, -76.71326230309406],
             "neighbors": [
                             ["Intersection 36", 8, true],
-                            ["Intersection 53", 20, true]
+                            ["Intersection 53", 20, true],
+                            ["Intersection 88", 5, true]
                         ]
         },
         
@@ -2437,7 +3002,9 @@
             "neighbors": [
                             ["Intersection 41", 7, true],
                             ["Intersection 49", 7, true],
-                            ["Intersection 55", 20, true]
+                            ["Intersection 55", 20, true],
+                            ["Intersection 91", 19, true],
+                            ["Intersection 107", 25, true]
                         ]
         },
         {
@@ -2490,7 +3057,8 @@
 	        "coords": [39.25222777777806, -76.71232381613375],
             "neighbors": [
                             ["Intersection 40", 20, true],
-                            ["Intersection 52", 54, true]
+                            ["Intersection 52", 54, true],
+                            ["Intersection 96", 1, true]
                         ]
         },
         {
@@ -2509,7 +3077,8 @@
 	        "coords": [39.25538118542461, -76.71024021455327],
             "neighbors": [
                             ["Intersection 48", 20, true],
-                            ["Intersection 57", 11, true]
+                            ["Intersection 57", 11, true],
+                            ["Intersection 107", 9, true]
                         ]
         },
 
@@ -2539,7 +3108,9 @@
 	        "coords": [39.25490050619252, -76.70984720620127],
             "neighbors": [
                             ["Intersection 57", 4, true],
-                            ["Intersection 59", 3, true]
+                            ["Intersection 59", 2, true],
+                            ["Intersection 114", 5, true],
+                            ["Intersection 128", 6, true]
                         ]
         },
         {
@@ -2588,7 +3159,8 @@
 	        "coords": [39.254768760402484, -76.70975772249678],
             "neighbors": [
                             ["Physics Building Entrance 1", 3, true],
-                            ["Intersection 59", 3, true]
+                            ["Intersection 59", 3, true],
+                            ["Intersection 128", 4, true]
                         ]
         },
         {
@@ -2597,9 +3169,1084 @@
 	        "coords": [39.254165589446934, -76.71002638253115],
             "neighbors": [
                             ["Intersection 61", 4, true],
-                            ["Intersection 62", 4, true]
+                            ["Intersection 62", 4, true],
+                            ["Intersection 129", 6, true]
                         ]
         },
+        {
+	        "name": "Intersection 65",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Parking Services Entrance 1", 2, true],
+                            ["Intersection 74", 37, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 66",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 67", 37, true],
+                            ["Intersection 68", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 67",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 66", 37, true],
+                            ["Intersection 72", 6, true],
+                            ["Intersection 78", 34, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 68",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 66", 6, true],
+                            ["Intersection 70", 3, true],
+                            ["Intersection 72", 36, true],
+                            ["Intersection 79", 14, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 70",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 68", 3, true],
+                            ["Intersection 1", 13, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 71",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Walker Avenue Apartments Entrance 3", 1, true],
+                            ["Intersection 73", 4, true],
+                            ["Intersection 78", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 72",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 67", 5, true],
+                            ["Intersection 68", 36, true],
+                            ["Intersection 80", 38, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 73",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Walker Avenue Apartments Entrance 2", 2, true],
+                            ["Intersection 71", 4, true],
+                            ["Intersection 74", 4, true],
+                            ["Intersection 77", 2, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 74",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 73", 4, true],
+                            ["Intersection 75", 2, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 75",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Walker Avenue Apartments Entrance 3", 2, true],
+                            ["Intersection 74", 2, true],
+                            ["Intersection 76", 5, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 76",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 75", 5, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 77",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 73", 2, true],
+                            ["Intersection 78", 4, true],
+                            ["Intersection 80", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 78",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 67", 34, true],
+                            ["Intersection 71", 4, true],
+                            ["Intersection 77", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 79",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 1", 5, true],
+                            ["Intersection 68", 14, true],
+                            ["Intersection 81", 20, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 80",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 72", 38, true],
+                            ["Intersection 77", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 81",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Central Plant Entrance 2", 41, true],
+                            ["Intersection 8", 9, true],
+                            ["Intersection 12", 17, true],
+                            ["Intersection 79", 20, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 82",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["West Hill Apartments Entrance 2", 4, true],
+                            ["Intersection 83", 9, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 83",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Apartment Community Center Entrance 1", 8, true],
+                            ["Intersection 82", 9, true],
+                            ["Intersection 84", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 84",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["West Hill Apartments Entrance 3", 1, true],
+                            ["Intersection 83", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 85",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 104", 21, true],
+                            ["Intersection 127", 3, true],
+                            ["Intersection 132", 1, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 86",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 87", 8, true],
+                            ["Intersection 89", 20, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 87",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 86", 8, true],
+                            ["Intersection 24", 8, true],
+                            ["Intersection 88", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 88",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 36", 5, true],
+                            ["Intersection 40", 5, true],
+                            ["Intersection 87", 8, true],
+                            ["Intersection 90", 7, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 89",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 86", 20, true],
+                            ["Intersection 90", 8, true],
+                            ["Intersection 93", 14, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 90",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 88", 7, true],
+                            ["Intersection 89", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 91",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 37", 19, true],
+                            ["Intersection 48", 19, true],
+                            ["Intersection 48", 2, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 92",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 91", 2, true],
+                            ["Intersection 94", 5, true],
+                            ["Intersection 95", 10, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 93",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 89", 14, true],
+                            ["Intersection 127", 37, true],
+                            ["Intersection 133", 51, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 94",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Erickson Hall Entrance 1", 0, true],
+                            ["Intersection 92", 5, true],
+                            ["Intersection 97", 20, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 95",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 92", 10, true],
+                            ["Intersection 99", 4, true],
+                            ["Intersection 110", 19, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 96",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 53", 1, true],
+                            ["Intersection 104", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 97",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 94", 20, true],
+                            ["Intersection 98", 7, true],
+                            ["Intersection 102", 18, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 98",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 97", 7, true],
+                            ["Intersection 100", 9, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 99",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Erickson Hall Entrance 2", 0, true],
+                            ["Intersection 95", 4, true],
+                            ["Intersection 102", 11, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 100",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Hillside Apartments Entrance 2", 4, true],
+                            ["Intersection 98", 9, true],
+                            ["Intersection 103", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 102",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Erickson Hall Entrance 3", 1, true],
+                            ["Erickson Hall Entrance 4", 4, true],
+                            ["Intersection 97", 18, true],
+                            ["Intersection 99", 11, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 103",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Hillside Apartments Entrance 3", 0, true],
+                            ["Hillside Apartments Entrance 4", 14, true],
+                            ["Intersection 100", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 104",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 96", 8, true],
+                            ["Intersection 85", 21, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 105",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Erickson Hall Entrance 5", 1, true],
+                            ["Intersection 109", 8, true],
+                            ["Intersection 110", 7, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 107",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 48", 25, true],
+                            ["Intersection 55", 9, true],
+                            ["Intersection 111", 1, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 108",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 109", 25, true],
+                            ["Intersection 115", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 109",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 105", 8, true],
+                            ["Intersection 108", 25, true],
+                            ["Intersection 119", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 110",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 95", 19, true],
+                            ["Intersection 105", 7, true],
+                            ["Intersection 111", 22, true],
+                            ["Intersection 121", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 111",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 107", 1, true],
+                            ["Intersection 110", 22, true],
+                            ["Intersection 112", 2, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 112",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 111", 2, true],
+                            ["Intersection 113", 5, true],
+                            ["Intersection 124", 1, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 113",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Public Policy Building Entrance 2", 4, true],
+                            ["Intersection 112", 5, true],
+                            ["Intersection 114", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 114",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 58", 5, true],
+                            ["Intersection 113", 4, true],
+                            ["Intersection 149", 19, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 115",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Preschool Center Entrance 1", 4, true],
+                            ["Intersection 108", 3, true],
+                            ["Intersection 116", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 116",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 115", 4, true],
+                            ["Intersection 117", 5, true],
+                            ["Intersection 136", 11, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 117",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 116", 5, true],
+                            ["Intersection 118", 9, true],
+                            ["Intersection 125", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 118",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 117", 9, true],
+                            ["Intersection 119", 5, true],
+                            ["Intersection 134", 10, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 119",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 109", 3, true],
+                            ["Intersection 118", 5, true],
+                            ["Intersection 120", 1, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 120",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Chesapeake Hall Entrance 2", 0, true],
+                            ["Intersection 119", 1, true],
+                            ["Intersection 121", 12, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 121",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 110", 3, true],
+                            ["Intersection 120", 12, true],
+                            ["Intersection 122", 5, true],
+                            ["Intersection 130", 7, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 122",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Center For Well-Being Entrance 1", 1, true],
+                            ["Intersection 121", 5, true],
+                            ["Intersection 123", 12, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 123",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 122", 12, true],
+                            ["Intersection 124", 3, true],
+                            ["Intersection 140", 14, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 124",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 112", 1, true],
+                            ["Intersection 123", 3, true],
+                            ["Intersection 131", 7, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 125",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Harbor Hall Entrance 1", 0, true],
+                            ["Harbor Hall Entrance 2", 0, true],
+                            ["Intersection 117", 3, true],
+                            ["Intersection 135", 11, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 126",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 128", 21, true],
+                            ["Intersection 155", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 127",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 93", 37, true],
+                            ["Intersection 85", 3, true],
+                            ["Intersection 133", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 128",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 58", 6, true],
+                            ["Intersection 63", 4, true],
+                            ["Intersection 149", 14, true],
+                            ["Intersection 126", 21, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 129",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 64", 6, true],
+                            ["Intersection 138", 10, true],
+                            ["Intersection 152", 17, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 130",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 121", 7, true],
+                            ["Intersection 146", 19, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 131",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Public Policy Building Entrance 1", 4, true],
+                            ["Intersection 124", 7, true],
+                            ["Intersection 148", 10, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 132",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 85", 1, true],
+                            ["Intersection 137", 5, true],
+                            ["Intersection 160", 43, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 133",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 93", 51, true],
+                            ["Intersection 127", 6, true],
+                            ["Intersection 137", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 134",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 118", 10, true],
+                            ["Intersection 135", 2, true],
+                            ["Intersection 142", 7, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 135",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 125", 11, true],
+                            ["Intersection 134", 2, true],
+                            ["Intersection 139", 5, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 136",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 116", 11, true],
+                            ["Intersection 139", 11, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 137",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 132", 5, true],
+                            ["Intersection 133", 7, true],
+                            ["Intersection 167", 44, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 138",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 129", 10, true],
+                            ["Intersection 141", 3, true],
+                            ["Intersection 160", 29, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 139",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Harbor Hall Entrance 3", 1, true],
+                            ["Harbor Hall Entrance 4", 1, true],
+                            ["Intersection 135", 5, true],
+                            ["Intersection 142", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 140",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 123", 14, true],
+                            ["Intersection 147", 5, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 141",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 138", 3, true],
+                            ["Intersection 150", 6, true],
+                            ["Intersection 165", 29, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 142",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 134", 7, true],
+                            ["Intersection 139", 8, true],
+                            ["Intersection 143", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 143",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Chesapeake Hall Entrance 1", 4, true],
+                            ["Intersection 142", 6, true],
+                            ["Intersection 156", 15, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 146",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 130", 19, true],
+                            ["Intersection 147", 11, true],
+                            ["Intersection 151", 1, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 147",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 140", 5, true],
+                            ["Intersection 146", 11, true],
+                            ["Intersection 153", 10, true],
+                            ["Intersection 158", 15, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 148",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 131", 10, true],
+                            ["Intersection 149", 9, true],
+                            ["Intersection 159", 16, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 149",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 114", 19, true],
+                            ["Intersection 128", 14, true],
+                            ["Intersection 148", 9, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 150",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 141", 6, true],
+                            ["Intersection 152", 2, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 151",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["True Grits Entrance 3", 1, true],
+                            ["Intersection 146", 1, true],
+                            ["Intersection 153", 9, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 152",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 129", 17, true],
+                            ["Intersection 154", 15, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 153",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["True Grits Entrance 2", 3, true],
+                            ["Intersection 147", 10, true],
+                            ["Intersection 151", 9, true],
+                            ["Intersection 161", 10, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 154",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 152", 15, true],
+                            ["Intersection 155", 3, true],
+                            ["Intersection 157", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 155",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 126", 4, true],
+                            ["Intersection 154", 3, true],
+                            ["Intersection 159", 16, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 156",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["True Grits Entrance 1", 6, true],
+                            ["Intersection 143", 15, true],
+                            ["Intersection 166", 10, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 157",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 150", 21, true],
+                            ["Intersection 154", 3, true],
+                            ["Intersection 164", 21, true],
+                            ["Intersection 169", 30, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 158",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 147", 15, true],
+                            ["Intersection 159", 3, true],
+                            ["Intersection 163", 1, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 159",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 148", 16, true],
+                            ["Intersection 155", 16, true],
+                            ["Intersection 158", 3, true],
+                            ["Intersection 164", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 160",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 132", 43, true],
+                            ["Intersection 138", 29, true],
+                            ["Intersection 165", 4, true],
+                            ["Intersection 167", 7, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 161",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 153", 10, true],
+                            ["Intersection 162", 8, true],
+                            ["Intersection 166", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 162",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Patapsco Hall Entrance 1", 0, true],
+                            ["Intersection 161", 8, true],
+                            ["Intersection 163", 2, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 163",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 158", 1, true],
+                            ["Intersection 162", 2, true],
+                            ["Intersection 173", 27, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 164",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 157", 21, true],
+                            ["Intersection 159", 3, true],
+                            ["Intersection 172", 24, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 165",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 141", 29, true],
+                            ["Intersection 160", 4, true],
+                            ["Intersection 168", 7, true],
+                            ["Intersection 169", 37, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 166",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Potomac Hall Entrance 2", 3, true],
+                            ["Intersection 156", 10, true],
+                            ["Intersection 161", 4, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 167",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 137", 44, true],
+                            ["Intersection 160", 7, true],
+                            ["Intersection 168", 5, true],
+                            ["Intersection 170", 16, true],
+                            ["Intersection 171", 65, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 168",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Chesapeake Arena Entrance 3", 13, true],
+                            ["Intersection 165", 7, true],
+                            ["Intersection 167", 5, true],
+                            ["Intersection 174", 38, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 169",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 157", 30, true],
+                            ["Intersection 165", 37, true],
+                            ["Intersection 172", 25, true],
+                            ["Intersection 174", 6, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 170",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Chesapeake Arena Entrance 1", 20, true],
+                            ["Chesapeake Arena Entrance 2", 6, true],
+                            ["Intersection 167", 17, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 171",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Ticket Booth", 0, true],
+                            ["Intersection 167", 65, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 172",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 164", 24, true],
+                            ["Intersection 169", 25, true],
+                            ["Intersection 173", 4, true],
+                            ["Intersection 176", 8, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 173",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 163", 27, true],
+                            ["Intersection 172", 4, true],
+                            ["Intersection 176", 12, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 174",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 168", 38, true],
+                            ["Intersection 169", 6, true],
+                            ["Intersection 175", 3, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 175",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 174", 3, true],
+                            ["Intersection 176", 22, true]
+                        ]
+        },
+        {
+	        "name": "Intersection 176",
+	        "type": "intersection",
+	        "coords": [],
+            "neighbors": [
+                            ["Intersection 172", 8, true],
+                            ["Intersection 173", 12, true],
+                            ["Intersection 175", 22, true]
+                        ]
+        },
+
+
+
+
+
+
         {
 	        "name": "Meyerhoff Building Bridge 1",
 	        "type": "bridge",
