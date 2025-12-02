@@ -517,6 +517,7 @@ function App() {
   const handleClearRoute = () => {
     setPath([]);
     setPathNames([]);
+    setTextDirections([]);
     setStartLocation(null);
     setEndLocation(null);
     setStartSearch("");
