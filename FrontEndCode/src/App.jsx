@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Polyline, Marker, Popup, Circle, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './App.css'; 
 import axios from 'axios';
@@ -16,11 +16,66 @@ let DefaultIcon = L.icon({
     iconAnchor: [12, 41]
 });
 L.Marker.prototype.options.icon = DefaultIcon;
+
+// Custom blue dot icon for current location
+const CurrentLocationIcon = L.divIcon({
+    className: 'current-location-marker',
+    html: '<div class="location-dot"></div>',
+    iconSize: [20, 20],
+    iconAnchor: [10, 10]
+});
 // --- End of FIX ---
 
 // --- Configuration ---
 const API_BASE_URL = "http://127.0.0.1:5000"; 
 const UMBC_CENTER = [39.255, -76.71]; 
+const OFF_ROUTE_THRESHOLD = 30; // meters
+
+// --- Helper: Calculate distance between two lat/lng points (Haversine) ---
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371e3; // Earth radius in meters
+  const φ1 = lat1 * Math.PI / 180;
+  const φ2 = lat2 * Math.PI / 180;
+  const Δφ = (lat2 - lat1) * Math.PI / 180;
+  const Δλ = (lon2 - lon1) * Math.PI / 180;
+
+  const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+            Math.cos(φ1) * Math.cos(φ2) *
+            Math.sin(Δλ/2) * Math.sin(Δλ/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+  return R * c; // Distance in meters
+}
+
+// --- Helper: Find closest point on route to current location ---
+function getClosestDistanceToRoute(currentPos, routePath) {
+  if (!routePath || routePath.length === 0) return Infinity;
+  
+  let minDistance = Infinity;
+  for (const point of routePath) {
+    const distance = calculateDistance(
+      currentPos[0], currentPos[1],
+      point[0], point[1]
+    );
+    if (distance < minDistance) {
+      minDistance = distance;
+    }
+  }
+  return minDistance;
+}
+
+// --- Component to handle map centering ---
+function MapController({ centerPosition, shouldCenter }) {
+  const map = useMap();
+  
+  useEffect(() => {
+    if (shouldCenter && centerPosition) {
+      map.flyTo(centerPosition, 18, { duration: 0.5 });
+    }
+  }, [centerPosition, shouldCenter, map]);
+  
+  return null;
+}
 
 // --- Notification Component ---
 function Notification({ message, type, onDismiss }) {
@@ -187,6 +242,14 @@ function App() {
   const [isSelectionMode, setIsSelectionMode] = useState(false); 
   const [locationToSet, setLocationToSet] = useState('end'); 
 
+  // Location tracking state
+  const [isTracking, setIsTracking] = useState(false);
+  const [currentLocation, setCurrentLocation] = useState(null);
+  const [locationError, setLocationError] = useState(null);
+  const [watchId, setWatchId] = useState(null);
+  const [shouldCenterOnUser, setShouldCenterOnUser] = useState(false);
+  const [hasShownOffRouteAlert, setHasShownOffRouteAlert] = useState(false);
+
   // --- Data Fetching on Load ---
   useEffect(() => {
     axios.get(`${API_BASE_URL}/api/locations`)
@@ -215,6 +278,86 @@ function App() {
       map.fitBounds(polylineBounds, { padding: [50, 50] });
     }
   }, [path]); 
+
+  // --- Location Tracking Effect ---
+  useEffect(() => {
+    if (!isTracking) return;
+
+    if (!navigator.geolocation) {
+      setLocationError("Geolocation is not supported by your browser");
+      setNotification({ message: "Geolocation not supported", type: "error" });
+      return;
+    }
+
+    const id = navigator.geolocation.watchPosition(
+      (position) => {
+        const newLocation = [position.coords.latitude, position.coords.longitude];
+        setCurrentLocation(newLocation);
+        setLocationError(null);
+
+        // Check if off route
+        if (path.length > 0) {
+          const distanceToRoute = getClosestDistanceToRoute(newLocation, path);
+          if (distanceToRoute > OFF_ROUTE_THRESHOLD && !hasShownOffRouteAlert) {
+            setNotification({ 
+              message: "You've strayed from the route. Please return to the highlighted path.", 
+              type: "error" 
+            });
+            setHasShownOffRouteAlert(true);
+            
+            // Reset alert after 10 seconds so it can show again
+            setTimeout(() => setHasShownOffRouteAlert(false), 10000);
+          }
+        }
+      },
+      (error) => {
+        console.error("Geolocation error:", error);
+        setLocationError(error.message);
+        setNotification({ message: "Could not get your location", type: "error" });
+      },
+      {
+        enableHighAccuracy: true,
+        maximumAge: 0,
+        timeout: 5000
+      }
+    );
+
+    setWatchId(id);
+
+    return () => {
+      if (id) {
+        navigator.geolocation.clearWatch(id);
+      }
+    };
+  }, [isTracking, path, hasShownOffRouteAlert]);
+
+  // --- Start Tracking Function ---
+  const handleStartTracking = () => {
+    setIsTracking(true);
+    setShouldCenterOnUser(true);
+    setNotification({ message: "Location tracking started", type: "success" });
+  };
+
+  // --- Stop Tracking Function ---
+  const handleStopTracking = () => {
+    setIsTracking(false);
+    setShouldCenterOnUser(false);
+    setCurrentLocation(null);
+    if (watchId) {
+      navigator.geolocation.clearWatch(watchId);
+      setWatchId(null);
+    }
+    setNotification({ message: "Location tracking stopped", type: "success" });
+  };
+
+  // --- Center on User Function ---
+  const handleCenterOnUser = () => {
+    if (currentLocation) {
+      setShouldCenterOnUser(true);
+      // Reset after centering to allow manual panning
+      setTimeout(() => setShouldCenterOnUser(false), 1000);
+    }
+  };
 
   // --- User / Favorite Functions ---
   const handleLoginSuccess = (user) => {
@@ -477,6 +620,15 @@ function App() {
               </>
             )}
 
+            {/* Location Tracking Button */}
+            <button 
+              onClick={isTracking ? handleStopTracking : handleStartTracking}
+              className={`find-route-button ${isTracking ? 'tracking-active' : ''}`}
+              title={isTracking ? "Stop Tracking" : "Start Tracking"}
+            >
+              {isTracking ? '📍 Stop' : '📍 Track Me'}
+            </button>
+
           </div>
 
           <div className="map-wrapper">
@@ -485,6 +637,13 @@ function App() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
+              
+              {/* Map Controller for centering */}
+              <MapController 
+                centerPosition={currentLocation} 
+                shouldCenter={shouldCenterOnUser}
+              />
+              
               {startLocation && startLocation.coords && (startLocation.coords[0] !== 0 || startLocation.coords[1] !== 0) && (
                 <Marker position={startLocation.coords}>
                   <Popup>Start: {startLocation.name}</Popup>
@@ -496,6 +655,28 @@ function App() {
                 </Marker>
               )}
               {path.length > 0 && <Polyline positions={path} color="#007bff" weight={6} />}
+              
+              {/* Current Location Marker with Accuracy Circle */}
+              {isTracking && currentLocation && (
+                <>
+                  <Circle 
+                    center={currentLocation} 
+                    radius={15}
+                    pathOptions={{ 
+                      color: '#4285F4', 
+                      fillColor: '#4285F4', 
+                      fillOpacity: 0.2,
+                      weight: 2
+                    }}
+                  />
+                  <Marker 
+                    position={currentLocation} 
+                    icon={CurrentLocationIcon}
+                  >
+                    <Popup>Your Current Location</Popup>
+                  </Marker>
+                </>
+              )}
               
               <MapClickHandler
                   isSelectionMode={isSelectionMode}
@@ -515,6 +696,17 @@ function App() {
               />
 
             </MapContainer>
+
+            {/* Center on Me Button */}
+            {isTracking && currentLocation && (
+              <button 
+                className="center-on-me-button"
+                onClick={handleCenterOnUser}
+                title="Center on my location"
+              >
+                🎯
+              </button>
+            )}
           </div>
         </div>
 
