@@ -783,7 +783,8 @@
 	        "coords": [39.254746485865745, -76.71218035643324],
             "neighbors": [
                             ["Biological Sciences Building Inside 2", 0, true],
-                            ["Biological Sciences Building Inside 3", 0, true]
+                            ["Biological Sciences Building Inside 3", 0, true],
+                            ["Biological Sciences Building Inside 4", 0, true]
                         ]
         },
         {
@@ -797,7 +798,8 @@
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
                             ["Biological Sciences Building Inside 2", 0, true],
-                            ["Biological Sciences Building Inside 3", 0, true]
+                            ["Biological Sciences Building Inside 3", 0, true],
+                            ["Biological Sciences Building Inside 4", 0, true]
                         ]
         },
         {
@@ -811,7 +813,8 @@
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
                             ["Biological Sciences Building Inside 2", 0, true],
-                            ["Biological Sciences Building Inside 3", 0, true]
+                            ["Biological Sciences Building Inside 3", 0, true],
+                            ["Biological Sciences Building Inside 4", 0, true]
                         ]
         },
         {
@@ -825,7 +828,8 @@
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
                             ["Biological Sciences Building Inside 2", 0, true],
-                            ["Biological Sciences Building Inside 3", 0, true]
+                            ["Biological Sciences Building Inside 3", 0, true],
+                            ["Biological Sciences Building Inside 4", 0, true]
                         ]
         },
         {
@@ -839,7 +843,8 @@
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
                             ["Biological Sciences Building Inside 2", 0, true],
-                            ["Biological Sciences Building Inside 3", 0, true]
+                            ["Biological Sciences Building Inside 3", 0, true],
+                            ["Biological Sciences Building Inside 4", 0, true]
                         ]
         },
         {
@@ -853,7 +858,8 @@
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Inside 2", 0, true],
-                            ["Biological Sciences Building Inside 3", 0, true]
+                            ["Biological Sciences Building Inside 3", 0, true],
+                            ["Biological Sciences Building Inside 4", 0, true]
                         ]
         },
         {
@@ -883,6 +889,7 @@
             "floor": "1",
             "neighbors": [
                             ["Biological Sciences Building Inside 2", 2, true],
+                            ["Biological Sciences Building Inside 4", 3, true],
                             ["Intersection 38", 0, true]
                         ]
         },
@@ -2053,7 +2060,7 @@
 	        "coords": [39.25855922198689, -76.71261178320015],
             "neighbors": [
                             ["West Hill Apartments", 0, true],
-                            ["West Hill Apartments Entrance 2", 10, true],
+                            ["West Hill Apartments Entrance 1", 10, true],
                             ["Intersection 82", 4, true]
                         ]
         },
@@ -2234,7 +2241,7 @@
         {
 	        "name": "Harbor Hall",
 	        "type": "building",
-	        "coords": [39.257447051095056, -76.70853714337099],
+	        "coords": [39.25729266296289, -76.70806717698177],
             "neighbors": [
                             ["Harbor Hall Entrance 1", 20, true],
                             ["Harbor Hall Entrance 2", 20, true],
@@ -3402,8 +3409,8 @@
 	        "coords": [39.25853044216877, -76.71217128070964],
             "neighbors": [
                             ["Apartment Community Center Entrance 1", 8, true],
-                            ["Intersection 82", 9, true],
-                            ["West Hill Apartments Entrance 3", 8, true]
+                            ["West Hill Apartments Entrance 3", 8, true],
+                            ["Intersection 82", 9, true]
                         ]
         },
         {
@@ -3815,7 +3822,7 @@
 	        "type": "intersection",
 	        "coords": [39.25622596131676, -76.70865789543826],
             "neighbors": [
-                            ["Center Of Well-Being Entrance 1", 2, true],
+                            ["Center For Well-Being Entrance 1", 2, true],
                             ["Intersection 121", 7, true],
                             ["Intersection 146", 19, true]
                         ]
@@ -4294,6 +4301,7 @@
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 10, true],
+                            ["Biological Sciences Building Inside 4", 3, true],
                             ["Biological Sciences Building Bridge 2", 3, true],
                             ["Biological Sciences Building Entrance 1", 20, true],
                             ["Biological Sciences Building Entrance 2", 20, true],
@@ -4313,6 +4321,7 @@
                             ["Biological Sciences Building Floor 2", 30, true],
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 10, true],
+                            ["Biological Sciences Building Inside 4", 3, true],
                             ["Biological Sciences Building Bridge 1", 3, true],
                             ["Biological Sciences Building Entrance 1", 20, true],
                             ["Biological Sciences Building Entrance 2", 20, true],
@@ -4733,7 +4742,7 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Building Inside 2",
+	        "name": "Biological Sciences Building Inside 3",
 	        "type": "inside",
 	        "coords": [39.254996136753344, -76.71209988404779],
             "neighbors": [
@@ -4749,9 +4758,9 @@
                         ]
         },
         {
-	        "name": "Biological Sciences Building Inside 3",
+	        "name": "Biological Sciences Building Inside 4",
 	        "type": "inside",
-	        "coords": [39.255026136753344, -76.71209988404779],
+	        "coords": [39.254561591549326, -76.71232343648684],
             "neighbors": [
                             ["Biological Sciences Building", 30, true],
                             ["Biological Sciences Building Floor b", 30, true],
@@ -4760,8 +4769,8 @@
                             ["Biological Sciences Building Floor 3", 30, true],
                             ["Biological Sciences Building Floor 4", 30, true],
                             ["Biological Sciences Building Entrance 2", 3, true],
-                            ["Biological Sciences Building Bridge 1", 5, true],
-                            ["Biological Sciences Building Bridge 2", 5, true],
+                            ["Biological Sciences Building Bridge 1", 9, true],
+                            ["Biological Sciences Building Bridge 2", 9, true],
                             ["Biological Sciences Building Inside 2", 13, true]
                         ]
         },
