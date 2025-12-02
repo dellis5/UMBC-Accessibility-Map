@@ -27,7 +27,7 @@ const CurrentLocationIcon = L.divIcon({
 // --- End of FIX ---
 
 // --- Configuration ---
-const API_BASE_URL = "http://127.0.0.1:5000"; 
+const API_BASE_URL = "http://127.0.0.1:5001"; 
 const UMBC_CENTER = [39.255, -76.71]; 
 const OFF_ROUTE_THRESHOLD = 30; // meters
 
@@ -198,21 +198,23 @@ function LoginModal({ onDismiss, onLoginSuccess }) {
 }
 
 // --- Text Directions Component ---
-function TextDirections({ pathNames }) {
-  if (!pathNames || pathNames.length === 0) {
+function TextDirections({ pathNames, directions }) {
+  if ((!pathNames || pathNames.length === 0) && (!directions || directions.length === 0))
     return null;
-  }
+
   return (
     <div className="text-directions-container">
-      <h3>Text-Based Route</h3>
+      <h3>Step-by-Step Directions</h3>
+
       <ol className="text-directions-list">
-        {pathNames.map((name, index) => (
-          <li key={index}>{name}</li>
+        {directions.map((step, index) => (
+          <li key={index}>{step}</li>
         ))}
       </ol>
     </div>
   );
 }
+
 
 // --- Main Application Component ---
 function App() {
@@ -223,6 +225,8 @@ function App() {
   const [allLocations, setAllLocations] = useState([]);
   const [selectableLocations, setSelectableLocations] = useState([]); 
   const [favoriteRoutes, setFavoriteRoutes] = useState([]);
+
+  const [textDirections, setTextDirections] = useState([]);
 
   // Search and selection state
   const [startLocation, setStartLocation] = useState(null);
@@ -430,10 +434,26 @@ function App() {
 
   const handleSelectLocation = (location, type, isFromMap = false) => {
     if (type === 'start') {
+      // 💥 AUTO-CLEAR route when start changes
+      if (startLocation && location.name !== startLocation.name) {
+        setPath([]);
+        setPathNames([]);
+        setTextDirections([]);   // includes text directions
+        setEndLocation(null);    // optional – forces user to pick a new destination
+        setEndSearch("");
+      }
+
       setStartLocation(location);
       setStartSearch(location.name);
-      setStartResults([]);
+      setStartResults([]); 
     } else {
+      // 💥 AUTO-CLEAR route when destination changes
+      if (endLocation && location.name !== endLocation.name) {
+        setPath([]);
+        setPathNames([]);
+        setTextDirections([]);
+      }
+    
       setEndLocation(location);
       setEndSearch(location.name);
       setEndResults([]);
@@ -462,6 +482,7 @@ function App() {
         if (response.data.path && response.data.path.length > 0) {
           setPath(response.data.path);
           setPathNames(response.data.names); 
+          setTextDirections(response.data.directions || []);
         } else {
           setNotification({ message: "No accessible path found.", type: "error" });
         }
@@ -711,7 +732,8 @@ function App() {
         </div>
 
         <div className={`favorites-section ${userMode !== 'loggedIn' ? 'favorites-section-guest' : ''}`}>
-          <TextDirections pathNames={pathNames} />
+          <TextDirections pathNames={pathNames} directions={textDirections} />
+
           
           <h2>My Favorite Routes</h2>
           {userMode !== 'loggedIn' ? (
