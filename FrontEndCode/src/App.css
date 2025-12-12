@@ -231,7 +231,7 @@ body {
   border-radius: 0 0 5px 5px;
   max-height: 200px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 1001;
   text-align: left;
 }
 .result-item { padding: 0.5rem; cursor: pointer; font-size: 0.9rem; }

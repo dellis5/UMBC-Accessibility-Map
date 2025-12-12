@@ -263,7 +263,7 @@ function App() {
         
         const filtered = all.filter(loc => {
           const name = loc.name.toLowerCase();
-          return !name.includes('entrance') && !name.includes('intersection') && !name.includes('inside');
+          return !name.includes('entrance') && !name.includes('intersection') && !name.includes('inside')&& !name.includes('curve');
         });
         
         setSelectableLocations(filtered);

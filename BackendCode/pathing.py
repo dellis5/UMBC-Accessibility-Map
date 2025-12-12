@@ -208,7 +208,7 @@ def get_directions(nodes):
         try:
             if previous_floor == "":
                 previous_floor = node["floor"]
-            elif node["floor"] != previous_floor:
+            elif node["floor"] != previous_floor or previous_type == "building":
                 previous_floor = node["floor"]
 
                 elevator_text = ["Take the elevator to the ", " floor"]
@@ -238,10 +238,11 @@ def get_directions(nodes):
         # NEW: using a bridge (only once per bridge segment)
         if previous_type != "bridge" and node["type"] == "bridge":
             dest_building = find_bridge_destination(idx)
+            floor = node["floor"]
             if dest_building:
-                path.append(f"Use the bridge to cross into {dest_building}.")
+                path.append(f"Use the bridge on the {floor}th floor to cross into {dest_building}.")
             else:
-                path.append("Use the bridge to cross to the connected building.")
+                path.append(f"Use the bridge on the {floor}th floor to cross to the connected building.")
 
         previous_type = node["type"]
 
