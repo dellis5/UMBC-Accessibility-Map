@@ -29,7 +29,7 @@ def get_locations():
         with open("nodes.json", "r") as f:
             node_data = json.load(f)
         # This is the NEW, correct line that includes coords:
-        locations = [{"id": node["id"], "name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
+        locations = [{"name": node["name"], "coords": node["coords"]} for node in node_data["node"]]
         return jsonify(locations)
     except FileNotFoundError:
         return jsonify({"error": "nodes.json not found"}), 404
@@ -44,24 +44,25 @@ def find_accessible_path():
         return jsonify({"error": "start and end parameters are required"}), 400
 
     try:
-        # 1. Run your partner's pathfinding code
+        # Run backend path logic
         path_result = get_path(start_name, end_name)
         path_node_names = path_result[0]
+        directions = path_result[1]  # <--- NEW
 
         if not path_node_names:
-            return jsonify({"path": []}) # Return an empty path if none is found
+            return jsonify({"path": [], "names": [], "directions": []})
 
-        # 2. Convert the list of node names into a list of coordinates for the frontend
+        # Load coords to map path
         with open("nodes.json", "r") as f:
             node_data = json.load(f)
-        
-        # Create a quick lookup dictionary for coordinates
         coord_map = {node["name"]: node["coords"] for node in node_data["node"]}
-        
-        path_coords = [coord_map[name] for name in path_node_names if name in coord_map]
+        path_coords = [coord_map[n] for n in path_node_names]
 
-        # 3. Send the coordinates back to the frontend
-        return jsonify({"path": path_coords, "names": path_node_names})        
+        return jsonify({
+            "path": path_coords,
+            "names": path_node_names,
+            "directions": directions     # <--- SEND DIRECTIONS
+        })
     except Exception as e:
         print(f"An error occurred: {e}")
         return jsonify({"error": "An internal error occurred"}), 500
@@ -180,4 +181,4 @@ def delete_favorite(favorite_id):
 
 if __name__ == '__main__':
     # Runs the server on http://127.0.0.1:5000
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)
